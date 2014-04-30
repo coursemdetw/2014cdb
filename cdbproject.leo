@@ -38,6 +38,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 <v t="2014pythonE.20140430162301.1761"><vh>@path 2bg13</vh>
 <v t="2014pythonE.20140430162301.1762"><vh>@edit doc.txt</vh></v>
 </v>
+<v t="kmolII_lite.20140430174156.1609" a="E"><vh>@path 2bg6</vh>
+<v t="kmolII_lite.20140430174156.1610" a="O"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="kmolII_lite.20140430174205.1613"><vh>@path 2bg9</vh>
 <v t="kmolII_lite.20140430174205.1614"><vh>@edit doc.txt</vh></v>
 </v>
@@ -344,6 +347,18 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 ===
 
 這是 2bg3 報告摘要內容
+</t>
+<t tx="kmolII_lite.20140430174156.1609"></t>
+<t tx="kmolII_lite.20140430174156.1610">@nocolor
+2bg6報告內容
+===
+
+這是 2bg6報告內容
+
+報告摘要
+===
+
+這是 2bg6 報告摘要內容
 </t>
 <t tx="kmolII_lite.20140430174205.1613"></t>
 </tnodes>
