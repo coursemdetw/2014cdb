@@ -33,10 +33,13 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<v t="2014pythonE.20140430152238.1751" a="E"><vh>@path 2bg2</vh>
+<v t="2014pythonE.20140430152238.1752"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2bg1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2051"><vh>@path 2bg2</vh>
+<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2bg15</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
 </v>
@@ -64,6 +67,7 @@ couorsemdetw on Github 使用 course@mde.tw 登記
 course-mde-tw 為協同人員
 
 </t>
+<t tx="2014pythonE.20140430152238.1751"></t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
@@ -202,7 +206,7 @@ d = c.scanAllDirectives(p)
 '''
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
-filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt']
+filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg15/doc.txt']
 directory = "V:/project/2014cdb/wsgi/doc/"
 with open('V:/project/2014cdb/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
