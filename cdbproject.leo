@@ -21,6 +21,7 @@
 <v t="2014pythonE.20140422152422.1670"><vh>OpenShift 權限管理</vh></v>
 <v t="course-mde-tw.20140422171455.1745"><vh>Github 倉儲與 OpenShift 同步</vh></v>
 <v t="2014spring.20140430140611.1875"><vh>協同出席登錄</vh></v>
+<v t="2014spring.20140430175148.1847"><vh>@edit README.md</vh></v>
 <v t="2014spring.20140430140611.1945"><vh>第十一週任務</vh></v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028" a="E"
