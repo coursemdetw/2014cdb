@@ -71,9 +71,9 @@ couorsemdetw on Github 使用 course@mde.tw 登記
 course-mde-tw 為協同人員
 
 </t>
-<<<<<<< HEAD
+
 <t tx="2014pythonE.20140430152238.1751"></t>
-=======
+
 <t tx="2014spring.20140430140611.1875">Week 10:
 
 第四組缺席
