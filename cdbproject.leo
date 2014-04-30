@@ -35,27 +35,27 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<v t="2014pythonE.20140430162301.1761" a="E"><vh>@path 2bg13</vh>
+<v t="2014pythonE.20140430162301.1761"><vh>@path 2bg13</vh>
 <v t="2014pythonE.20140430162301.1762"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140430152238.1751" a="E"><vh>@path 2bg2</vh>
+<v t="kmolII_lite.20140430174205.1613"><vh>@path 2bg9</vh>
+<v t="kmolII_lite.20140430174205.1614"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140430152238.1751"><vh>@path 2bg2</vh>
 <v t="2014pythonE.20140430152238.1752"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2049"><vh>@path 2bg1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140430170549.1693" a="E"><vh>@path 2bg5</vh>
+<v t="2014pythonE.20140430170549.1693"><vh>@path 2bg5</vh>
 <v t="2014pythonE.20140430170549.1694"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2bg15</vh>
+<v t="course-mde-tw.20140417093332.2051"><vh>@path 2bg15</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014spring.20140430140611.1878" a="E"><vh>@path 2bg3</vh>
-<v t="kmolII_lite.20140430172749.1603"><vh>@path 2bg3</vh>
+<v t="2014spring.20140430140611.1878"><vh>@path 2bg3</vh>
+<v t="kmolII_lite.20140430172749.1603" a="E"><vh>@path 2bg3</vh>
 <v t="kmolII_lite.20140430172749.1604" a="O"><vh>@edit doc.txt</vh></v>
-</v>
-<v t="kmolII_lite.20140430172749.1607" a="E"><vh>@path 2bg9</vh>
-<v t="kmolII_lite.20140430172749.1608" a="O"><vh>@edit doc.txt</vh></v>
 </v>
 </v>
 </v>
@@ -345,17 +345,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 
 這是 2bg3 報告摘要內容
 </t>
-<t tx="kmolII_lite.20140430172749.1607"></t>
-<t tx="kmolII_lite.20140430172749.1608">@nocolor
-2bg3報告內容
-===
-
-這是 2bg3報告內容
-
-報告摘要
-===
-
-這是 2bg3 報告摘要內容
-</t>
+<t tx="kmolII_lite.20140430174205.1613"></t>
 </tnodes>
 </leo_file>
