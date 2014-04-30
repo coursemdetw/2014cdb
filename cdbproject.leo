@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -36,20 +36,31 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<v t="2014pythonE.20140430162301.1761" a="E"><vh>@path 2bg13</vh>
+<v t="2014pythonE.20140430162301.1761"><vh>@path 2bg13</vh>
 <v t="2014pythonE.20140430162301.1762"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140430152238.1751" a="E"><vh>@path 2bg2</vh>
+<v t="kmolII_lite.20140430174156.1609" a="E"><vh>@path 2bg6</vh>
+<v t="kmolII_lite.20140430174156.1610" a="O"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="kmolII_lite.20140430174205.1613"><vh>@path 2bg9</vh>
+<v t="kmolII_lite.20140430174205.1614"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140430152238.1751"><vh>@path 2bg2</vh>
 <v t="2014pythonE.20140430152238.1752"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2049" a="E"><vh>@path 2bg1</vh>
+<v t="course-mde-tw.20140417093332.2049"><vh>@path 2bg1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2bg15</vh>
+<v t="2014pythonE.20140430170549.1693"><vh>@path 2bg5</vh>
+<v t="2014pythonE.20140430170549.1694"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="course-mde-tw.20140417093332.2051"><vh>@path 2bg15</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014spring.20140430140611.1878" a="E"><vh>@path 2bg3</vh>
-<v t="2014spring.20140430140611.1879"><vh>@edit doc.txt</vh></v>
+<v t="2014spring.20140430140611.1878"><vh>@path 2bg3</vh>
+<v t="kmolII_lite.20140430172749.1603" a="E"><vh>@path 2bg3</vh>
+<v t="kmolII_lite.20140430172749.1604" a="O"><vh>@edit doc.txt</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -78,6 +89,7 @@ course-mde-tw 為協同人員
 </t>
 <t tx="2014pythonE.20140430152238.1751"></t>
 <t tx="2014pythonE.20140430162301.1761"></t>
+<t tx="2014pythonE.20140430170549.1693"></t>
 <t tx="2014spring.20140430140611.1875">Week 10:
 
 第四組缺席
@@ -231,7 +243,7 @@ d = c.scanAllDirectives(p)
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
 
-filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt']
+filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt']
 
 directory = "V:/project/2014cdb/wsgi/doc/"
 with open('V:/project/2014cdb/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
@@ -325,5 +337,30 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
+<t tx="kmolII_lite.20140430172749.1603"></t>
+<t tx="kmolII_lite.20140430172749.1604">@nocolor
+2bg3報告內容
+===
+
+這是 2bg3報告內容
+
+報告摘要
+===
+
+這是 2bg3 報告摘要內容
+</t>
+<t tx="kmolII_lite.20140430174156.1609"></t>
+<t tx="kmolII_lite.20140430174156.1610">@nocolor
+2bg6報告內容
+===
+
+這是 2bg6報告內容
+
+報告摘要
+===
+
+這是 2bg6 報告摘要內容
+</t>
+<t tx="kmolII_lite.20140430174205.1613"></t>
 </tnodes>
 </leo_file>
