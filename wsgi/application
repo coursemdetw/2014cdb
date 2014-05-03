@@ -461,6 +461,19 @@ application_conf = {'/static':{
 ########################### 5. 在近端或遠端啟動程式
 # 利用 HelloWorld() class 產生案例物件
 root = CDProject()
+#####################################################
+# 導入協同程式 cdbg1
+#####################################################
+# 以下為 cdbg1 的模組導入與連結設定
+import programs.cdbg1 as cdbg1
+root.cdbg1 = cdbg1.CDBG1()
+#####################################################
+# 導入協同程式 cdbg2
+#####################################################
+# 以下為 cdbg2 的模組導入與連結設定
+import programs.cdbg2 as cdbg2
+root.cdbg2 = cdbg2.CDBG2()
+
 # 假如在 os 環境變數中存在 'OPENSHIFT_REPO_DIR', 表示程式在 OpenShift 環境中執行
 if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
     # 雲端執行啟動

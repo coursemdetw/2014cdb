@@ -28,6 +28,14 @@
 <v t="course-mde-tw.20140417093332.2028" a="E"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
+<v t="2014spring.20140503125211.2473" a="E"><vh>分組程式開發</vh>
+<v t="2014spring.20140503125211.2474" a="E"><vh>@path wsgi/programs/cdbg1</vh>
+<v t="2014spring.20140503125211.2475"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140503125211.2476" a="E"><vh>@path wsgi/programs/cdbg2</vh>
+<v t="2014spring.20140503125211.2477"><vh>@edit __init__.py</vh></v>
+</v>
+</v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
 <v t="course-mde-tw.20140422221207.1747"><vh>注意事項</vh></v>
 <v t="course-mde-tw.20140417093332.2059"><vh>@button pandoc</vh></v>
@@ -38,13 +46,13 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
-<v t="2014pythonE.20140430162301.1761"><vh>@path 2bg13</vh>
+<v t="2014pythonE.20140430162301.1761" a="E"><vh>@path 2bg13</vh>
 <v t="2014pythonE.20140430162301.1762"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140430174156.1609"><vh>@path 2bg6</vh>
+<v t="kmolII_lite.20140430174156.1609" a="E"><vh>@path 2bg6</vh>
 <v t="kmolII_lite.20140430174156.1610" a="O"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="kmolII_lite.20140430174205.1613"><vh>@path 2bg9</vh>
+<v t="kmolII_lite.20140430174205.1613" a="E"><vh>@path 2bg9</vh>
 <v t="kmolII_lite.20140430174205.1614"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140430152238.1751"><vh>@path 2bg2</vh>
@@ -53,16 +61,14 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 <v t="course-mde-tw.20140417093332.2049"><vh>@path 2bg1</vh>
 <v t="course-mde-tw.20140417093332.2050"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014pythonE.20140430170549.1693"><vh>@path 2bg5</vh>
+<v t="2014pythonE.20140430170549.1693" a="E"><vh>@path 2bg5</vh>
 <v t="2014pythonE.20140430170549.1694"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2051"><vh>@path 2bg15</vh>
+<v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2bg15</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014spring.20140430140611.1878"><vh>@path 2bg3</vh>
-<v t="kmolII_lite.20140430172749.1603" a="E"><vh>@path 2bg3</vh>
-<v t="kmolII_lite.20140430172749.1604" a="O"><vh>@edit doc.txt</vh></v>
-</v>
+<v t="kmolII_lite.20140430172749.1604"><vh>@edit doc.txt</vh></v>
 </v>
 </v>
 </v>
@@ -230,6 +236,38 @@ os.system("V:\\apps\\portableLatex\\MiKTeX\\texmf\\miktex\\bin\\xdvipdfmx.exe -v
 
 filename = target_name+".pdf"
 os.system(filename)</t>
+<t tx="2014spring.20140503125211.2473">各分組在 Github 中要有一個參與 2014c2 協同程式開發的帳號外
+
+各組員同時在 Github 與 Bitbucket 下都要有對應帳號, 並且利用 Github (不限協同人員個數, 但是免費帳號只允許建立開放專案)或 Bitbucket (專案可以選擇公開或私用, 但是免費帳號只允許最多 5 人協同) 的協同模式, 在小分組下共享程式碼.
+
+Github 2014c2 全班協同專案將會有一個對應的 OpenShift 網站, 各組另外要建立一個分組的 OpenShift 網站與 Github 全班協同專案同步, 以練習各分組的雲端程式部署與控管流程 (各分組成員必須將各自的 public keys 放到分組 OpenShift 應用程式中, 並且自行練習以協同模式控管雲端網站, 而且要與各分組的 Bitbucket 或 Github 程式同步).
+
+各分組雲端程式位於 wsgi/programs/c2g1 目錄下, 使用時必須:
+    
+    1. 確認主要程式 application 中已經導入分組模組, 且與 root 下屬方法加以對應
+    
+    也就是下列程式的置入.
+    
+#####################################################
+# 這是 c2g1 組的物件案例定義
+#####################################################
+# 導入 application 目錄下的模組
+# 導入 programs/c2g1 並且命名為 c2g1
+# 模組內建使用 __init__.py 中的 C2G1 類別
+# 若使用 programs/c2g1/class1.py, 則使用 import programs.c2g1.class1 as c2g1
+import programs.c2g1 as c2g1
+# 利用 c2g1 目錄下的 __init__.py 檔案中的 C2G1 類別建立案例物件
+# 而且指到 application 根目錄下的 c2g1
+root.c2g1 = c2g1.C2G1()
+#####################################################
+# 結束 c2g1 組的物件案例定義
+#####################################################
+
+    2. 各分組則在 wsgi/programs/c2gX 目錄下各自開發 __init__.py 程式方法
+    
+    3. 完成後先在近端測試, 完全符合需求且根據標準流程, 拉下目前協同專案區最新的 github 程式碼後, 檢驗 .leo 是否可以正確開啟, 各對應目錄是否正確配置, application 是否可以正確執行後, 再推送到協同專案區, 並與各分組的 OpenShift 雲端網站進行同步.</t>
+<t tx="2014spring.20140503125211.2474"></t>
+<t tx="2014spring.20140503125211.2476"></t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
@@ -463,18 +501,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
-<t tx="kmolII_lite.20140430172749.1603"></t>
-<t tx="kmolII_lite.20140430172749.1604">@nocolor
-2bg3報告內容
-===
-
-這是 2bg3報告內容
-
-報告摘要
-===
-
-這是 2bg3 報告摘要內容
-</t>
 <t tx="kmolII_lite.20140430174156.1609"></t>
 <t tx="kmolII_lite.20140430174156.1610">@nocolor
 2bg6報告內容
