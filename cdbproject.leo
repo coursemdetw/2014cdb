@@ -71,7 +71,7 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="kmolII_lite.20140505203306.1631" a="E"><vh>@path 2bg16</vh>
-<v t="kmolII_lite.20140505203306.1632" a="O"><vh>@edit doc.txt</vh></v>
+<v t="kmolII_lite.20140505203306.1632"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014spring.20140430140611.1878"><vh>@path 2bg3</vh>
 <v t="kmolII_lite.20140430172749.1604"><vh>@edit doc.txt</vh></v>
@@ -533,16 +533,5 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 這是 2bg11 報告摘要內容
 </t>
 <t tx="kmolII_lite.20140505203306.1631"></t>
-<t tx="kmolII_lite.20140505203306.1632">@nocolor
-2bg16報告內容
-===
-
-這是 2bg16報告內容
-
-報告摘要
-===
-
-這是 2bg16 報告摘要內容
-</t>
 </tnodes>
 </leo_file>
