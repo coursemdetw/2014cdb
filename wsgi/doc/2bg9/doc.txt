@@ -1,9 +1,41 @@
-2bg13報告內容
 ===
+W11
+===
+原文(摘要):
+1. Wikis provide teachers with potentially significant opportunities for creating socially engaged tasks that require active student participation and collaboration.
 
-這是 2bg13報告內容
+2. Wikis allow students to work to-gether to develop content on the web, giving them a sense of how writing can be carried out col-laboratively.
+
+3. Collaborative writing offer opportunities not only to practice literature review, aca-demic reading and writing, but also to stimulate reflection, knowledge sharing, and critical think-ing.
+
+4. However, despite the potential capabilities of wikis, true collaborative writing does not work by itself as the research literature clearly reveals.
+
+5. To foster collaborative writing, participation, and active involvement in wiki development, there is a need for a systematic approach to the con-struction of wikis.
+
+6. The aim of this paper is to allow students to develop wiki applications using a collaborative writing development approach based on rapid prototyping.
+
+7. The paper also reports on the evaluation of the approach by means of qualitative data collection and analysis methods.
+
+8. Finally, the implications of the approach for collaborative writing are critically discussed accord-ing to a set of requirements associated with software development considerations and pedagogical issues.
+===
+中文:
+1. wikis以潛在地重大機會提供老師與活躍學生參與和合作的社會上參與的任務。
+
+2. wikis允許學生在網上開發內容,給他們感覺文字可以合作和被執行。
+
+3. 合作文字的機會不僅實踐文學回顧、學術讀書和文字，而且刺激反射，知識分享和重要認知。
+
+4. 然而，當研究文學清楚地顯露，儘管wikis的潛在的能力，真實的合作文字單獨不運作。
+
+5. 對於一種系統的方法對wikis的建設，有需要促進合作文字、參與和活躍介入wiki發展。
+
+6. 本文的目標將允許學生使用prototyping的合作文字發展方法開發wiki應用。
+
+7. 本文也報告關於評估定性數據收集和分析方法。
+
+8. 最終，方法的涵義為合作文字是重要地被談論的達成協議對一套要求與軟件開發考慮相關和師範問題。
 
 報告摘要
 ===
 
-這是 2bg13 報告摘要內容
+這是 2bg9 報告摘要內容
