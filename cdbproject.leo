@@ -70,6 +70,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 <v t="course-mde-tw.20140417093332.2051" a="E"><vh>@path 2bg15</vh>
 <v t="course-mde-tw.20140417093332.2052"><vh>@edit doc.txt</vh></v>
 </v>
+<v t="kmolII_lite.20140505203306.1631" a="E"><vh>@path 2bg16</vh>
+<v t="kmolII_lite.20140505203306.1632" a="O"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="2014spring.20140430140611.1878"><vh>@path 2bg3</vh>
 <v t="kmolII_lite.20140430172749.1604"><vh>@edit doc.txt</vh></v>
 </v>
@@ -410,7 +413,7 @@ d = c.scanAllDirectives(p)
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
 
-filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt','2bg11/doc.txt']
+filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt','2bg11/doc.txt','2bg16/doc.txt']
 
 directory = "V:/project/2014cdb/wsgi/doc/"
 with open('V:/project/2014cdb/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
@@ -519,16 +522,27 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140430174205.1613"></t>
 <t tx="kmolII_lite.20140505193226.1631"></t>
 <t tx="kmolII_lite.20140505193226.1632">@nocolor
-2bg11報告內容
+﻿2bg11報告內容
 ===
 
 這是 2bg11報告內容
-
 
 報告摘要
 ===
 
 這是 2bg11 報告摘要內容
+</t>
+<t tx="kmolII_lite.20140505203306.1631"></t>
+<t tx="kmolII_lite.20140505203306.1632">@nocolor
+2bg16報告內容
+===
+
+這是 2bg16報告內容
+
+報告摘要
+===
+
+這是 2bg16 報告摘要內容
 </t>
 </tnodes>
 </leo_file>
