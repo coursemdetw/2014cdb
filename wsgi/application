@@ -473,6 +473,13 @@ root.cdbg1 = cdbg1.CDBG1()
 # 以下為 cdbg2 的模組導入與連結設定
 import programs.cdbg2 as cdbg2
 root.cdbg2 = cdbg2.CDBG2()
+#####################################################
+# 導入協同程式 cdbg13
+#####################################################
+# 以下為 cdbg13 的模組導入與連結設定
+import programs.cdbg13 as cdbg13
+root.cdbg13 = cdbg13.CDBG13()
+
 
 # 假如在 os 環境變數中存在 'OPENSHIFT_REPO_DIR', 表示程式在 OpenShift 環境中執行
 if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
