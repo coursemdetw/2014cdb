@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
+<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -46,6 +46,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<v t="2014pythonE.20140507142951.1656" a="E"><vh>@path 2bg14</vh>
+<v t="2014pythonE.20140507142951.1657" a="O"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="2014pythonE.20140430162301.1761" a="E"><vh>@path 2bg13</vh>
 <v t="2014pythonE.20140430162301.1762"><vh>@edit doc.txt</vh></v>
 </v>
@@ -104,6 +107,18 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140430152238.1751"></t>
 <t tx="2014pythonE.20140430162301.1761"></t>
 <t tx="2014pythonE.20140430170549.1693"></t>
+<t tx="2014pythonE.20140507142951.1656"></t>
+<t tx="2014pythonE.20140507142951.1657">@nocolor
+2bg14報告內容
+===
+
+這是 2bg14報告內容
+
+報告摘要
+===
+
+這是 2bg14 報告摘要內容
+</t>
 <t tx="2014spring.20140430140611.1875">Week 10:
 
 第四組缺席
@@ -413,7 +428,7 @@ d = c.scanAllDirectives(p)
 #在處理 pandoc 之前,  將協同人員上傳的 file1.txt 與 file2.txt 結合為 demo.txt
 # 應該以 walkdir 走進各目錄取檔案名稱後, 然後依照字串排序決定先後次序
 
-filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg6/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt','2bg11/doc.txt','2bg16/doc.txt']
+filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg6/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt','2bg11/doc.txt','2bg16/doc.txt','2bg14/doc.txt']
 
 directory = "V:/project/2014cdb/wsgi/doc/"
 with open('V:/project/2014cdb/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
@@ -511,7 +526,7 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140430174205.1613"></t>
 <t tx="kmolII_lite.20140505193226.1631"></t>
 <t tx="kmolII_lite.20140505193226.1632">@nocolor
-﻿2bg11報告內容
+2bg11報告內容
 ===
 
 這是 2bg11報告內容
