@@ -1,4 +1,4 @@
-2bg13報告內容
+﻿2bg13報告內容
 ===
 
 這是 2bg13報告內容
@@ -7,3 +7,32 @@
 ===
 
 這是 2bg13 報告摘要內容
+
+2bg13 w8.9工作
+===
+
+課程教材一(English):
+Wikis provide teachers with potentially significant opportunities for creating socially engaged tasks that require active student participation and collaboration. Wikis allow students to work to-gether to develop content on the web, giving them a sense of how writing can be carried out col-laboratively. Collaborative writing offer opportunities not only to practice literature review, aca-demic reading and writing, but also to stimulate reflection, knowledge sharing, and critical think-ing. However, despite the potential capabilities of wikis, true collaborative writing does not work by itself as the research literature clearly reveals. To foster collaborative writing, participation, and active involvement in wiki development, there is a need for a systematic approach to the con-struction of wikis. The aim of this paper is to allow students to develop wiki applications using a collaborative writing development approach based on rapid prototyping. The paper also reports on the evaluation of the approach by means of qualitative data collection and analysis methods. Finally, the implications of the approach for collaborative writing are critically discussed accord-ing to a set of requirements associated with software development considerations and pedagogical issues.
+翻譯:
+wiki創建需要學生積極參、合作，聚集在一起上網並協同開發內容，讓他們知道如何協同。
+協同不僅要結合文獻回顧、學術閱讀和創作，並同時也能激發學生反思、知識共享以及思考能力。本文的目的是讓學生使用快速原型製作一個協同的開發方法來開發的wiki 應用程序。
+Wiki也在教育界中日益普及，因為他為學生帶來潛在的教學和學習。從技術角度來看，維基的用戶不需要任何特定的軟件也不需要掌握先進的技術，只要有Web瀏覽器就足夠創建wiki了。
+創建過程: 利用wiki 協同創作的潛在能力，讓學生參與其中並積極參與的協作式創作的過程，但創建wiki 需要階段式規劃。文章提供了六個基本階段：1. 收集資料2. 維基的架構3.各個頁面的設計4. 協同的wiki 和鏈接別人5. 質量保證和集成的網頁創建的頁面6. 整體評估。
+總而言之這篇文章主要是在敘述wiki在教育中所擔任的角色，創建wiki不需要有大量的程式或資訊知識，他只又有一些些的知識就可以輕鬆的創建出一個網頁，並且可以使學生輕易的在網路上一起協同創串作，而這也將促使學生更有意願去學習更多的知識來協同創作，因此wiki在教育界中也更被更及的使用(這限定於國外吧……..)。
+
+課程教材二(English):
+Effective collaboration is essential for engineers at geographically dispersed locations to accomplish good design with less iteration. Over the last several years, more and more efforts   have been put into such research as many industries have distributed their product development to locations with knowledge force. This paper presents a collaborative engine to facilitate
+ collaborations among distributed mechanical designs. Using component-based software
+technology, collaboration functionality is developed into a set of groupware that makes the collaborative engine applicable to develop new collaborative applications or integrate legacy applications into collaborative environments. An XML-based information representation is developed to streamline the information transmission within the distributed environment. A case study is carried out to show how this engine facilitates designers to collaboratively create a 3D solid model of a same part in real time.
+翻譯:
+近年來越來越多的設計是由在世界各地的工程師一起協同完成的，而本文提出了一種協同引擎，使工程師協同工作更加的方便文忠也列出協同應該須具備1. 即時的通信2. 同一工作可以在同一時間給多人工作3. 確保信息安全的共享4. 可個人獨立工作5. 可做討論與會議6. 讓協同更順利機械設計一位顧客連接到設計者和製造商。如果客戶要求一些修改A 部分，設計師A與客戶一起，而設計師B 工作在一個相關的部分（B 部分），這將是一起assemblied 與A 部分設計師A 和之間的所有討論中的消息客戶可以“看到”設計師B，誰是工作的變動B 部分，由於A 部分設計B 的變化將有任何改變A 部分的結構來通知，他可以修改B 部分滿足新的要求。雖然設計師B 不能直接修改A 部分，但他/她可以通過發送消息到設計者A，如果一些衝突被發現A 部分和B部分之間由設計師以執行的所有活動也可見設計者的A和客戶提出建議。與此同時，A 部分和B 部分的所有設計活動是可見的製造工程師。他/她可以評估A 部分和B 部分的可製造性，並給予意見後設計變更部分A 或B 部份顯然，這些任務都在合作做一個實時的方式。這樣的合作將有效地解決工程問題，並減少設計錯誤，衝突和設計迭代。
+
+2bg13 w11工作
+===
+
+1.編寫自己組的 __init__.py，並建好資料夾。
+2.利用Pro/Web.Link來控制Creo之零件尺寸與組立。
+3.須先將IE設定好，將http://2014cdb-mdenfu.rhcloud.com/ 設為信任網站，之後將ActiveX選項都選為啟用。
+4.注意，Creo須為64位元版。畫好零件檔便能於內嵌式IE執行程式了(請先將零件放置指定位置)。
+5.由於我push程式後，別組沒有重新clone檔案下來改就push，造成版次衝突，以致leo開不起來。
+6.我花了一些時間處理錯誤，其實還蠻簡單的。
