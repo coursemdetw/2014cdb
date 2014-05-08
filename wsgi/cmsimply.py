@@ -1,5 +1,5 @@
 #@+leo-ver=5-thin
-#@+node:2014spring.20140508134612.2631: * @file cmsimply.py
+#@+node:2014spring.20140509071814.2155: * @file cmsimply.py
 '''
 Copyright © 2014 Chiaming Yen
 
@@ -23,7 +23,7 @@ along with CMSimply. If not, see <http://www.gnu.org/licenses/>.
 #@@tabwidth -4
 
 #@+<<declarations>>
-#@+node:2014spring.20140508134612.2632: ** <<declarations>> (cmsimply.py)
+#@+node:2014spring.20140509071814.2156: ** <<declarations>> (cmsimply.py)
 import cherrypy
 import re
 import os
@@ -60,7 +60,7 @@ else:
 
 #@-<<declarations>>
 #@+others
-#@+node:2014spring.20140508134612.2633: ** downloadlist_access_list
+#@+node:2014spring.20140509071814.2157: ** downloadlist_access_list
 def downloadlist_access_list(files, starti, endi):
     # different extension files, associated links were provided
     # popup window to view images, video or STL files, other files can be downloaded directly
@@ -85,17 +85,17 @@ def downloadlist_access_list(files, starti, endi):
             files[index]+'\',\'images\', \'catalogmode\',\'scrollbars\')">'+files[index]+'</a> ('+str(fileSize)+')<br />'
         # direct download files
         else:
-            outstring += "<input type='checkbox' name='filename' value='"+files[index]+"'><a href='/download/?filepath="+download_root_dir.replace('\\', '/')+ \
+            outstring += "<input type='checkbox' name='filename' value='"+files[index]+"'><a href='download/?filepath="+download_root_dir.replace('\\', '/')+ \
             "downloads/"+files[index]+"'>"+files[index]+"</a> ("+str(fileSize)+")<br />"
     return outstring
-#@+node:2014spring.20140508134612.2634: ** sizeof_fmt
+#@+node:2014spring.20140509071814.2158: ** sizeof_fmt
 def sizeof_fmt(num):
     for x in ['bytes','KB','MB','GB']:
         if num < 1024.0:
             return "%3.1f%s" % (num, x)
         num /= 1024.0
     return "%3.1f%s" % (num, 'TB')
-#@+node:2014spring.20140508134612.2635: ** set_admin_css
+#@+node:2014spring.20140509071814.2159: ** set_admin_css
 # set_admin_css for administrator
 def set_admin_css():
     outstring = '''<!doctype html><html><head>
@@ -142,7 +142,7 @@ window.location= 'https://' + location.host + location.pathname + location.searc
 </confmenu></header>
 '''
     return outstring
-#@+node:2014spring.20140508134612.2636: ** set_footer
+#@+node:2014spring.20140509071814.2160: ** set_footer
 def set_footer():
     # Extra consideration for cherrypy.url(qs=cherrypy.request.query_string) return no data
     return "<footer> \
@@ -154,16 +154,16 @@ def set_footer():
         <br />Powered by <a href='http://cmsimple.cycu.org'>CMSimply</a> \
         </footer> \
         </body></html>"
-#@+node:2014spring.20140508134612.2637: ** file_get_contents
+#@+node:2014spring.20140509071814.2161: ** file_get_contents
 def file_get_contents(filename):
     # open file in utf-8 and return file content
     with open(filename, encoding="utf-8") as file:
         return file.read()
-#@+node:2014spring.20140508134612.2638: ** search_content
+#@+node:2014spring.20140509071814.2162: ** search_content
 # use head title to search page content
 def search_content(head, page, search):
     return page[head.index(search)]
-#@+node:2014spring.20140508134612.2639: ** parse_content
+#@+node:2014spring.20140509071814.2163: ** parse_content
 def parse_content():
     if not os.path.isfile(data_dir+"content.htm"):
         # create content.htm if there is no content.htm
@@ -201,7 +201,7 @@ def parse_content():
     # send head to unique function to avoid duplicate heading
     #head_list = unique(head_list)
     return head_list, level_list, page_list
-#@+node:2014spring.20140508134612.2640: ** render_menu
+#@+node:2014spring.20140509071814.2164: ** render_menu
 def render_menu(head, level, page, sitemap=0):
     directory = ""
     current_level = level[0]
@@ -234,7 +234,7 @@ def render_menu(head, level, page, sitemap=0):
         current_level = level[index]
     directory += "</li></ul>"
     return directory
-#@+node:2014spring.20140508134612.2641: ** filebrowser
+#@+node:2014spring.20140509071814.2165: ** filebrowser
 def filebrowser():
     return '''
 <script type="text/javascript">
@@ -242,7 +242,8 @@ function wrFilebrowser (field_name, url, type, win) {
 poppedUpWin = win;
 inputField = field_name;
 if (type == "file") {type = "downloads"};
-var cmsURL = "/file_selector";    
+// 請注意, 這裡要配合 application 中的 root.cmsimply 設為 cmsimply
+var cmsURL = "/cmsimply/file_selector";    
 
 if (cmsURL.indexOf("?") < 0) {
     cmsURL = cmsURL + "?type="+ type ;
@@ -270,7 +271,7 @@ tinyMCE.activeEditor.windowManager.open(
 return false;
 }
 '''
-#@+node:2014spring.20140508134612.2642: ** syntaxhighlight
+#@+node:2014spring.20140509071814.2166: ** syntaxhighlight
 def syntaxhighlight():
     return '''
 <script type="text/javascript" src="/static/syntaxhighlighter/shCore.js"></script>
@@ -286,13 +287,13 @@ def syntaxhighlight():
 <link type="text/css" rel="stylesheet" href="/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 '''
-#@+node:2014spring.20140508134612.2643: ** editorhead
+#@+node:2014spring.20140509071814.2167: ** editorhead
 def editorhead():
     return '''
 <script language="javascript" type="text/javascript" src="/static/tinymce3/tiny_mce/tiny_mce.js"></script>
 <script type="text/javascript" src="/static/tinymce3/init.js"></script>
 '''
-#@+node:2014spring.20140508134612.2644: ** tinymceinit
+#@+node:2014spring.20140509071814.2168: ** tinymceinit
 def tinymceinit():
     return '''
 <script language="javascript" type="text/javascript">
@@ -347,16 +348,16 @@ theme_advanced_buttons4 : ""
 }
 </script>
 '''
-#@+node:2014spring.20140508134612.2645: ** editorfoot
+#@+node:2014spring.20140509071814.2169: ** editorfoot
 def editorfoot():
     return '''<body id="body"  onload="tinyMCE_initialize0();">'''
-#@+node:2014spring.20140508134612.2646: ** tinymce_editor
+#@+node:2014spring.20140509071814.2170: ** tinymce_editor
 def tinymce_editor(menu_input=None, editor_content=None, page_order=None):
     files = os.listdir(download_root_dir+"downloads/")
     link_list = ""
     image_list = ""
     for index in range(len(files)):
-        file_url = "/download/?filepath="+download_root_dir.replace('\\', '/')+"downloads/"+files[index]
+        file_url = "download/?filepath="+download_root_dir.replace('\\', '/')+"downloads/"+files[index]
         link_list += "['"+files[index]+"', '"+file_url+"']"
         if index != len(files)-1:
             link_list += ","
@@ -389,7 +390,7 @@ var myLinkList = new Array('''+link_list+''');
         outstring += '''<input type=button onClick="location.href='get_page?heading='''+head[page_order]+ \
             ''''" value='viewpage'></form></section></body></html>'''
     return outstring
-#@+node:2014spring.20140508134612.2647: ** parse_config
+#@+node:2014spring.20140509071814.2171: ** parse_config
 def parse_config():
     if not os.path.isfile(data_dir+"config"):
         # create config file if there is no config file
@@ -404,7 +405,7 @@ def parse_config():
     site_title = config_data[0].split(":")[1]
     password = config_data[1].split(":")[1]
     return site_title, password
-#@+node:2014spring.20140508134612.2648: ** file_selector_script
+#@+node:2014spring.20140509071814.2172: ** file_selector_script
 def file_selector_script():
     return '''
 <script type="text/javascript" src="/static/tinymce3/tiny_mce/tiny_mce_popup.js"></script>
@@ -439,7 +440,7 @@ function setLink(link){
 }
 </script>
 '''
-#@+node:2014spring.20140508134612.2649: ** file_lister
+#@+node:2014spring.20140509071814.2173: ** file_lister
 def file_lister(directory, type=None, page=1, item_per_page=10):
     files = os.listdir(download_root_dir+directory)
     total_rows = len(files)
@@ -454,11 +455,11 @@ def file_lister(directory, type=None, page=1, item_per_page=10):
             notlast = True
         if int(page) > 1:
             outstring += "<a href='"
-            outstring += "/file_selector?type="+type+"&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+            outstring += "file_selector?type="+type+"&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
             outstring += "'><<</a> "
             page_num = int(page) - 1
             outstring += "<a href='"
-            outstring += "/file_selector?type="+type+"&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+            outstring += "file_selector?type="+type+"&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
             outstring += "'>Previous</a> "
         span = 10
         for index in range(int(page)-span, int(page)+span):
@@ -469,16 +470,16 @@ def file_lister(directory, type=None, page=1, item_per_page=10):
                     outstring += "<font size='+1' color='red'>"+str(page)+" </font>"
                 else:
                     outstring += "<a href='"
-                    outstring += "/file_selector?type="+type+"&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                    outstring += "file_selector?type="+type+"&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                     outstring += "'>"+str(page_now)+"</a> "
 
         if notlast == True:
             nextpage = int(page) + 1
             outstring += " <a href='"
-            outstring += "/file_selector?type="+type+"&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+            outstring += "file_selector?type="+type+"&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
             outstring += "'>Next</a>"
             outstring += " <a href='"
-            outstring += "/file_selector?type="+type+"&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+            outstring += "file_selector?type="+type+"&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
             outstring += "'>>></a><br /><br />"
         if (int(page) * int(item_per_page)) < total_rows:
             notlast = True
@@ -494,11 +495,11 @@ def file_lister(directory, type=None, page=1, item_per_page=10):
                 outstring += imageselect_access_list(files, starti, total_rows)+"<br />"
         if int(page) > 1:
             outstring += "<a href='"
-            outstring += "/file_selector?type="+type+"&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+            outstring += "file_selector?type="+type+"&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
             outstring += "'><<</a> "
             page_num = int(page) - 1
             outstring += "<a href='"
-            outstring += "/file_selector?type="+type+"&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+            outstring += "file_selector?type="+type+"&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
             outstring += "'>Previous</a> "
         span = 10
         for index in range(int(page)-span, int(page)+span):
@@ -509,15 +510,15 @@ def file_lister(directory, type=None, page=1, item_per_page=10):
                     outstring += "<font size='+1' color='red'>"+str(page)+" </font>"
                 else:
                     outstring += "<a href='"
-                    outstring += "/file_selector?type="+type+"&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                    outstring += "file_selector?type="+type+"&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                     outstring += "'>"+str(page_now)+"</a> "
         if notlast == True:
             nextpage = int(page) + 1
             outstring += " <a href='"
-            outstring += "/file_selector?type="+type+"&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+            outstring += "file_selector?type="+type+"&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
             outstring += "'>Next</a>"
             outstring += " <a href='"
-            outstring += "/file_selector?type="+type+"&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+            outstring += "file_selector?type="+type+"&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
             outstring += "'>>></a>"
     else:
         outstring += "no data!"
@@ -526,17 +527,17 @@ def file_lister(directory, type=None, page=1, item_per_page=10):
         return outstring+"<br /><br /><a href='/fileuploadform'>file upload</a>"
     else:
         return outstring+"<br /><br /><a href='/imageuploadform'>image upload</a>"
-#@+node:2014spring.20140508134612.2650: ** downloadselect_access_list
+#@+node:2014spring.20140509071814.2174: ** downloadselect_access_list
 def downloadselect_access_list(files, starti, endi):
     outstring = ""
     for index in range(int(starti)-1, int(endi)):
         fileName, fileExtension = os.path.splitext(files[index])
         fileSize = os.path.getsize(download_root_dir+"/downloads/"+files[index])
-        outstring += '''<input type="checkbox" name="filename" value="'''+files[index]+'''"><a href="#" onclick='window.setLink("/download/?filepath='''+ \
+        outstring += '''<input type="checkbox" name="filename" value="'''+files[index]+'''"><a href="#" onclick='window.setLink("download/?filepath='''+ \
         download_root_dir.replace('\\', '/')+'''/downloads/'''+files[index]+'''",0); return false;'>'''+ \
         files[index]+'''</a> ('''+str(sizeof_fmt(fileSize))+''')<br />'''
     return outstring
-#@+node:2014spring.20140508134612.2651: ** loadlist_access_list
+#@+node:2014spring.20140509071814.2175: ** loadlist_access_list
 def loadlist_access_list(files, starti, endi, filedir):
     # different extension files, associated links were provided
     # popup window to view images, video or STL files, other files can be downloaded directly
@@ -566,7 +567,7 @@ def loadlist_access_list(files, starti, endi, filedir):
         else:
             outstring += "<input type='checkbox' name='filename' value='"+files[index]+"'><a href='/"+filedir+"_programs/"+files[index]+"'>"+files[index]+"</a> ("+str(fileSize)+")<br />"
     return outstring
-#@+node:2014spring.20140508134612.2652: ** imageselect_access_list
+#@+node:2014spring.20140509071814.2176: ** imageselect_access_list
 def imageselect_access_list(files, starti, endi):
     outstring = '''<head>
 <style>
@@ -592,20 +593,20 @@ a.xhfbfile:hover{
     for index in range(int(starti)-1, int(endi)):
         fileName, fileExtension = os.path.splitext(files[index])
         fileSize = os.path.getsize(download_root_dir+"/images/"+files[index])
-        outstring += '''<a class="xhfbfile" href="#" onclick='window.setLink("/download/?filepath='''+ \
+        outstring += '''<a class="xhfbfile" href="#" onclick='window.setLink("download/?filepath='''+ \
         download_root_dir.replace('\\', '/')+'''/images/'''+files[index]+'''",0); return false;'>'''+ \
         files[index]+'''<span style="position: absolute; z-index: 4;"><br />
-        <img src="/download/?filepath='''+ \
+        <img src="download/?filepath='''+ \
         download_root_dir.replace('\\', '/')+'''/images/'''+files[index]+'''" width="150px"/></span></a> ('''+str(sizeof_fmt(fileSize))+''')<br />'''
     return outstring
-#@+node:2014spring.20140508134612.2653: ** sizeof_fmt
+#@+node:2014spring.20140509071814.2177: ** sizeof_fmt
 def sizeof_fmt(num):
     for x in ['bytes','kb','mb','gb']:
         if num < 1024.0:
             return "%3.1f %s" % (num, x)
         num /= 1024.0
     return "%3.1f %s" % (num, 'tb')
-#@+node:2014spring.20140508134612.2654: ** unique
+#@+node:2014spring.20140509071814.2178: ** unique
 def unique(items):
     found = set([])
     keep = []
@@ -619,7 +620,7 @@ def unique(items):
             count[item] += 1
             keep.append(str(item)+"_"+str(count[item]))
     return keep
-#@+node:2014spring.20140508134612.2655: ** class CMSimply
+#@+node:2014spring.20140509071814.2179: ** class CMSimply
 class CMSimply(object):
     _cp_config = {
     # if there is no utf-8 encoding, no Chinese input available
@@ -633,7 +634,7 @@ class CMSimply(object):
     }
     
     #@+others
-    #@+node:2014spring.20140508134612.2656: *3* __init__
+    #@+node:2014spring.20140509071814.2180: *3* __init__
     def __init__(self):
         # hope to create downloads and images directories　
         if not os.path.isdir(download_root_dir+"downloads"):
@@ -662,7 +663,7 @@ class CMSimply(object):
             except:
                 print("mkdir error")
 
-    #@+node:2014spring.20140508134612.2657: *3* index
+    #@+node:2014spring.20140509071814.2181: *3* index
     @cherrypy.expose
     def index(self, heading=None, *args, **kwargs):
         head, level, page = parse_content()
@@ -690,20 +691,20 @@ class CMSimply(object):
             directory+"</nav><section>"+last_page+" "+next_page+"<br /><h1>"+heading+"</h1>"+search_content(head, page, heading)+"<br />"+last_page+" "+next_page+"</section></div></body></html>"
 
 
-    #@+node:2014spring.20140508134612.2658: *3* default
+    #@+node:2014spring.20140509071814.2182: *3* default
     # default method, if there is no corresponding method, cherrypy will redirect to default method
     # need *args and **kwargs as input variables for all possible URL links
     @cherrypy.expose
     def default_void(self, attr='default', *args, **kwargs):
         raise cherrypy.HTTPRedirect("/")
-    #@+node:2014spring.20140508134612.2659: *3* error_log
+    #@+node:2014spring.20140509071814.2183: *3* error_log
     @cherrypy.expose
     def error_log(self, info="Error"):
         head, level, page = parse_content()
         directory = render_menu(head, level, page)
         return self.set_css()+"<div class='container'><nav>"+ \
         directory+"</nav><section><h1>ERROR</h1>"+info+"</section></div></body></html>"
-    #@+node:2014spring.20140508134612.2660: *3* login
+    #@+node:2014spring.20140509071814.2184: *3* login
     @cherrypy.expose
     def login(self):
         head, level, page = parse_content()
@@ -716,12 +717,12 @@ class CMSimply(object):
         </section></div></body></html>"
         else:
             raise cherrypy.HTTPRedirect("/edit_page")
-    #@+node:2014spring.20140508134612.2661: *3* logout
+    #@+node:2014spring.20140509071814.2185: *3* logout
     @cherrypy.expose
     def logout(self):
         cherrypy.session.delete()
         raise cherrypy.HTTPRedirect("/")
-    #@+node:2014spring.20140508134612.2662: *3* checkLogin
+    #@+node:2014spring.20140509071814.2186: *3* checkLogin
     @cherrypy.expose
     def checkLogin(self, password=None):
         site_title, saved_password = parse_config()
@@ -730,7 +731,7 @@ class CMSimply(object):
             cherrypy.session['admin'] = 1
             raise cherrypy.HTTPRedirect("edit_page")
         raise cherrypy.HTTPRedirect("/")
-    #@+node:2014spring.20140508134612.2663: *3* get_page
+    #@+node:2014spring.20140509071814.2187: *3* get_page
     # seperate page need heading and edit variables, if edit=1, system will enter edit mode
     # single page edit will use ssavePage to save content, it means seperate save page
     @cherrypy.expose
@@ -771,13 +772,13 @@ class CMSimply(object):
                 pagedata = "<h"+level[page_order]+">"+heading+"</h"+level[page_order]+">"+search_content(head, page, heading)
                 outstring = last_page+" "+next_page+"<br />"+ tinymce_editor(directory, cgi.escape(pagedata), page_order)
                 return outstring
-    #@+node:2014spring.20140508134612.2664: *3* isAdmin
+    #@+node:2014spring.20140509071814.2188: *3* isAdmin
     def isAdmin(self):
         if cherrypy.session.get('admin') == 1:
                 return True
         else:
             return False
-    #@+node:2014spring.20140508134612.2665: *3* edit_page
+    #@+node:2014spring.20140509071814.2189: *3* edit_page
     # edit all page content
     @cherrypy.expose
     def edit_page(self):
@@ -790,7 +791,7 @@ class CMSimply(object):
             pagedata =file_get_contents(data_dir+"content.htm")
             outstring = tinymce_editor(directory, cgi.escape(pagedata))
             return outstring
-    #@+node:2014spring.20140508134612.2666: *3* savePage
+    #@+node:2014spring.20140509071814.2190: *3* savePage
     @cherrypy.expose
     def savePage(self, page_content=None):
         # check if administrator
@@ -813,7 +814,7 @@ class CMSimply(object):
         file.close()
         '''
         raise cherrypy.HTTPRedirect("edit_page")
-    #@+node:2014spring.20140508134612.2667: *3* ssavePage
+    #@+node:2014spring.20140509071814.2191: *3* ssavePage
     # seperate save page
     @cherrypy.expose
     def ssavePage(self, page_content=None, page_order=None):
@@ -841,7 +842,7 @@ class CMSimply(object):
         # go back to origin edit status
         edit_url = "get_page?heading="+urllib.parse.quote_plus(head[int(page_order)])+"&edit=1"
         raise cherrypy.HTTPRedirect(edit_url)
-    #@+node:2014spring.20140508134612.2668: *3* save_program
+    #@+node:2014spring.20140509071814.2192: *3* save_program
     @cherrypy.expose
     def save_program(self, filename=None, editor=None, overwrite=0, delete1=0, delete2=0):
         if not self.isAdmin():
@@ -857,7 +858,7 @@ class CMSimply(object):
             else:  
                 return str(filename)+" exists! editor content not saved yet!<br />"
 
-    #@+node:2014spring.20140508134612.2669: *3* save_calcprogram
+    #@+node:2014spring.20140509071814.2193: *3* save_calcprogram
     @cherrypy.expose
     def save_calcprogram(self, filename=None, sheet_content=None, overwrite=0, delete1=0, delete2=0):
         if not self.isAdmin():
@@ -879,7 +880,7 @@ class CMSimply(object):
 
 
 
-    #@+node:2014spring.20140508134612.2670: *3* delete_program
+    #@+node:2014spring.20140509071814.2194: *3* delete_program
     @cherrypy.expose
     def delete_program(self, filename=None, editor=None, overwrite=0, delete1=0, delete2=0):
         if not self.isAdmin():
@@ -893,7 +894,7 @@ class CMSimply(object):
             else:
                 return "can not delete "+str(filename)+"!"
                 
-    #@+node:2014spring.20140508134612.2671: *3* delete_calcprogram
+    #@+node:2014spring.20140509071814.2195: *3* delete_calcprogram
     @cherrypy.expose
     def delete_calcprogram(self, filename=None, sheet_content=None, overwrite=0, delete1=0, delete2=0):
         if not self.isAdmin():
@@ -907,7 +908,7 @@ class CMSimply(object):
             else:
                 return "can not delete "+str(filename)+"!"
                 
-    #@+node:2014spring.20140508134612.2672: *3* fileuploadform
+    #@+node:2014spring.20140509071814.2196: *3* fileuploadform
     @cherrypy.expose
     def fileuploadform(self):
         if self.isAdmin():
@@ -938,7 +939,7 @@ remotePath:function(){
 '''
         else:
             raise cherrypy.HTTPRedirect("login")
-    #@+node:2014spring.20140508134612.2673: *3* fileaxupload
+    #@+node:2014spring.20140509071814.2197: *3* fileaxupload
     @cherrypy.expose
     def fileaxupload(self, *args, **kwargs):
         # need to consider if the uploaded filename already existed.
@@ -955,7 +956,7 @@ remotePath:function(){
             return "files uploaded!"
         else:
             raise cherrypy.HTTPRedirect("login")
-    #@+node:2014spring.20140508134612.2674: *3* flvplayer
+    #@+node:2014spring.20140509071814.2198: *3* flvplayer
     @cherrypy.expose
     def flvplayer(self, filepath=None):
         outstring = '''
@@ -968,7 +969,7 @@ remotePath:function(){
     </object>
     '''
         return outstring
-    #@+node:2014spring.20140508134612.2675: *3* imageuploadform
+    #@+node:2014spring.20140509071814.2199: *3* imageuploadform
     @cherrypy.expose
     def imageuploadform(self):
         if self.isAdmin():
@@ -998,7 +999,7 @@ remotePath:function(){
 '''
         else:
             raise cherrypy.HTTPRedirect("login")
-    #@+node:2014spring.20140508134612.2676: *3* imageaxupload
+    #@+node:2014spring.20140509071814.2200: *3* imageaxupload
     @cherrypy.expose
     def imageaxupload(self, *args, **kwargs):
         if self.isAdmin():
@@ -1013,7 +1014,7 @@ remotePath:function(){
             return "image files uploaded!"
         else:
             raise cherrypy.HTTPRedirect("login")
-    #@+node:2014spring.20140508134612.2677: *3* file_selector
+    #@+node:2014spring.20140509071814.2201: *3* file_selector
     @cherrypy.expose
     def file_selector(self, type=None, page=1, item_per_page=10, keyword=None):
         if not self.isAdmin():
@@ -1025,7 +1026,7 @@ remotePath:function(){
             elif type == "image":
                 #return images_file_selector()
                 return file_lister("images", type, page, item_per_page)
-    #@+node:2014spring.20140508134612.2678: *3* download_list
+    #@+node:2014spring.20140509071814.2202: *3* download_list
     @cherrypy.expose
     def download_list(self, item_per_page=5, page=1, keyword=None, *args, **kwargs):
         if not self.isAdmin():
@@ -1045,11 +1046,11 @@ remotePath:function(){
                 notlast = True
             if int(page) > 1:
                 outstring += "<a href='"
-                outstring += "/download_list?&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "download_list?&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'><<</a> "
                 page_num = int(page) - 1
                 outstring += "<a href='"
-                outstring += "/download_list?&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "download_list?&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>Previous</a> "
             span = 10
             for index in range(int(page)-span, int(page)+span):
@@ -1059,16 +1060,16 @@ remotePath:function(){
                         outstring += "<font size='+1' color='red'>"+str(page)+" </font>"
                     else:
                         outstring += "<a href='"
-                        outstring += "/download_list?&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                        outstring += "download_list?&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                         outstring += "'>"+str(page_now)+"</a> "
 
             if notlast == True:
                 nextpage = int(page) + 1
                 outstring += " <a href='"
-                outstring += "/download_list?&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "download_list?&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>Next</a>"
                 outstring += " <a href='"
-                outstring += "/download_list?&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "download_list?&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>>></a><br /><br />"
             if (int(page) * int(item_per_page)) < total_rows:
                 notlast = True
@@ -1079,11 +1080,11 @@ remotePath:function(){
             
             if int(page) > 1:
                 outstring += "<a href='"
-                outstring += "/download_list?&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "download_list?&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'><<</a> "
                 page_num = int(page) - 1
                 outstring += "<a href='"
-                outstring += "/download_list?&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "download_list?&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>Previous</a> "
             span = 10
             for index in range(int(page)-span, int(page)+span):
@@ -1094,15 +1095,15 @@ remotePath:function(){
                         outstring += "<font size='+1' color='red'>"+str(page)+" </font>"
                     else:
                         outstring += "<a href='"
-                        outstring += "/download_list?&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                        outstring += "download_list?&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                         outstring += "'>"+str(page_now)+"</a> "
             if notlast == True:
                 nextpage = int(page) + 1
                 outstring += " <a href='"
-                outstring += "/download_list?&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "download_list?&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>Next</a>"
                 outstring += " <a href='"
-                outstring += "/download_list?&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "download_list?&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>>></a>"
         else:
             outstring += "no data!"
@@ -1113,7 +1114,7 @@ remotePath:function(){
 
         return self.set_css()+"<div class='container'><nav>"+ \
             directory+"</nav><section><h1>Download List</h1>"+outstring+"<br/><br /></body></html>"
-    #@+node:2014spring.20140508134612.2679: *3* load_list
+    #@+node:2014spring.20140509071814.2203: *3* load_list
     @cherrypy.expose
     def load_list(self, item_per_page=5, page=1, filedir=None, keyword=None, *args, **kwargs):
         '''
@@ -1138,11 +1139,11 @@ remotePath:function(){
                 notlast = True
             if int(page) > 1:
                 outstring += "<a href='"
-                outstring += "/brython?&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "brython?&amp;page=1&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>{{</a> "
                 page_num = int(page) - 1
                 outstring += "<a href='"
-                outstring += "/brython?&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "brython?&amp;page="+str(page_num)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>Previous</a> "
             span = 10
             for index in range(int(page)-span, int(page)+span):
@@ -1152,16 +1153,16 @@ remotePath:function(){
                         outstring += "<font size='+1' color='red'>"+str(page)+" </font>"
                     else:
                         outstring += "<a href='"
-                        outstring += "/brython?&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                        outstring += "brython?&amp;page="+str(page_now)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                         outstring += "'>"+str(page_now)+"</a> "
 
             if notlast == True:
                 nextpage = int(page) + 1
                 outstring += " <a href='"
-                outstring += "/brython?&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "brython?&amp;page="+str(nextpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>Next</a>"
                 outstring += " <a href='"
-                outstring += "/brython?&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
+                outstring += "brython?&amp;page="+str(totalpage)+"&amp;item_per_page="+str(item_per_page)+"&amp;keyword="+str(cherrypy.session.get('download_keyword'))
                 outstring += "'>}}</a><br /><br />"
             '''
             if (int(page) * int(item_per_page)) < total_rows:
@@ -1204,7 +1205,7 @@ remotePath:function(){
         outstring += "<br /><br /></form>"
 
         return outstring
-    #@+node:2014spring.20140508134612.2680: *3* delete_file
+    #@+node:2014spring.20140509071814.2204: *3* delete_file
     @cherrypy.expose
     def delete_file(self, filename=None):
         if not self.isAdmin():
@@ -1228,7 +1229,7 @@ remotePath:function(){
 
         return self.set_css()+"<div class='container'><nav>"+ \
             directory+"</nav><section><h1>Download List</h1>"+outstring+"<br/><br /></body></html>"
-    #@+node:2014spring.20140508134612.2681: *3* doDelete
+    #@+node:2014spring.20140509071814.2205: *3* doDelete
     @cherrypy.expose
     def doDelete(self, filename=None):
         if not self.isAdmin():
@@ -1256,7 +1257,7 @@ remotePath:function(){
 
         return self.set_css()+"<div class='container'><nav>"+ \
             directory+"</nav><section><h1>Download List</h1>"+outstring+"<br/><br /></body></html>"
-    #@+node:2014spring.20140508134612.2682: *3* creo_getvolume
+    #@+node:2014spring.20140509071814.2206: *3* creo_getvolume
     @cherrypy.expose
     def creo_getvolume(self, *args, **kwargs):
         return '''
@@ -1282,7 +1283,7 @@ remotePath:function(){
        }
 </script>
 '''
-    #@+node:2014spring.20140508134612.2683: *3* anglebracket
+    #@+node:2014spring.20140509071814.2207: *3* anglebracket
     @cherrypy.expose
     def anglebracket(self, *args, **kwargs):
         return '''
@@ -1342,7 +1343,7 @@ if (!newfile.Status) {
         }
 </script>
 '''
-    #@+node:2014spring.20140508134612.2684: *3* search_form
+    #@+node:2014spring.20140509071814.2208: *3* search_form
     @cherrypy.expose
     def search_form(self):
         if self.isAdmin():
@@ -1355,7 +1356,7 @@ if (!newfile.Status) {
         </section></div></body></html>"
         else:
             raise cherrypy.HTTPRedirect("login")
-    #@+node:2014spring.20140508134612.2685: *3* doSearch
+    #@+node:2014spring.20140509071814.2209: *3* doSearch
     @cherrypy.expose
     def doSearch(self, keyword=None):
         if not self.isAdmin():
@@ -1373,7 +1374,7 @@ if (!newfile.Status) {
             keyword.lower()+"<br /><br />in the following pages:<br /><br />"+ \
             match+" \
          </section></div></body></html>"
-    #@+node:2014spring.20140508134612.2686: *3* set_css
+    #@+node:2014spring.20140509071814.2210: *3* set_css
     def set_css(self):
         outstring = '''<!doctype html><html><head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8">
@@ -1425,7 +1426,7 @@ if (!newfile.Status) {
     </confmenu></header>
     '''
         return outstring
-    #@+node:2014spring.20140508134612.2687: *3* edit_config
+    #@+node:2014spring.20140509071814.2211: *3* edit_config
     @cherrypy.expose
     def edit_config(self):
         head, level, page = parse_content()
@@ -1446,7 +1447,7 @@ if (!newfile.Status) {
      <input type='hidden' name='password2' value='"+password+"'> \
         <input type='submit' value='send'></form> \
         </section></div></body></html>"
-    #@+node:2014spring.20140508134612.2688: *3* saveConfig
+    #@+node:2014spring.20140509071814.2212: *3* saveConfig
     @cherrypy.expose
     def saveConfig(self, site_title=None, password=None, password2=None):
         if not self.isAdmin():
@@ -1469,12 +1470,12 @@ if (!newfile.Status) {
             file.close()
             return self.set_css()+"<div class='container'><nav>"+ \
             directory+"</nav><section><h1>config file saved</h1><a href='/'>Home</a></body></html>"
-    #@+node:2014spring.20140508134612.2689: *3* listdir
+    #@+node:2014spring.20140509071814.2213: *3* listdir
     # use to check directory variable data
     @cherrypy.expose
     def listdir(self):
         return download_root_dir +","+data_dir
-    #@+node:2014spring.20140508134612.2690: *3* sitemap
+    #@+node:2014spring.20140509071814.2214: *3* sitemap
     @cherrypy.expose
     def sitemap(self):
         head, level, page = parse_content()
@@ -1483,7 +1484,7 @@ if (!newfile.Status) {
 
         return self.set_css()+"<div class='container'><nav>"+ \
         directory+"</nav><section><h1>Site Map</h1>"+sitemap+"</section></div></body></html>"
-    #@+node:2014spring.20140508134612.2691: *3* brython
+    #@+node:2014spring.20140509071814.2215: *3* brython
     @cherrypy.expose
     def brython(self, item_per_page=5, page=1, keyword=None, filename=None, *args, **kwargs):
         part1 =  '''
@@ -1778,7 +1779,7 @@ if (!newfile.Status) {
             return part1+part2+load_program+part3+self.load_list(item_per_page, page, "brython")+part4+part5
         else:
             return part1+adm1+part2+adm2+load_program+part3+self.load_list(item_per_page, page, "brython")+part4+adm3+part5
-    #@+node:2014spring.20140508134612.2692: *3* ethercalc
+    #@+node:2014spring.20140509071814.2216: *3* ethercalc
     @cherrypy.expose
     def ethercalc(self, filename=None, *args, **kwargs):
         part1 = '''
@@ -1970,7 +1971,7 @@ if (!newfile.Status) {
     '''
         return part1+load_program+part2
 
-    #@+node:2014spring.20140508134612.2693: *3* calc
+    #@+node:2014spring.20140509071814.2217: *3* calc
     @cherrypy.expose
     def calc(self, item_per_page=5, page=1, keyword=None, filename=None, *args, **kwargs):
         part1 = '''
@@ -2201,7 +2202,7 @@ if (!newfile.Status) {
             # for admin
             return part1+adm1+load_program+part2+adm2+self.load_list(item_per_page, page, "calc")+part3
 
-    #@+node:2014spring.20140508134612.2694: *3* openjscad
+    #@+node:2014spring.20140509071814.2218: *3* openjscad
     @cherrypy.expose
     def openjscad(self, *args, **kwargs):
         return '''
@@ -2421,7 +2422,7 @@ if (!newfile.Status) {
     </script>
     </body></html> 
     '''
-    #@+node:2014spring.20140508134612.2695: *3* ucrobot
+    #@+node:2014spring.20140509071814.2219: *3* ucrobot
     @cherrypy.expose
     def ucrobot(self):
         return '''
@@ -2445,10 +2446,10 @@ if (!newfile.Status) {
     </body></html>
     '''
     #@-others
-#@+node:2014spring.20140508134612.2696: ** class Download
+#@+node:2014spring.20140509071814.2220: ** class Download
 class Download:
     #@+others
-    #@+node:2014spring.20140508134612.2697: *3* index
+    #@+node:2014spring.20140509071814.2221: *3* index
     @cherrypy.expose
     def index(self, filepath):
         return serve_file(filepath, "application/x-download", "attachment")
