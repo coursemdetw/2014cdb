@@ -80,8 +80,11 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="kmolII_lite.20140505203306.1631" a="E"><vh>@path 2bg16</vh>
 <v t="kmolII_lite.20140505203306.1632"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014spring.20140430140611.1878"><vh>@path 2bg3</vh>
+<v t="2014spring.20140430140611.1878" a="E"><vh>@path 2bg3</vh>
 <v t="kmolII_lite.20140430172749.1604"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140512232735.2633" a="E"><vh>@path 2bg12</vh>
+<v t="2014pythonE.20140512232735.2634"><vh>@edit doc.txt</vh></v>
 </v>
 </v>
 </v>
@@ -124,6 +127,7 @@ course-mde-tw 為協同人員
 
 2bg14 報告摘要內容
 </t>
+<t tx="2014pythonE.20140512232735.2633"></t>
 <t tx="2014spring.20140430140611.1875">Week 10:
 
 第四組缺席
