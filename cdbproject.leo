@@ -57,6 +57,9 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<v t="2014pythonE.20140513163709.1881" a="E"><vh>@path 2bg17</vh>
+<v t="2014pythonE.20140513163709.1882" a="O"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="2014pythonE.20140507142951.1656" a="E"><vh>@path 2bg14</vh>
 <v t="2014pythonE.20140507142951.1657" a="O"><vh>@edit doc.txt</vh></v>
 </v>
@@ -87,8 +90,11 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="kmolII_lite.20140505203306.1631" a="E"><vh>@path 2bg16</vh>
 <v t="kmolII_lite.20140505203306.1632"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014spring.20140430140611.1878"><vh>@path 2bg3</vh>
+<v t="2014spring.20140430140611.1878" a="E"><vh>@path 2bg3</vh>
 <v t="kmolII_lite.20140430172749.1604"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140512232735.2633" a="E"><vh>@path 2bg12</vh>
+<v t="2014pythonE.20140512232735.2634"><vh>@edit doc.txt</vh></v>
 </v>
 </v>
 </v>
@@ -130,6 +136,19 @@ course-mde-tw 為協同人員
 ===
 
 2bg14 報告摘要內容
+</t>
+<t tx="2014pythonE.20140512232735.2633"></t>
+<t tx="2014pythonE.20140513163709.1881"></t>
+<t tx="2014pythonE.20140513163709.1882">@nocolor
+2bg17報告內容
+===
+
+2bg17報告內容
+
+報告摘要
+===
+
+2bg17 報告摘要內容
 </t>
 <t tx="2014spring.20140430140611.1875">Week 10:
 
@@ -208,7 +227,7 @@ d = c.scanAllDirectives(p)
 # 最後再利用 insert 將標題頁面放入數列最前頭
 '''
 # 這裡是原先使用的手動檔名排序數列, 好處為可以任意編排次序
-filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt','2bg6/doc.txt']
+filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt','2bg6/doc.txt','2bg17/doc.txt']
 '''
 # 定義要合併檔案的共同目錄
 directory = "V:/project/2014cdb/wsgi/doc/"
