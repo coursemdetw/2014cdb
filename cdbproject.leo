@@ -60,6 +60,9 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<v t="2014pythonE.20140514155607.1899" a="E"><vh>@path 2bg18</vh>
+<v t="2014pythonE.20140514155607.1900"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="2014pythonE.20140513163709.1881" a="E"><vh>@path 2bg17</vh>
 <v t="2014pythonE.20140513163709.1882" a="O"><vh>@edit doc.txt</vh></v>
 </v>
@@ -153,7 +156,11 @@ course-mde-tw 為協同人員
 
 2bg17 報告摘要內容
 </t>
+<<<<<<< HEAD
 <t tx="2014pythonE.20140514141707.2193"></t>
+=======
+<t tx="2014pythonE.20140514155607.1899"></t>
+>>>>>>> f79fc29302d42a77e7842bf44b7191af41a53076
 <t tx="2014spring.20140430140611.1875">Week 10:
 
 第四組缺席
