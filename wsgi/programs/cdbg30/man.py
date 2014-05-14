@@ -4,12 +4,12 @@ import cherrypy
 # 這是 MAN 類別的定義
 '''
 # 在 application 中導入子模組
-import programs.cdbg30.man as cdbg30_man
-# 加入 cdbg30 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
-root.cdbg30.man = cdbg30_man.MAN()
+import programs.cdag30.man as cdag30_man
+# 加入 cdag30 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
+root.cdag30.man = cdag30_man.MAN()
 
 # 完成設定後, 可以利用
-/cdbg30/man/assembly
+/cdag30/man/assembly
 # 呼叫 man.py 中 MAN 類別的 assembly 方法
 '''
 class MAN(object):
@@ -36,6 +36,97 @@ class MAN(object):
 </head>
 <body>
 </script><script language="JavaScript">
+/*設計一個零件組立函示*/
+// featID 為組立件第一個組立零件的編號
+// inc 則為 part1 的組立順序編號, 第一個入組立檔編號為 featID+0
+// part2 為外加的零件名稱
+function axis_plane_assembly(session, assembly, transf, featID, inc, part2, axis1, plane1, axis2, plane2){
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/"+part2);
+var componentModel = session.GetModelFromDescr(descr);
+var componentModel = session.RetrieveModel(descr);
+if (componentModel != void null)
+{
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+var ids = pfcCreate("intseq");
+ids.Append(featID+inc);
+var subPath = pfcCreate("MpfcAssembly").CreateComponentPath(assembly, ids);
+subassembly = subPath.Leaf;
+var asmDatums = new Array(axis1, plane1);
+var compDatums = new Array(axis2, plane2);
+var relation = new Array (pfcCreate("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS, pfcCreate("pfcModelItemType").ITEM_SURFACE);
+var constrs = pfcCreate("pfcComponentConstraints");
+    for (var i = 0; i < 2; i++)
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (true, false);
+        constrs.Append(constr);
+    }
+asmcomp.SetConstraints(constrs, void null);
+}
+// 以上為 axis_plane_assembly() 函式
+//
+function three_plane_assembly(session, assembly, transf, featID, inc, part2, plane1, plane2, plane3, plane4, plane5, plane6){
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/"+part2);
+var componentModel = session.GetModelFromDescr(descr);
+var componentModel = session.RetrieveModel(descr);
+if (componentModel != void null)
+{
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+var ids = pfcCreate("intseq");
+ids.Append(featID+inc);
+var subPath = pfcCreate("MpfcAssembly").CreateComponentPath(assembly, ids);
+subassembly = subPath.Leaf;
+var constrs = pfcCreate("pfcComponentConstraints");
+var asmDatums = new Array(plane1, plane2, plane3);
+var compDatums = new Array(plane4, plane5, plane6);
+var MpfcSelect = pfcCreate("MpfcSelect");
+for (var i = 0; i < 3; i++)
+{
+    var asmItem = subassembly.GetItemByName(pfcCreate("pfcModelItemType").ITEM_SURFACE, asmDatums[i]);
+    
+    if (asmItem == void null)
+    {
+        interactFlag = true;
+        continue;
+    }
+    var compItem = componentModel.GetItemByName(pfcCreate("pfcModelItemType").ITEM_SURFACE, compDatums[i]);
+    if (compItem == void null)
+    {
+        interactFlag = true;
+        continue;
+    }
+    var asmSel = MpfcSelect.CreateModelItemSelection(asmItem, subPath);
+    var compSel = MpfcSelect.CreateModelItemSelection(compItem, void null);
+    var constr = pfcCreate("pfcComponentConstraint").Create(pfcCreate("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+    constr.AssemblyReference = asmSel;
+    constr.ComponentReference = compSel;
+    constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (false, false);
+    constrs.Append(constr);
+}
+asmcomp.SetConstraints(constrs, void null);
+}
+// 以上為 three_plane_assembly() 函式
+//
 // 假如 Creo 所在的操作系統不是 Windows 環境
 if (!pfcIsWindows())
 // 則啟動對應的 UniversalXPConnect 執行權限 (等同 Windows 下的 ActiveX)
@@ -129,6 +220,7 @@ constr.ComponentReference = compSel;
        // 強制變數為 false, 表示不強制約束, 只有透過點與線對齊時需設為 true
        // 忽略變數為 false, 約束條件在更新模型時是否忽略, 設為 false 表示不忽略
        // 通常在組立 closed chain 機構時,  忽略變數必須設為 true, 才能完成約束
+       // 因為三個面絕對約束, 因此輸入變數為 false, false
 constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (false, false);
 // 將互動選擇相關資料, 附加在程式約束變數之後
 constrs.Append(constr);
@@ -175,7 +267,7 @@ for (var i = 0; i < 2; i++)
         continue;
     }
                   // 設定零件參考面, compItem 為 model item
-    var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+    var compItem = componentModel.GetItemByName (relationItem[i], compDatums[i]);
     if (compItem == void null)
     {
         interactFlag = true;
@@ -204,7 +296,7 @@ if (componentModel != void null)
 {
         // 注意這個 asmcomp 即為設定約束條件的本體
         // asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
-var asmcomp = assembly.AssembleComponent (componentModel, transf);
+var asmcomp = assembly.AssembleComponent(componentModel, transf);
 }
 // 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
 var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
@@ -252,6 +344,90 @@ for (var i = 0; i < 2; i++)
 // 設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
 // 請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
 asmcomp.SetConstraints (constrs, void null);
+/**---------------------- LEGO_HAND 右手手腕--------------------**/
+// 右手臂 LEGO_ARM_RT.prt 基準  A_2, DTM2
+// 右手腕 LEGO_HAND.prt 基準 A_1, DTM3
+var descr = pfcCreate ("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/LEGO_HAND.prt");
+var componentModel = session.GetModelFromDescr(descr);
+var componentModel = session.RetrieveModel(descr);
+if (componentModel != void null)
+{
+        // 注意這個 asmcomp 即為設定約束條件的本體
+        // asmcomp 為特徵物件,直接將零件, 以 transf 座標轉換放入組立檔案中
+var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+// 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+var ids = pfcCreate ("intseq");
+
+// 組立件中 LEGO_BODY.prt 編號為 featID
+// LEGO_ARM_RT.prt 則是組立件第二個置入的零件,  編號為 featID+1
+ids.Append(featID+1);
+// 在 assembly 模型中, 根據子零件的編號, 建立子零件所對應的路徑
+var subPath = pfcCreate("MpfcAssembly").CreateComponentPath(assembly, ids);
+subassembly = subPath.Leaf;
+// 以下針對 LEGO_ARM_RT 的 A_2 軸與 DTM2 基準面及 HAND 的  A_1 軸線與 DTM3 進行對齊與面接約束
+var asmDatums = new Array("A_2", "DTM2");
+var compDatums = new Array("A_1", "DTM3");
+// 組立的關係變數為對齊與面接
+var relation = new Array (pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate ("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+// 組立元件則為軸與平面
+var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS, pfcCreate("pfcModelItemType").ITEM_SURFACE);
+// 建立約束條件變數, 軸採對齊而基準面則以面接進行約束
+var constrs = pfcCreate ("pfcComponentConstraints");
+for (var i = 0; i < 2; i++)
+{
+                  // 設定組立參考面, asmItem 為 model item
+    var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+                  // 若無對應的組立參考面, 則啟用互動式平面選擇表單 flag
+    if (asmItem == void null)
+    {
+        interactFlag = true;
+        continue;
+    }
+                  // 設定零件參考面, compItem 為 model item
+    var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+    if (compItem == void null)
+    {
+        interactFlag = true;
+        continue;
+    }
+                  // 採用互動式設定相關的變數
+    var MpfcSelect = pfcCreate("MpfcSelect");
+    var asmSel = MpfcSelect.CreateModelItemSelection(asmItem, subPath);
+    var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+    var constr = pfcCreate("pfcComponentConstraint").Create (relation[i]);
+    constr.AssemblyReference  = asmSel;
+    constr.ComponentReference = compSel;
+                  // 因為透過軸線對齊, 第一 force 變數需設為 true
+    constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (true, false);
+                  // 將互動選擇相關資料, 附加在程式約束變數之後
+    constrs.Append(constr);
+}
+// 設定組立約束條件, 以 asmcomp 特徵進行約束條件設定
+// 請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
+asmcomp.SetConstraints (constrs, void null);
+// 利用函式呼叫組立左手 HAND
+axis_plane_assembly(session, assembly, transf, featID, 2, 
+                              "LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
+// 利用函式呼叫組立人偶頭部 HEAD
+// BODY id 為 featID+0, 以 A_2 及  DTM3 約束
+// HEAD 則直接呼叫檔案名稱, 以 A_2, DTM2 約束
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "LEGO_HEAD.prt", "A_2", "DTM3", "A_2", "DTM2");
+// Body 與 WAIST 採三個平面約束組立
+// Body 組立面為 DTM4, DTM5, DTM6
+// WAIST 組立面為 DTM1, DTM2, DTM3
+three_plane_assembly(session, assembly, transf, featID, 0, "LEGO_WAIST.prt", "DTM4", "DTM5", "DTM6", "DTM1", "DTM2", "DTM3"); 
+// 右腳
+axis_plane_assembly(session, assembly, transf, featID, 6, 
+                              "LEGO_LEG_RT.prt", "A_8", "DTM4", "A_10", "DTM1");
+// 左腳
+axis_plane_assembly(session, assembly, transf, featID, 6, 
+                              "LEGO_LEG_LT.prt", "A_8", "DTM5", "A_10", "DTM1");
+// 紅帽
+axis_plane_assembly(session, assembly, transf, featID, 5, 
+                              "LEGO_HAT.prt", "A_2", "TOP", "A_2", "FRONT");     
 </script>
 </body>
 </html>
