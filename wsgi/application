@@ -498,6 +498,24 @@ root.cdbg2 = cdbg2.CDBG2()
 import programs.cdbg13 as cdbg13
 root.cdbg13 = cdbg13.CDBG13()
 
+# 以下為 cdbg30 的模組導入與連結設定
+import programs.cdbg30 as cdbg30
+root.cdbg30 = cdbg30.CDBG30()
+import programs.cdbg30.man as cdbg30_man
+# 加入 cdag30 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
+root.cdbg30.man = cdbg30_man.MAN()
+#####################################################
+# 導入協同程式 cdbg9
+#####################################################
+# 以下為 cdbg9 的模組導入與連結設定
+import programs.cdbg9 as cdbg9
+root.cdbg9 = cdbg9.CDBG9()
+#####################################################
+# 導入協同程式 cdbg6
+#####################################################
+# 以下為 cdbg6 的模組導入與連結設定
+import programs.cdbg6 as cdbg6
+root.cdbg6 = cdbg6.CDBG6()
 
 # 假如在 os 環境變數中存在 'OPENSHIFT_REPO_DIR', 表示程式在 OpenShift 環境中執行
 if 'OPENSHIFT_REPO_DIR' in os.environ.keys():

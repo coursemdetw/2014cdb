@@ -24,21 +24,28 @@
 <v t="2014spring.20140430175148.1847"><vh>@edit README.md</vh></v>
 <v t="2014spring.20140430205920.1866"><vh>分散式課程評量</vh></v>
 <v t="2014spring.20140430140611.1945"><vh>第十一週任務</vh></v>
+<v t="2014spring.20140513154549.3590" a="E"><vh>第十二週任務</vh>
+<v t="2014spring.20140513154549.3591"><vh>組立約束條件屬性</vh></v>
+</v>
 <v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
 <v t="course-mde-tw.20140417093332.2028"
 expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
-<v t="2014spring.20140509071814.2155" a="E"
+<v t="2014spring.20140509071814.2155"
 expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
-<v t="2014spring.20140503125211.2473"><vh>分組程式開發</vh>
+<v t="2014spring.20140503125211.2473" a="E"><vh>分組程式開發</vh>
 <v t="2014pythonE.20140507141007.1807" a="E"><vh>@path wsgi/programs/cdbg13</vh>
 <v t="2014pythonE.20140507141007.1808"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2474" a="E"><vh>@path wsgi/programs/cdbg1</vh>
 <v t="2014spring.20140503125211.2475"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014spring.20140503125211.2476" a="E"><vh>@path wsgi/programs/cdbg2</vh>
+<v t="2014spring.20140503125211.2476"><vh>@path wsgi/programs/cdbg2</vh>
 <v t="2014spring.20140503125211.2477"><vh>@edit __init__.py</vh></v>
+</v>
+<v t="2014spring.20140513154549.3595" a="E"><vh>@path wsgi/programs/cdbg30</vh>
+<v t="2014spring.20140513154549.3596"><vh>@edit __init__.py</vh></v>
+<v t="2014spring.20140513154549.3597"><vh>@edit man.py</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
@@ -50,6 +57,9 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<v t="2014pythonE.20140513163709.1881" a="E"><vh>@path 2bg17</vh>
+<v t="2014pythonE.20140513163709.1882" a="O"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="2014pythonE.20140507142951.1656" a="E"><vh>@path 2bg14</vh>
 <v t="2014pythonE.20140507142951.1657" a="O"><vh>@edit doc.txt</vh></v>
 </v>
@@ -80,8 +90,11 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="kmolII_lite.20140505203306.1631" a="E"><vh>@path 2bg16</vh>
 <v t="kmolII_lite.20140505203306.1632"><vh>@edit doc.txt</vh></v>
 </v>
-<v t="2014spring.20140430140611.1878"><vh>@path 2bg3</vh>
+<v t="2014spring.20140430140611.1878" a="E"><vh>@path 2bg3</vh>
 <v t="kmolII_lite.20140430172749.1604"><vh>@edit doc.txt</vh></v>
+</v>
+<v t="2014pythonE.20140512232735.2633" a="E"><vh>@path 2bg12</vh>
+<v t="2014pythonE.20140512232735.2634"><vh>@edit doc.txt</vh></v>
 </v>
 </v>
 </v>
@@ -123,6 +136,19 @@ course-mde-tw 為協同人員
 ===
 
 2bg14 報告摘要內容
+</t>
+<t tx="2014pythonE.20140512232735.2633"></t>
+<t tx="2014pythonE.20140513163709.1881"></t>
+<t tx="2014pythonE.20140513163709.1882">@nocolor
+2bg17報告內容
+===
+
+2bg17報告內容
+
+報告摘要
+===
+
+2bg17 報告摘要內容
 </t>
 <t tx="2014spring.20140430140611.1875">Week 10:
 
@@ -201,7 +227,7 @@ d = c.scanAllDirectives(p)
 # 最後再利用 insert 將標題頁面放入數列最前頭
 '''
 # 這裡是原先使用的手動檔名排序數列, 好處為可以任意編排次序
-filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt','2bg6/doc.txt']
+filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt','2bg6/doc.txt','2bg17/doc.txt']
 '''
 # 定義要合併檔案的共同目錄
 directory = "V:/project/2014cdb/wsgi/doc/"
@@ -294,6 +320,83 @@ root.c2g1 = c2g1.C2G1()
     3. 完成後先在近端測試, 完全符合需求且根據標準流程, 拉下目前協同專案區最新的 github 程式碼後, 檢驗 .leo 是否可以正確開啟, 各對應目錄是否正確配置, application 是否可以正確執行後, 再推送到協同專案區, 並與各分組的 OpenShift 雲端網站進行同步.</t>
 <t tx="2014spring.20140503125211.2474"></t>
 <t tx="2014spring.20140503125211.2476"></t>
+<t tx="2014spring.20140513154549.3590">總結目前所完成的相關配置與任務
+
+  - 最初利用 Dokuwiki on OpenShift 建立多人協同的  wiki 寫作系統
+  
+  好處是此一系統可以由管理者自由掌控, 所有內容都是純文字檔案, 無需資料庫
+  
+  -  接著, 為了讓管理者可以利用程式控管 Dokuwiki 多人模式下的帳號與密碼, 採用 Python 3 與  sha1 編碼, 產生多人帳號與密碼, 並且可以自由控管各帳號所能擷取的頁面
+  
+  - 近端與遠端的 Dokuwiki 可以嵌入 STL 零件, 設計圖片, Vimeo 影片等產品設計相關內容
+  
+  - 接著為了利用 Python 3 控管多人所建立的文書處理與產品設計程式內容, 利用 Leo Editor 與 CherryPy 建立一個 Github 上全班協同的專案倉儲, 所有 collaborators 可以自由更新專案內容, 而且可以自由編寫 Github 所提供的 Wiki 系統.
+  
+   - 此外全班協同專案中, 除了各組協同文書處理外, 也透過 CherryPy 與 Python 3 的模組導入, 讓各組各自擁有網際協同程式模組的控制權, 可以利用 Creo Pro/Web.Link 建立網際協同設計程式.
+   
+   - 協同倉儲的 CherryPy 程式除了可在 Github 上進行版次管理外, 也可與對應的 Bitbucket 倉儲與 OpenShift 雲端網站進行同步, 而雲端網站的同步設定則分為全班協同網站(由老師控管) 以即由各組自行設定對應的 OpenShift 雲端網站兩種.
+   
+   本週的任務一即是希望透過目前已經完成的協同環境配置, 利用流程圖進行表示, 將各模組的功能與設置目的加以整合, 並將內容放入各組的文書處理區.
+   
+   但是, 由於全班協同的雲端網站目前並沒有內容管理系統, 因此本週將設法嵌入 CMSimply 套件, 充當全班協同網站的內容管理系統, 以便導引全班協同的相關內容.</t>
+<t tx="2014spring.20140513154549.3591">Constraint Attributes
+約束條件屬性
+
+Methods and Properties Introduced:
+衍生的方法與性質
+
+pfcConstraintAttributes.Create()
+建立約束條件屬性
+
+pfcConstraintAttributes.Force
+強制約束條件
+
+pfcConstraintAttributes.Ignore
+忽略約束條件
+
+The method pfcConstraintAttributes.Create() returns the constraint attributes object based on the values of the following input
+parameters:
+
+約束條件建立方法, 依照下列輸入變數而傳回不同的約束條件屬性
+
+• Ignore—Constraint is ignored during regeneration. Use this capability to store extra constraints on the component, which allows you to quickly toggle between different constraints.
+
+是否忽略 – 約束條件在更新模型時是否忽略, 可以利用此一忽略特性, 將額外的約束條件附加在組立元件上, 讓使用者可在不同約束條件間切換
+
+• Force—Constraint has to be forced for line and point alignment.
+
+是否強制 – 當使用線或點對齊約束時, 可以強制進行約束.
+
+• None—No constraint attributes. This is the default value.
+
+無約束屬性 – 內定為無約束屬性.
+
+static pfcConstraintAttributes Create (boolean Force, boolean Ignore)
+
+Creates a new constraint attributes object.
+
+用來建立新的約束條件屬性物件
+
+Parameters:
+
+輸入變數
+
+Force
+
+強制變數
+
+true if the constraint should be forced (required for ASM_CONSTRAINT_PNT_ON_LINE).
+
+若設為真, 表示約束條件將會強制執行 (使用點在線上約束時必須設為真)
+
+Ignore
+
+忽略變數
+
+true if the constraint is stored with the component, but not enforced. false if the constraint is enforced.
+
+若設為真, 表示約束將附加在元件上, 但卻不強制執行, 若設為偽, 則該約束條件將會強制執行.</t>
+<t tx="2014spring.20140513154549.3595"></t>
 <t tx="course-mde-tw.20140417093332.1998"></t>
 <t tx="course-mde-tw.20140417093332.1999">QSplitter::handle {
     background-color: #CAE1FF; /* lightSteelBlue1 */
