@@ -34,6 +34,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2473" a="E"><vh>分組程式開發</vh>
+<v t="2014pythonE.20140519202248.1434" a="E"><vh>@path wsgi/programs/cdbg8</vh>
+<v t="2014pythonE.20140519202248.1435"><vh>@edit __init__.py</vh></v>
+</v>
 <v t="2014pythonE.20140519074351.1903" a="E"><vh>@path wsgi/programs/cdbg9</vh>
 <v t="2014pythonE.20140519074351.1904"><vh>@edit __init__.py</vh></v>
 </v>
@@ -63,6 +66,9 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
+<v t="2014pythonE.20140519202248.1430" a="E"><vh>@path 2bg8</vh>
+<v t="2014pythonE.20140519202248.1431" a="O"><vh>@edit doc.txt</vh></v>
+</v>
 <v t="2014pythonE.20140514155607.1899" a="E"><vh>@path 2bg18</vh>
 <v t="2014pythonE.20140514155607.1900"><vh>@edit doc.txt</vh></v>
 </v>
@@ -162,6 +168,19 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140514141707.2193"></t>
 <t tx="2014pythonE.20140514155607.1899"></t>
 <t tx="2014pythonE.20140519074351.1903"></t>
+<t tx="2014pythonE.20140519202248.1430"></t>
+<t tx="2014pythonE.20140519202248.1431">@nocolor
+2bg8報告內容
+===
+
+2bg8報告內容
+
+報告摘要
+===
+
+2bg8 報告摘要內容
+</t>
+<t tx="2014pythonE.20140519202248.1434"></t>
 <t tx="2014spring.20140430140611.1875">Week 10:
 
 第四組缺席
