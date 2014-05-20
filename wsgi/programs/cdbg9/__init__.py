@@ -4,7 +4,7 @@ import cherrypy
 class CDBG9(object):
     # 各組利用 index 引導隨後的程式執行
     @cherrypy.expose
-    def index(self, *args, **kwargs):
+    def index(self,*args, **kwargs):
         outstring = '''
 這是 2014CDB 協同專案下的 cdbg9 分組程式開發網頁, 以下為 W12 的任務執行內容.<br />
 <!-- 這裡採用相對連結, 而非網址的絕對連結 (這一段為 html 註解) -->
@@ -24,7 +24,7 @@ class CDBG9(object):
     則程式啟動後, 可以利用 /cdbg9/cube1 呼叫函式執行
     '''
     @cherrypy.expose
-    def cube1(self, *args, **kwargs):
+    def cube1(self, w,h,l):
         '''
     // 假如要自行打開特定零件檔案
     // 若第三輸入為 false, 表示僅載入 session, 但是不顯示
@@ -64,17 +64,20 @@ c = solid.GetParam("c");
 volume=0;
 count=0;
 try
-{
-    for(i=0;i<5;i++)
-    {
-        myf = 100;
-        myn = myf + i*10;
+{ 
+   var w,l,h;
+    w='''+w+''';
+    l='''+l+''';
+    h='''+h+''';
+        
         // 設定變數值, 利用 ModelItem 中的 CreateDoubleParamValue 轉換成 Pro/Web.Link 所需要的浮點數值
-    aValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myn);
-    bValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myn);
+    aValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(w);
+    bValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(l);
+    cValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(h);
     // 將處理好的變數值, 指定給對應的零件變數
     a.Value = aValue;
     b.Value = bValue;
+    c.Value = cValue;
     //零件尺寸重新設定後, 呼叫 Regenerate 更新模型
     solid.Regenerate(void null);
     //利用 GetMassProperty 取得模型的質量相關物件
