@@ -1,5 +1,7 @@
 import cherrypy
-
+import os
+import math
+import urllib.parse
 # 這是 CDBG13 類別的定義
 class CDBG13(object):
     # 各組利用 index 引導隨後的程式執行
@@ -11,8 +13,15 @@ class CDBG13(object):
 <a href="cube1">cdbg13 正方體參數繪圖</a>(尺寸變數 a, b, c)<br /><br />
 <a href="fourbar1">四連桿組立</a><br /><br />
 請確定下列連桿位於 V:/home/fourbar 目錄中, 且開啟空白 Creo 組立檔案.<br />
-<a href="/static/fourbar.7z">fourbar.7z</a>(滑鼠右鍵存成 .7z 檔案)<br />
-'''
+<a href="/static/fourbar.7z">fourbar.7z</a>(滑鼠右鍵存成 .7z 檔案)<br /><br />
+<a href="cube2">cdbg13 正方體參數繪圖</a>(尺寸變數 a, b, c)<br /><br />
+這是 2014CDBG13的第十二週第二小題作業，請輸入以下參數.<br />
+<form action="cube2">
+            請輸入A值:<input type=text name=A value=1 ><br />
+            請輸入B值:<input type=text name=B value=1 ><br />
+            請輸入C值:<input type=text name=C value=1 ><br />
+            <input type="submit" value="send"><br 10/></form>'''
+
         return outstring
 
     ''' 
@@ -23,6 +32,94 @@ class CDBG13(object):
     
     則程式啟動後, 可以利用 /cdbg13/cube1 呼叫函式執行
     '''
+    
+    @cherrypy.expose
+    def cube2(self, A=None, B=None,C=None):
+        '''
+    // 假如要自行打開特定零件檔案
+    // 若第三輸入為 false, 表示僅載入 session, 但是不顯示
+    // ret 為 model open return
+    var ret = document.pwl.pwlMdlOpen("axle_5.prt", "v:/tmp", false);
+    if (!ret.Status) {
+        alert("pwlMdlOpen failed (" + ret.ErrorCode + ")");
+    }
+    //將 ProE 執行階段設為變數 session
+    var session = pfcGetProESession();
+    // 在視窗中打開零件檔案, 並且顯示出來
+    var window = session.OpenFile(pfcCreate("pfcModelDescriptor").CreateFromFileName("axle_5.prt"));
+    var solid = session.GetModel("axle_5.prt",pfcCreate("pfcModelType").MDL_PART);
+'''
+        outstring ='''
+    <!DOCTYPE html> 
+    <html>
+    <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <script type="text/javascript" src="/static/weblink/examples/jscript/pfcUtils.js"></script>
+    <script type="text/javascript" src="/static/weblink/examples/jscript/pfcParameterExamples.js"></script>
+    <script type="text/javascript" src="/static/weblink/examples/jscript/pfcComponentFeatExamples.js"></script>
+    </head>
+    <body>
+    <script type="text/javascript">
+var session = pfcGetProESession ();
+
+// 以目前所開啟的檔案為 solid model
+// for volume
+var solid = session.CurrentModel;
+var a, b, c, i, j, aValue, bValue, cValue, volume, count,x,y,z;
+// 將模型檔中的 a 變數設為 javascript 中的 a 變數
+a = solid.GetParam("a");
+b = solid.GetParam("b");
+c = solid.GetParam("c");
+x='''+A+''';
+y='''+B+''';
+z='''+C+''';
+volume=0;
+count=0;
+try
+{
+    for(i=0;i<1;i++)
+    {
+        myna = x ;
+        mynb = y ;
+        mync = z ;
+        // 設定變數值, 利用 ModelItem 中的 CreateDoubleParamValue 轉換成 Pro/Web.Link 所需要的浮點數值
+    aValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myna);
+    bValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(mynb);
+    cValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(mync);
+    // 將處理好的變數值, 指定給對應的零件變數
+    a.Value = aValue;
+    b.Value = bValue;
+    c.Value = cValue;
+    //零件尺寸重新設定後, 呼叫 Regenerate 更新模型
+    solid.Regenerate(void null);
+    //利用 GetMassProperty 取得模型的質量相關物件
+    properties = solid.GetMassProperty(void null);
+    volume = properties.Volume;
+    count = count + 1;
+    alert("執行第"+count+"次,零件總體積:"+volume);
+    // 將零件存為新檔案
+    //var newfile = document.pwl.pwlMdlSaveAs("filename.prt", "v:/tmp", "filename_5_"+count+".prt");
+    // 測試  stl 轉檔
+    //var stl_csys = "PRT_CSYS_DEF";
+    //var stl_instrs = new pfcCreate ("pfcSTLASCIIExportInstructions").Create(stl_csys);
+    //stl_instrs.SetQuality(10);  
+    //solid.Export("v:/tmp/filename_5_"+count+".stl", stl_instrs); 
+    // 結束測試轉檔
+    //if (!newfile.Status) {
+            //alert("pwlMdlSaveAs failed (" + newfile.ErrorCode + ")");
+        //}
+    } // for loop
+}
+catch (err)
+{
+    alert ("Exception occurred: "+pfcGetExceptionType (err));
+}
+    </script>
+    </body>
+    </html>
+    '''
+        return outstring
+
     @cherrypy.expose
     def cube1(self, *args, **kwargs):
         '''
@@ -104,7 +201,7 @@ catch (err)
     </html>
     '''
         return outstring
-        
+       
     @cherrypy.expose
     def fourbar1(self, *args, **kwargs):
         outstring = '''
