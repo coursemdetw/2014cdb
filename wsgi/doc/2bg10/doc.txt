@@ -1,0 +1,97 @@
+2bg10報告內容
+===
+
+這是 2bg10報告內容
+
+報告摘要
+===
+
+這是 2bg10 報告摘要內容
+標題: Collaborative Writing Approach to Wiki
+原文(摘要):
+1.The most important characteristic of wikis is that they provide support for the collaborative pro-duction of shared knowledge, documents, and study materials by means of reading, writing, group reflection and interaction.
+2.Collaborative writing requires technical skills associated with formatting, editing, use of fonts, color, input of multimedia elements (text, graphics, images, au-dio and video) onto wiki pages, hyper linking, etc.
+3.In addition, collaborative writing involves ac-tive participation of the project members, shared editing, reading and group writing strategies, revisions, peer-review, and group evaluations of contributions (Judd, Kennedy, & Cropper, 2010; Kim, Hong, Bonk, & Lim, 2009; Meishar-Tal & Gorsky, 2010).
+4.Hence, the development of wiki-based collaborative writing must differ from other approaches to software production in a number of aspects. Approaches that use conventional software development, such as the waterfall model (Pressman, 2000), or extensions of these approaches to Web-based learning (Horton & Lynch, 1999), to address the whole software process are not flexible enough, time-consuming, and too complicated, to be applied to collaborative writing projects.
+5.Domain-specific approaches that are exclusively devoted to Web-based development (Balasubramaniam, Pries-Hje & Baskerville, 2003; Baskerville, 1999; Murugesan & Ginige, 2001) do not explicitly address the specific char-acteristics that are proper to wikis, such as collaboration, participation, active involvement in the gradual production of texts and documents.
+6.Another important difference between conventional software production and wiki development is that wikis are mostly concerned with writing proc-esses rather than software and programming activities, even though some programming skills (mostly html coding) are needed.
+7.In addition, a practical approach to collaborative writing needs to consider that wiki developers are not software experts.
+8.Nevertheless, some elements of soft-ware production are still important and need to be considered for wiki development, such as user involvement, architecture design, quality insurance, and component integration.
+9.Finally, evolu-tionary approaches such as rapid prototyping are more suitable to the collaborative character of wiki-based writing.
+10.Rapid prototyping is powerful to quickly generate an initial text that can be improved, changed, and modified collaboratively through incremental revisions.
+===
+中文:
+1.Wikis最重要的特徵是它們提供的合作生產的共享知識、文檔、以及閱、讀寫作，小組反思和互動的方式學習材料的支持。
+2.協同寫作要求與格式相關的技術技能、編輯，使用的字體、顏色、多媒體元素（文字、圖形、圖像、音頻和視頻）到wiki頁面的超連結等輸入。
+3.此外，協同寫作牽涉的專案成員，共享編輯，閱讀和寫作組策略，修改，評審，以及評估小組的貢獻(Judd, Kennedy, & Cropper, 2010; Kim, Hong, Bonk, & Lim, 2009; Meishar-Tal & Gorsky, 2010)。
+4.因此，為基於wiki的協同寫作的發展必須不同於其他的方法來生產軟件在多個方面。使用傳統的軟件開發，如瀑布模型(Pressman, 2000)，或這些方法基於網絡的學習（Horton & Lynch, 1999）擴展的方法，以解決整個軟件過程是不夠靈活，費時，太複雜了，要應用到協同寫作項目。
+5.特定領域的辦法，是專門致力於基於Web的開發(Balasubramaniam, Pries-Hje & Baskerville, 2003; Baskerville, 1999; Murugesan & Ginige, 2001)並沒有明確解決具體字符，acteristics是恰當的wikis，這樣的協同、參與，逐步生產文本和文件的積極參與。
+6.傳統的軟件生產和的wiki發展的另一個重要區別是，wiki大多寫proc-esses，而不是軟件和編程活動，即使一些編程技巧(mostly html coding)是必要的。
+7.此外，實用的方法，協同寫作需要考慮的wiki開發商不是軟件專家。
+8.然而，軟件生產中的一些內容仍然是重要的，需要考慮的wiki開發，如用戶參與、架構設計、優質的保險和組件組成。
+9.最後，evolu-tionary的方法，如快速原型更適合的基於wiki的書面合作字符。
+10.快速成型的功能快速生成可以改善並增加修正協同修改的初始文本。
+===
+2bg10 w8報告摘要
+
+(第一題) 請寫一個執行時可以列出 9×9 乘法表的網際 Python 程式, 然後 Push 到個人 bitbucket 空間, 而且同步指到 OpenShift 個人帳號上執行.
+
+程式碼:
+for x in range(0,10):
+      for y in range(0,10):
+          print(x,'*',y,'=',x*y)
+          
+解題過程:
+打完程式後，之後我把它上傳到bitbucket，git add .→ git commit -m “99”→ git push，之後為了要把99乘法表顯示在openshift CMSimply上，進去openshift CMSimply的資料夾→ wsgi資料夾→ application檔案，在裡面新增一個class 的格式，之後連線FileZilla , 把application檔案覆蓋到app-root/runtime/repo/wsgi的application檔案下，之後進去openshift CMSimply的網站，就顯示99乘法表了。
+
+2.(第二題) 請將上述執行過程錄為 flv 後, 上傳到個人的 Vemeo 空間中, 並將網址回報到各組網站 (dokuwiki 與 CMSimply)與報告中, 並且將相關心得與報告連結登錄到 wiki.mde.tw 第八週的分組頁面中.
+
+網址:https://vimeo.com/93010133
+
+3.(第三題) (協同計分, 分組進行) 請在各組的雲端 dowiki 中,根據下列 40 個帳號與密碼, 新增對應的使用者帳號與密碼後, 將雲端網址登錄在 wiki.mde.tw 各組第八週頁面中, 並說明操作過程與心得後, 將心得整理成 pdf 後繳交到 course@mde.tw.
+
+解題過程:用手打
+
+圖片連結:
+https://www.facebook.com/photo.php?fbid=237748633096932&set=a.107866072751856.1073741826.100005853909062&type=1&theater 
+程式碼連結:
+https://www.facebook.com/photo.php?fbid=237751783096617&set=a.107866072751856.1073741826.100005853909062&type=1&theater
+===
+2bg10 w9報告摘要
+
+1.(第一題 30%) 請寫一個執行時可以列出以十為底對數表的網際 Python 程式, 然後 Push 到個人 bitbucket 空間, 而且同步指到 OpenShift 個人帳號上執行.
+
+程式碼:
+import math
+  count = 0
+  text='%04d'
+  for i in range(100,200+10):
+      print(text%round(math.log(i/100,10)*10000,0),end='-')
+      count += 1
+      if(count == 10):
+          print()
+          count = 0
+解題過程:
+打完程式後，有顯示出來，但無法顯示表單在CMSimply網址上，只能用最蠢的方式<tr><td>一個一個慢慢打。
+
+2.(第二題 40%) 請在個人的 OpenShift 平台上建立一個能夠列印出與九九乘法表結果完全相同的網際程式, 接著在乘法表上端加上兩個輸入表單, 讓使用者輸入兩個整數, 按下送出鍵後, 程式會列出以此兩個整數為基底的乘法表, 例如: 若兩個欄位都輸入: 9, 則列出九九乘法表, 若輸入 9, 20, 則列出 9×20 的乘法表.
+
+解題過程:
+打完程式後，之後我把它上傳到bitbucket，git add .→ git commit -m “w9_2”→ git push，之後為了要把99乘法表顯示在openshift CMSimply上，進去openshift CMSimply的資料夾→ wsgi資料夾→ application檔案，在裡面新增一個class 的格式，之後連線FileZilla , 把application檔案覆蓋到app-root/runtime/repo/wsgi的application檔案下，之後進去openshift CMSimply的網站，輸入 9, 20, 則顯示 9×20 的乘法表.
+
+3.(第三題 30%) 請在各組的雲端 dokuwiki 中, 新增帳號與密碼都是由 abc001 ~ abc399 字串所組成的 399 名用戶登入對應資料, 並將製作過程與驗證流程拍成 flv 後上傳到個人的 Vimeo 資料區, 並將連結放在個人第九週頁面.
+
+程式碼:
+import hashlib
+  #convert user_password into sha1 encoded string
+  def gen_password(user_password):
+      return hashlib.sha1(user_password.encode("utf-8")).hexdigest()
+  text='abc%03d'
+  for i in range(1,399+1):
+      print(text%(i)+':'+gen_password(text%(i))+':'+text%(i)+'@gmail.com:'+text%(i)+'@gmail.com:'+'user')
+
+解題過程:
+先寫一個程式使他能產生帳號與密碼都是由 abc001 ~ abc399 字串所組成的 399 名用戶登入對應資料，之後連線到openshift dokuwiki的FileZilla，把產生出來的程式碼貼到app-root/data/conf/users.auth.php下，之後開啟dokuwiki網站即可。
+===
+
+

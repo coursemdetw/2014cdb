@@ -2,8 +2,7 @@
 ===
 
 這是 2bg1報告內容
-openshift網址
-http://2014cdb-40123201.rhcloud.com/
+
 
 報告摘要
 ===
