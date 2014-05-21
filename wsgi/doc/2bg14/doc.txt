@@ -1,9 +1,79 @@
-﻿2bg14報告內容
+2bg14報告內容
 ===
 
-2bg14報告內容
+這是 2bg14報告內容
 
 報告摘要
 ===
 
-2bg14 報告摘要內容
+這是 2bg14 報告摘要內容
+
+第十週心得整理
+===
+
+1.Creo 必須使用 ” 64 位元” “教育版本”
+2.Openshift與Github同步
+3.在doc及leo下新增14組
+4.修正 core/LeoApp.py 第 3237 行, 加入 encoding=“UTF-8”, 否則會發出 5.CP950 無法解讀 UTF-8 編碼內容的錯誤.
+6.git clone https://github.com/coursemdetw/2014cdb.git
+7.leo 及 2014cdb\wsgi\doc 下新增cdbg14
+8.git add . ; git commit -m “add cdbg14” ; git push
+9.若顯示hint則在git pull 之後再 git push
+
+第十一週心得整理
+===
+
+Proweb.link組合
+
+方形
+
+1.設定IE→工具→網際網路選項→安全性→信任的網站→自訂等級 允許信任網站執行 ActiveX
+2.設定Creo config.pro 路徑為Creo2_m060_x64\Common Files\M060\text
+3.開啟64位元Creo
+4.建立一方型,並給定參數及關係,工具→參數→加入A.B.C;工具→關係→d0=a,d1=b,d2=c
+5.在內嵌網頁輸入http://2014cda-mdenfu.rhcloud.com/cdag1/cube1
+
+四連桿
+
+1.將fourbar資料夾放入V:\home
+2.在Creo下新增一組合件
+    在內嵌網頁輸入http://2014cda-mdenfu.rhcloud.com/cdag1/fourbar1
+
+第十二週心得整理
+===
+
+Github上傳之前確認:
+1.leo存檔後,關閉後再開啟,確認可以正常開啟
+2.執行leo內的application,連到localhost:8080確認正常執行
+3.傳到自己組別的Github
+4.確認無誤後再傳到課程協同Github
+
+本週完成事項:
+1.建立本組(14)之CMSimply
+2.並同步至本組的Github
+
+
+
+第十二週任務
+===
+
+1.請各組將第八週與第九週考試的摘要報告放入 Github 協同專案中的分組報告區, 並將內容放入各組控管的同步 OpenShift 網站中. (佔期末成績 5分)
+
+第十四組OpenShift 網站:https://cdbg14-40123223space.rhcloud.com
+
+W8,W9摘要:
+1.   建立各組  OpenShift  上的  dokuwiki:   
+http://cd2bno14-40123223space.rhcloud.com/doku.php 
+2.   請將課程教材一  與  課程教材二  整理成中文簡要內容,  並根據協同產品設
+計專案中的說明,  以組為單位完成期中報告: 
+課程教材一:https://copy.com/GEh7IVDbp4oy
+課程教材二:https://copy.com/yxnSpzNnwqPd
+3.   各組所完成的期中報告原始資料必須送到  Bitbucket  與  OpenShift 
+Dokuwiki  雲端維基網站,  並在網站中提供報告  html  連結與  pdf  文件下
+載. 
+https://bitbucket.org/40123246/14wiki 
+4.   期中考試與分組報告必選題: 
+坐位分配:https://copy.com/u4zUM3WxxQrR
+
+2.請各組設法利用 CherryPy 與 Pro/Web.Link 技術, 在 Github 協同專案中建立一個能夠透過連結或表單控制 Cube 零件, a, b, 或 c 零件尺寸的網際協同程式, 讓使用者可以藉以利用近端的 Creo 嵌入式瀏覽器控制 Cube 的尺寸後列出該零件的體積大小. (佔期末成績 5分)
+https://cdbg14-40123223space.rhcloud.com/cdbg14
