@@ -1,14 +1,14 @@
 import cherrypy
 
-# 這是 CDBG9 類別的定義
-class CDBG9(object):
+# 這是 CDBG8 類別的定義
+class CDBG8(object):
     # 各組利用 index 引導隨後的程式執行
     @cherrypy.expose
-    def index(self,*args, **kwargs):
+    def index(self, *args, **kwargs):
         outstring = '''
-這是 2014CDB 協同專案下的 cdbg9 分組程式開發網頁, 以下為 W12 的任務執行內容.<br />
+這是 2014CDB 協同專案下的 cdbg8 分組程式開發網頁, 以下為 W12 的任務執行內容.<br />
 <!-- 這裡採用相對連結, 而非網址的絕對連結 (這一段為 html 註解) -->
-<a href="cube1">cdbg9 正方體參數繪圖</a>(尺寸變數 a, b, c)<br /><br />
+<a href="cube1">cdbg8 正方體參數繪圖</a>(尺寸變數 a, b, c)<br /><br />
 <a href="fourbar1">四連桿組立</a><br /><br />
 請確定下列連桿位於 V:/home/fourbar 目錄中, 且開啟空白 Creo 組立檔案.<br />
 <a href="/static/fourbar.7z">fourbar.7z</a>(滑鼠右鍵存成 .7z 檔案)<br />
@@ -18,13 +18,13 @@ class CDBG9(object):
     ''' 
     假如採用下列規畫
     
-    import programs.cdbg9 as cdbg9
-    root.cdbg9 = cdbg9.CDBG9()
+    import programs.cdbg8 as cdbg8
+    root.cdbg8 = cdbg8.CDBG8()
     
-    則程式啟動後, 可以利用 /cdbg9/cube1 呼叫函式執行
+    則程式啟動後, 可以利用 /cdbg8/cube1 呼叫函式執行
     '''
     @cherrypy.expose
-    def cube1(self, w,h,l):
+    def cube1(self, *args, **kwargs):
         '''
     // 假如要自行打開特定零件檔案
     // 若第三輸入為 false, 表示僅載入 session, 但是不顯示
@@ -58,26 +58,23 @@ var solid = session.CurrentModel;
 
 var a, b, c, i, j, aValue, bValue, cValue, volume, count;
 // 將模型檔中的 a 變數設為 javascript 中的 a 變數
-a = solid.GetParam("l");
-b = solid.GetParam("w");
-c = solid.GetParam("h");
+a = solid.GetParam("a");
+b = solid.GetParam("b");
+c = solid.GetParam("c");
 volume=0;
 count=0;
 try
-{ 
-   var w,l,h;
-    w='''+w+''';
-    l='''+l+''';
-    h='''+h+''';
-        
+{
+    for(i=0;i<5;i++)
+    {
+        myf = 100;
+        myn = myf + i*10;
         // 設定變數值, 利用 ModelItem 中的 CreateDoubleParamValue 轉換成 Pro/Web.Link 所需要的浮點數值
-    aValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(l);
-    bValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(w);
-    cValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(h);
+    aValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myn);
+    bValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(myn);
     // 將處理好的變數值, 指定給對應的零件變數
     a.Value = aValue;
     b.Value = bValue;
-    c.Value = cValue;
     //零件尺寸重新設定後, 呼叫 Regenerate 更新模型
     solid.Regenerate(void null);
     //利用 GetMassProperty 取得模型的質量相關物件

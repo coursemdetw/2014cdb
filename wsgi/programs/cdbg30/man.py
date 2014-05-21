@@ -36,7 +36,7 @@ class MAN(object):
 </head>
 <body>
 </script><script language="JavaScript">
-/*設計一個零件組立函示*/
+/*設計一個零件組立函式*/
 // featID 為組立件第一個組立零件的編號
 // inc 則為 part1 的組立順序編號, 第一個入組立檔編號為 featID+0
 // part2 為外加的零件名稱
@@ -427,7 +427,10 @@ axis_plane_assembly(session, assembly, transf, featID, 6,
                               "LEGO_LEG_LT.prt", "A_8", "DTM5", "A_10", "DTM1");
 // 紅帽
 axis_plane_assembly(session, assembly, transf, featID, 5, 
-                              "LEGO_HAT.prt", "A_2", "TOP", "A_2", "FRONT");     
+                              "LEGO_HAT.prt", "A_2", "TOP", "A_2", "FRONT");
+// regenerate 並且 repaint 組立檔案
+assembly.Regenerate (void null);
+session.GetModelWindow (assembly).Repaint();    
 </script>
 </body>
 </html>
