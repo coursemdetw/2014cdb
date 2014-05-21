@@ -58,9 +58,9 @@ var solid = session.CurrentModel;
 
 var a, b, c, i, j, aValue, bValue, cValue, volume, count;
 // 將模型檔中的 a 變數設為 javascript 中的 a 變數
-a = solid.GetParam("a");
-b = solid.GetParam("b");
-c = solid.GetParam("c");
+a = solid.GetParam("l");
+b = solid.GetParam("w");
+c = solid.GetParam("h");
 volume=0;
 count=0;
 try
@@ -71,8 +71,8 @@ try
     h='''+h+''';
         
         // 設定變數值, 利用 ModelItem 中的 CreateDoubleParamValue 轉換成 Pro/Web.Link 所需要的浮點數值
-    aValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(w);
-    bValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(l);
+    aValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(l);
+    bValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(w);
     cValue = pfcCreate ("MpfcModelItem").CreateDoubleParamValue(h);
     // 將處理好的變數值, 指定給對應的零件變數
     a.Value = aValue;
