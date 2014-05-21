@@ -205,6 +205,8 @@ root.cdbg30 = cdbg30.CDBG30()
 import programs.cdbg30.man as cdbg30_man
 # 加入 cdag30 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
 root.cdbg30.man = cdbg30_man.MAN()
+import programs.cdbg30.man2 as cdbg30_man2
+root.cdbg30.man2 = cdbg30_man2.MAN()
 #####################################################
 # 導入協同程式 cdbg9
 #####################################################

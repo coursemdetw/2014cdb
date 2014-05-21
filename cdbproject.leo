@@ -49,9 +49,10 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="2014pythonE.20140514141707.2193"><vh>@path wsgi/programs/cdbg5</vh>
 <v t="2014pythonE.20140514141707.2194"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014spring.20140513154549.3595"><vh>@path wsgi/programs/cdbg30</vh>
+<v t="2014spring.20140513154549.3595" a="E"><vh>@path wsgi/programs/cdbg30</vh>
 <v t="2014spring.20140513154549.3596"><vh>@edit __init__.py</vh></v>
 <v t="2014spring.20140513154549.3597"><vh>@edit man.py</vh></v>
+<v t="2014spring.20140521133830.1904"><vh>@edit man2.py</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
