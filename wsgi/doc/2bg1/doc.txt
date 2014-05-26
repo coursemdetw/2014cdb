@@ -1,7 +1,148 @@
-2bg1報告內容
+協同產品設計實習專案-2bg1
 ===
 
-這是 2bg1報告內容
+組員：
+40123101 江玟菱
+
+40123102 吳逸鈞
+
+40123132 楊家威
+
+OpenShift 網站: 2014cdb-40123201.rhcloud.com/
+
+---------------------------------------------
+
+W8考試:
+
+1. 第一題 : 請寫一個執行時可以列出 9×9 乘法表的網際 Python 程式, 然後 Push 到個人 bitbucket 空間, 而且同步指到 OpenShift 個人帳號上執行.
+
+2. 第二題 : 請將上述執行過程錄為 flv 後, 上傳到個人的 Vemeo 空間中, 並將網址回報到各組網站 (dokuwiki 與 CMSimply)與報告中, 並且將相關心得與報告連結登錄到 wiki.mde.tw 第八週的分組頁面中.
+
+3. 第三題 : (協同計分, 分組進行) 請在各組的雲端 dowiki 中,根據下列 40 個帳號與密碼, 新增對應的使用者帳號與密碼後, 將雲端網址登錄在 wiki.mde.tw 各組第八週頁面中, 並說明操作過程與心得後, 將心得整理成 pdf 後繳交到 course@mde.tw.
+
+
+---------------------------------------------
+
+W9考試:
+
+1. 第一題 : 請寫一個執行時可以列出以十為底對數表的網際 Python 程式，然後 Push 到個人 bitbucket 空間，而且同步指到 OpenShift 個人帳號上執行。
+
+- 程式碼:
+
+```python 
+import math
+count = 0
+text='%04d'
+for i in range(100,200+10):
+    print(text%round(math.log(i/100,10)*10000,0),end='-')
+    count += 1
+    if(count == 10):
+        print()
+        count = 0
+```
+
+- 解題過程:
+　　　　打完程式之後按go執行，就可以跑出以十為底對數。
+
+- 解題影片: http://vimeo.com/92706809
+ 
+
+- 解題心得:
+　　　　只會程式以及上傳到bitbucket上。
+
+ 
+
+2. 請在個人的 OpenShift 平台上建立一個能夠列印出與九九乘法表結果完全相同的網際程式，接著在乘法表上端加上兩個輸入表單, 讓使用者輸入兩個整數，按下送出鍵後，程式會列出以此兩個整數為基底的乘法表，例如: 若兩個欄位都輸入: 9，則列出九九乘法表, 若輸入 9，20，則列出 9×20 的乘法表。
+
+
+- 解題過程:
+                打完程式後，之後把它上傳到bitbucket，git add .→ git commit -m “w9_2”→ git push，進去openshift CMSimply的資料夾→ wsgi資料夾→ application檔案，在裡面新增一個class 的格式，之後連線FileZilla , 把application檔案覆蓋到app－root/runtime/repo/wsgi的application檔案下，就可以在openshift的CMSimply上顯示，進到openshift的CMSimply後,輸入 9，20，就可以列出 9×20 的乘法表了。
+
+- 解題影片:http://vimeo.com/92707233
+ 
+- 解題心得:
+            打好程式之後為了要在openshift的CMSimply上可以顯示研究了很久。
+
+
+3. 請在各組的雲端 dokuwiki 中，新增帳號與密碼都是由 abc001 ~ abc399 字串所組成的 399 名用戶登入對應資料，並將製作過程與驗證流程拍成 flv 後上傳到個人的 Vimeo 資料區，並將連結放在個人第九週頁面。
+
+- 程式碼:
+
+```python
+import hashlib
+# convert user_password into sha1 encoded string
+def gen_password(user_password):
+    return hashlib.sha1(user_password.encode("utf-8")).hexdigest()
+text='abc%03d'
+for i in range(1,399+1):
+    print(text%(i)+':'+gen_password(text%(i))+':'+text%(i)+'@gmail.com:'+text%(i)+'@gmail.com:'+'user')
+```
+
+- 解題過程:
+                寫一個能產生帳號密碼由abc001 ~ abc399字串所組成的399個用戶登入資料，然後打開FileZilla並且連線到openshift的dokuwiki，把程式碼貼到app-root/data/conf/users.auth.php下，之後打開dokuwiki網站並登入→上面admin→user manager確認。
+
+- 解題影片:http://vimeo.com/92707729
+
+- 解題心得:
+                打好程式產生帳號密碼由abc001 ~ abc399字串所組成的399個用戶，並且要讓這些帳號密碼跟一開始的格式一樣，所以還要再改程式，如同users.auth.php。
+
+ 
+
+copy : https://www.copy.com/browse/copy/w9_2.PNG
+
+vimeo : http://vimeo.com/user27154279/videos
+
+bitbucket : https://bitbucket.org/40123201/2014s2b/src
+
+---------------------------------------------
+
+w12任務:
+
+任務一: 請各組將第八週與第九週考試的摘要報告放入 Github 協同專案中的分組報告區, 並將內容放入各組控管的同步 OpenShift 網站中. (佔期末成績 5分)
+
+- 解題過程:
+          將之前W8及W9的考試報告放入github的分組報告區，並將內容放入openshift網站中
+Openshift網站: http://2014cdb-40123201.rhcloud.com
+
+任務二: 請各組設法利用 CherryPy 與 Pro/Web.Link 技術, 在 Github 協同專案中建立一個能夠透過連結或表單控制 Cube 零件, a, b, 或 c 零件尺寸的網際協同程式, 讓使用者可以藉以利用近端的 Creo 嵌入式瀏覽器控制 Cube 的尺寸後列出該零件的體積大小. (佔期末成績 5分)
+
+- 解題過程:
+          將原本程式裡的迴圈刪掉，增加立方體的長寬高之變數，使其可在URL後面輸入變數更改其數值，ex:　http://127.0.0.1:8080/cdag1/cube1?w=100&h=100&l=100
+
+ 
+
+---------------------------------------------
+
+w13任務
+
+任務1: 請以手動方式, 從下方下載 lego_man.7z 零件, 完成組立後, 以組員為單位, 在各分組報告區詳細說明組立過程的重點與注意事項. (5 分)
+
+任務2: 請利用 Vimeo 及 copy.com 存放任務一中的手動組立流程影片檔案, 以組員為單位, 將連結放入各分組報告區中. (5 分)
+
+任務3: 請仔細觀察協同程式中的 lego_man 自動組立程式, 並且從下方 lego_parts_edu.7z 中下載相同名稱的 lego_man 零件, 請詳細比較兩個壓縮檔案解開的 lego_man 零件檔案, 有哪些差別? 請將詳細比對結果以組為單位將資料放入各分組的報告中. (5 分)
+
+* 40123201心得
+
+- 任務1: 下載 lego_man.7z 零件，開始creo，建立一個組立檔，先叫出body零件檔，之後用軸與軸和面與面間的限制條件組上arm、hand、waist、head、leg、以及hat個零件，即可完成手動的樂高零組件之組立。
+
+- 任務2:
+ copy:https://www.copy.com/browse/copy/w13_man_assembly.flv
+
+vimeo: https://vimeo.com/95975522
+
+使用camstudio錄下組立過程並且用formatfactory轉成flv.檔後上傳到vimeo以及copy.com，轉檔後錄下的解提過程前後順序亂掉了!!已經試過很多次依舊亂掉，還沒找到原因以及解決辦法。
+
+* 40123202心得
+* 40123242心得
+ 
+
+- 任務3:
+
+使用lego_man的零件做自動組立的時候，每個零件是按照特徵ID排列組裝而成，反之，使用lego_parts_edu.7z中的lego_man 零件作自動組立時，各零件的特徵ID並不是按照順序排列而是有跳號，這表示在組立的過程中可能有刪除零件等等的現象，使用程式自動組立計可省時又方便控制 。
+
+
+
+
 
 
 報告摘要

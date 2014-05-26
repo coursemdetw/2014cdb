@@ -43,7 +43,7 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="2014pythonE.20140507141007.1807" a="E"><vh>@path wsgi/programs/cdbg13</vh>
 <v t="2014pythonE.20140507141007.1808"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014spring.20140503125211.2474"><vh>@path wsgi/programs/cdbg1</vh>
+<v t="2014spring.20140503125211.2474" a="E"><vh>@path wsgi/programs/cdbg1</vh>
 <v t="2014spring.20140503125211.2475"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2476"><vh>@path wsgi/programs/cdbg2</vh>
@@ -52,7 +52,7 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="2014pythonE.20140514141707.2193"><vh>@path wsgi/programs/cdbg5</vh>
 <v t="2014pythonE.20140514141707.2194"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014spring.20140513154549.3595"><vh>@path wsgi/programs/cdbg30</vh>
+<v t="2014spring.20140513154549.3595" a="E"><vh>@path wsgi/programs/cdbg30</vh>
 <v t="2014spring.20140513154549.3596"><vh>@edit __init__.py</vh></v>
 <v t="2014spring.20140513154549.3597"><vh>@edit man.py</vh></v>
 </v>
