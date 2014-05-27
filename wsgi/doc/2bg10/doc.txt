@@ -92,6 +92,7 @@ import hashlib
 
 解題過程:
 先寫一個程式使他能產生帳號與密碼都是由 abc001 ~ abc399 字串所組成的 399 名用戶登入對應資料，之後連線到openshift dokuwiki的FileZilla，把產生出來的程式碼貼到app-root/data/conf/users.auth.php下，之後開啟dokuwiki網站即可。
+......
 ===
 
 

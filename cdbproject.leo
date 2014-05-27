@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -34,6 +34,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2473" a="E"><vh>分組程式開發</vh>
+<v t="2014pythonE.20140521202529.2011" a="E"><vh>@path wsgi/programs/cdbg14</vh>
+<v t="2014pythonE.20140521202529.2012"><vh>@edit __init__.py</vh></v>
+</v>
 <v t="2014pythonE.20140519202248.1434" a="E"><vh>@path wsgi/programs/cdbg8</vh>
 <v t="2014pythonE.20140519202248.1435"><vh>@edit __init__.py</vh></v>
 </v>
@@ -43,10 +46,10 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="2014pythonE.20140507141007.1807" a="E"><vh>@path wsgi/programs/cdbg13</vh>
 <v t="2014pythonE.20140507141007.1808"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014spring.20140503125211.2474"><vh>@path wsgi/programs/cdbg1</vh>
+<v t="2014spring.20140503125211.2474" a="E"><vh>@path wsgi/programs/cdbg1</vh>
 <v t="2014spring.20140503125211.2475"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014spring.20140503125211.2476"><vh>@path wsgi/programs/cdbg2</vh>
+<v t="2014spring.20140503125211.2476" a="E"><vh>@path wsgi/programs/cdbg2</vh>
 <v t="2014spring.20140503125211.2477"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014pythonE.20140514141707.2193"><vh>@path wsgi/programs/cdbg5</vh>
@@ -83,7 +86,7 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="2014pythonE.20140513163709.1882" a="O"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140507142951.1656" a="E"><vh>@path 2bg14</vh>
-<v t="2014pythonE.20140507142951.1657" a="O"><vh>@edit doc.txt</vh></v>
+<v t="2014pythonE.20140507142951.1657"><vh>@edit doc.txt</vh></v>
 </v>
 <v t="2014pythonE.20140430162301.1761" a="E"><vh>@path 2bg13</vh>
 <v t="2014pythonE.20140430162301.1762"><vh>@edit doc.txt</vh></v>
@@ -148,21 +151,10 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140430170549.1693"></t>
 <t tx="2014pythonE.20140507141007.1807"></t>
 <t tx="2014pythonE.20140507142951.1656"></t>
-<t tx="2014pythonE.20140507142951.1657">@nocolor
-2bg14報告內容
-===
-
-2bg14報告內容
-
-報告摘要
-===
-
-2bg14 報告摘要內容
-</t>
 <t tx="2014pythonE.20140512232735.2633"></t>
 <t tx="2014pythonE.20140513163709.1881"></t>
 <t tx="2014pythonE.20140513163709.1882">@nocolor
-2bg17報告內容
+﻿2bg17報告內容
 ===
 
 2bg17報告內容
@@ -177,7 +169,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140519074351.1903"></t>
 <t tx="2014pythonE.20140519202248.1430"></t>
 <t tx="2014pythonE.20140519202248.1431">@nocolor
-2bg8報告內容
+﻿2bg8報告內容
 ===
 
 2bg8報告內容
@@ -190,6 +182,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140519202248.1434"></t>
 <t tx="2014pythonE.20140520001559.1748"></t>
 <t tx="2014pythonE.20140520001559.1752"></t>
+<t tx="2014pythonE.20140521202529.2011"></t>
 <t tx="2014spring.20140430140611.1875">Week 10:
 
 第四組缺席
@@ -608,7 +601,7 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140430174205.1613"></t>
 <t tx="kmolII_lite.20140505193226.1631"></t>
 <t tx="kmolII_lite.20140505193226.1632">@nocolor
-2bg11報告內容
+﻿2bg11報告內容
 ===
 
 這是 2bg11報告內容
