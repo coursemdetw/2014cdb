@@ -34,6 +34,9 @@ expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
 expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2473" a="E"><vh>分組程式開發</vh>
+<v t="2014pythonE.20140528233931.2166" a="E"><vh>@path wsgi/programs/cdbg15</vh>
+<v t="2014pythonE.20140528233931.2167"><vh>@edit __init__.py</vh></v>
+</v>
 <v t="2014pythonE.20140521202529.2011" a="E"><vh>@path wsgi/programs/cdbg14</vh>
 <v t="2014pythonE.20140521202529.2012"><vh>@edit __init__.py</vh></v>
 </v>
@@ -45,6 +48,7 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="2014pythonE.20140507141007.1807" a="E"><vh>@path wsgi/programs/cdbg13</vh>
 <v t="2014pythonE.20140507141007.1808"><vh>@edit __init__.py</vh></v>
+<v t="2014pythonE.20140528223628.1925"><vh>@edit remsub6.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2474" a="E"><vh>@path wsgi/programs/cdbg1</vh>
 <v t="2014spring.20140503125211.2475"><vh>@edit __init__.py</vh></v>
@@ -184,6 +188,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140520001559.1748"></t>
 <t tx="2014pythonE.20140520001559.1752"></t>
 <t tx="2014pythonE.20140521202529.2011"></t>
+<t tx="2014pythonE.20140528233931.2166"></t>
 <t tx="2014spring.20140430140611.1875">Week 10:
 
 第四組缺席

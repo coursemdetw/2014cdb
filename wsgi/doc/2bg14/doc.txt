@@ -77,3 +77,52 @@ https://bitbucket.org/40123246/14wiki
 
 2.請各組設法利用 CherryPy 與 Pro/Web.Link 技術, 在 Github 協同專案中建立一個能夠透過連結或表單控制 Cube 零件, a, b, 或 c 零件尺寸的網際協同程式, 讓使用者可以藉以利用近端的 Creo 嵌入式瀏覽器控制 Cube 的尺寸後列出該零件的體積大小. (佔期末成績 5分)
 https://cdbg14-40123223space.rhcloud.com/cdbg14
+
+第十四週各組員心得
+===
+
+40123223 林重佑 心得
+
+第一題:
+1.將BEAM_ANGLE零件TOP,FRONT,RIGHT面與基準面之相對的面重合
+
+2.加入AXLE_10,新增參考軸方便組立;並在BEAM_ANGLE相對位置也新增參考軸,再將軸之頂面.側面與BEAM_ANGLE孔重合
+
+3.加入AXLE_5,步驟2相同
+
+4.加入CROSSBLOCK_2與AXLE_10方法類似,將其內孔之頂面.側面與AXLE_10相對位置重合,包含AXLE_5上共六個,方法類推
+
+5.加入BUSHING與前項步驟相同,將其內孔之頂面.側面與AXLE_10相對位置重合
+
+6.加入CONN底面CROSSBLOCK_2與重合,另一端CONN凸緣與CROSSBLOCK_2內孔重合,另一支如同
+
+7.加入BEAM內孔與CONN軸外表面重合,共兩孔,接著重合BEAM之內面與CROSSBLOCK_2面重合即完成限制
+
+8.完成組合
+COPY.COM WORD圖文報告:https://copy.com/3xU8YQV4kDjR
+
+第二題:
+copy.com連結
+組合件檔案:https://copy.com/rbQkOO10JICo
+影片檔案:https://copy.com/AOIXlbXT4rDE
+
+vimeo連結:https://vimeo.com/96676542
+
+40123246 劉哲宇 心得
+
+第一題:
+1.將beal angle零件的面與基準面重合
+
+2.將AXLE和beam angle用零件檔單獨開啟並新增基準面,以方便後續的作業
+
+3.加入axle 10到beam angle裡面並將接槽重合,axle 5也是,並利用剛剛新增的基準面來讓零件置中
+
+4.先加入crossblock,在最外圍在加上bushing,方法和前面一樣
+
+5.加入conn,一端與crossblock重合,另一端則套上beam3
+
+
+第二題:
+vimeo網址:https://vimeo.com/96676868
+
+copy網址:https://copy.com/BJat3rX3SUO0
