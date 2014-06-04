@@ -198,6 +198,20 @@ root.cdbg2 = cdbg2.CDBG2()
 # 以下為 cdbg13 的模組導入與連結設定
 import programs.cdbg13 as cdbg13
 root.cdbg13 = cdbg13.CDBG13()
+import programs.cdbg13.remsub6 as cdbg13_remsub6
+root.cdbg13.remsub6 = cdbg13_remsub6.remsub6()
+#####################################################
+# 導入協同程式 cdbg14
+#####################################################
+# 以下為 cdbg14 的模組導入與連結設定
+import programs.cdbg14 as cdbg14
+root.cdbg14 = cdbg14.CDBG14()
+#####################################################
+# 導入協同程式 cdbg15
+#####################################################
+# 以下為 cdbg15 的模組導入與連結設定
+import programs.cdbg15 as cdbg15
+root.cdbg15 = cdbg15.CDBG15()
 
 # 以下為 cdbg30 的模組導入與連結設定
 import programs.cdbg30 as cdbg30
@@ -205,6 +219,8 @@ root.cdbg30 = cdbg30.CDBG30()
 import programs.cdbg30.man as cdbg30_man
 # 加入 cdag30 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
 root.cdbg30.man = cdbg30_man.MAN()
+import programs.cdbg30.man2 as cdbg30_man2
+root.cdbg30.man2 = cdbg30_man2.MAN()
 #####################################################
 # 導入協同程式 cdbg9
 #####################################################

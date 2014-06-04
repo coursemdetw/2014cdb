@@ -1,35 +1,56 @@
 2bg10報告內容
 ===
-
 這是 2bg10報告內容
 
 報告摘要
 ===
+這是 2bg10 報告
 
-這是 2bg10 報告摘要內容
+摘要內容
+
 標題: Collaborative Writing Approach to Wiki
+
 原文(摘要):
+
 1.The most important characteristic of wikis is that they provide support for the collaborative pro-duction of shared knowledge, documents, and study materials by means of reading, writing, group reflection and interaction.
+
 2.Collaborative writing requires technical skills associated with formatting, editing, use of fonts, color, input of multimedia elements (text, graphics, images, au-dio and video) onto wiki pages, hyper linking, etc.
+
 3.In addition, collaborative writing involves ac-tive participation of the project members, shared editing, reading and group writing strategies, revisions, peer-review, and group evaluations of contributions (Judd, Kennedy, & Cropper, 2010; Kim, Hong, Bonk, & Lim, 2009; Meishar-Tal & Gorsky, 2010).
+
 4.Hence, the development of wiki-based collaborative writing must differ from other approaches to software production in a number of aspects. Approaches that use conventional software development, such as the waterfall model (Pressman, 2000), or extensions of these approaches to Web-based learning (Horton & Lynch, 1999), to address the whole software process are not flexible enough, time-consuming, and too complicated, to be applied to collaborative writing projects.
+
 5.Domain-specific approaches that are exclusively devoted to Web-based development (Balasubramaniam, Pries-Hje & Baskerville, 2003; Baskerville, 1999; Murugesan & Ginige, 2001) do not explicitly address the specific char-acteristics that are proper to wikis, such as collaboration, participation, active involvement in the gradual production of texts and documents.
+
 6.Another important difference between conventional software production and wiki development is that wikis are mostly concerned with writing proc-esses rather than software and programming activities, even though some programming skills (mostly html coding) are needed.
+
 7.In addition, a practical approach to collaborative writing needs to consider that wiki developers are not software experts.
+
 8.Nevertheless, some elements of soft-ware production are still important and need to be considered for wiki development, such as user involvement, architecture design, quality insurance, and component integration.
+
 9.Finally, evolu-tionary approaches such as rapid prototyping are more suitable to the collaborative character of wiki-based writing.
+
 10.Rapid prototyping is powerful to quickly generate an initial text that can be improved, changed, and modified collaboratively through incremental revisions.
 ===
 中文:
 1.Wikis最重要的特徵是它們提供的合作生產的共享知識、文檔、以及閱、讀寫作，小組反思和互動的方式學習材料的支持。
+
 2.協同寫作要求與格式相關的技術技能、編輯，使用的字體、顏色、多媒體元素（文字、圖形、圖像、音頻和視頻）到wiki頁面的超連結等輸入。
+
 3.此外，協同寫作牽涉的專案成員，共享編輯，閱讀和寫作組策略，修改，評審，以及評估小組的貢獻(Judd, Kennedy, & Cropper, 2010; Kim, Hong, Bonk, & Lim, 2009; Meishar-Tal & Gorsky, 2010)。
+
 4.因此，為基於wiki的協同寫作的發展必須不同於其他的方法來生產軟件在多個方面。使用傳統的軟件開發，如瀑布模型(Pressman, 2000)，或這些方法基於網絡的學習（Horton & Lynch, 1999）擴展的方法，以解決整個軟件過程是不夠靈活，費時，太複雜了，要應用到協同寫作項目。
+
 5.特定領域的辦法，是專門致力於基於Web的開發(Balasubramaniam, Pries-Hje & Baskerville, 2003; Baskerville, 1999; Murugesan & Ginige, 2001)並沒有明確解決具體字符，acteristics是恰當的wikis，這樣的協同、參與，逐步生產文本和文件的積極參與。
+
 6.傳統的軟件生產和的wiki發展的另一個重要區別是，wiki大多寫proc-esses，而不是軟件和編程活動，即使一些編程技巧(mostly html coding)是必要的。
+
 7.此外，實用的方法，協同寫作需要考慮的wiki開發商不是軟件專家。
+
 8.然而，軟件生產中的一些內容仍然是重要的，需要考慮的wiki開發，如用戶參與、架構設計、優質的保險和組件組成。
+
 9.最後，evolu-tionary的方法，如快速原型更適合的基於wiki的書面合作字符。
+
 10.快速成型的功能快速生成可以改善並增加修正協同修改的初始文本。
 ===
 2bg10 w8報告摘要
@@ -93,5 +114,36 @@ import hashlib
 解題過程:
 先寫一個程式使他能產生帳號與密碼都是由 abc001 ~ abc399 字串所組成的 399 名用戶登入對應資料，之後連線到openshift dokuwiki的FileZilla，把產生出來的程式碼貼到app-root/data/conf/users.auth.php下，之後開啟dokuwiki網站即可。
 ===
+2bg10 w12報告摘要
+
+任務一: 請各組將第八週與第九週考試的摘要報告放入 Github 協同專案中的分組報告區, 並將內容放入各組控管的同步 OpenShift 網站中. (佔期末成績 5分)
+
+解題過程:
+將之前W8及W9的考試報告放入github的分組報告區，並將內容放入openshift網站中
+
+http://2014cdbg10-40123241.rhcloud.com
+
+任務二: 請各組設法利用 CherryPy 與 Pro/Web.Link 技術, 在 Github 協同專案中建立一個能夠透過連結或表單控制 Cube 零件, a, b, 或 c 零件尺寸的網際協同程式, 讓使用者可以藉以利用近端的 Creo 嵌入式瀏覽器控制 Cube 的尺寸後列出該零件的體積大小. (佔期末成績 5分)
+
+解題過程:
+將原本程式裡的迴圈刪掉，增加立方體的長寬高之變數，使其可在URL後面輸入變數更改其數值，ex:　http://127.0.0.1:8080/cdag1/cube1?w=100&h=100&l=100
+
+===
+2bg10 w13報告摘要
+
+任務一: 請以手動方式, 從下方下載 lego_man.7z 零件, 完成組立後, 以組員為單位, 在各分組報告區詳細說明組立過程的重點與注意事項. (5 分)
+
+1.注意組立順序及校正
+2.必須與基準面互相平行
+
+任務二: 請利用 Vimeo 及 copy.com 存放任務一中的手動組立流程影片檔案, 以組員為單位, 將連結放入各分組報告區中. (5 分)
+
+網址:http://vimeo.com/96365928
+copy:https://www.copy.com/home/?modal=%2Fauth%2Flogin%3Fredirect%3D%252Fbrowse%252Fcopy%252F%2525E6%2525A8%252582%2525E9%2525AB%252598%2525E6%2525A8%2525A1%2525E7%2525B5%252584%25252040123245.flv
+
+任務三: 請仔細觀察協同程式中的 lego_man 自動組立程式, 並且從下方 lego_parts_edu.7z 中下載相同名稱的 lego_man 零件, 請詳細比較兩個壓縮檔案解開的 lego_man 零件檔案, 有哪些差別? 請將詳細比對結果以組為單位將資料放入各分組的報告中. (5 分)
+
+===
+
 
 
