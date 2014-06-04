@@ -88,7 +88,7 @@ for i in range(1,399+1):
 
  
 
-copy : https://www.copy.com/browse/copy/w9_2.PNG
+copy : https://copy.com/c9thEGCoX8Rx
 
 vimeo : http://vimeo.com/user27154279/videos
 
@@ -126,15 +126,27 @@ w13任務
 - 任務1: 下載 lego_man.7z 零件，開始creo，建立一個組立檔，先叫出body零件檔，之後用軸與軸和面與面間的限制條件組上arm、hand、waist、head、leg、以及hat個零件，即可完成手動的樂高零組件之組立。
 
 - 任務2:
- copy:https://www.copy.com/browse/copy/w13_man_assembly.flv
 
-vimeo: https://vimeo.com/95975522
+使用camstudio錄下組立過程並且用formatfactory轉成flv.檔後上傳到vimeo以及copy.com。
 
-使用camstudio錄下組立過程並且用formatfactory轉成flv.檔後上傳到vimeo以及copy.com，轉檔後錄下的解提過程前後順序亂掉了!!已經試過很多次依舊亂掉，還沒找到原因以及解決辦法。
+copy: https://copy.com/E2Ra9oPrJF4v
+
+vimeo: https://vimeo.com/96699935
+
+使用camstudio錄下組立過程並且用formatfactory轉成flv.檔後上傳到vimeo以及copy.com。
 
 * 40123202心得
+1. 任務1:先開組件檔檔，叫出body零件，接著讓其他部位的檔案，與body零件檔有軸與軸的重合及面與面重合等限制條件。有時候限制條件會重複，不太知道怎麼取消，不過整個組裝過程並不是很困難。
+
+2. 任務2:
+vimeo:https://vimeo.com/95987848
+
 * 40123242心得
- 
+1. 任務1:先下載 lego_man.7z檔，解壓縮後開啟creo，新增一個組立檔，先叫出body零件檔檔後開始陸續與其他零件組裝，兩個零件檔之間增加幾個限制條件讓兩個零件接合，即可完成此組立圖。
+
+2. 任務2:使用CamStudioPortable錄製組立過程，接著把影片檔轉成.flv檔，即可上傳。
+
+vimeo:https://vimeo.com/96309454
 
 - 任務3:
 
@@ -142,8 +154,59 @@ vimeo: https://vimeo.com/95975522
 
 
 
+---------------------------------------------
+
+w14任務
+
+任務 1 : (5 分): 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立。
+
+任務 2 : (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中。
+
+任務 3 : (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub6 函式, 當使用者連結至各組雲端網站中的 remsub6, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中。
+
+40123201心得:
+
+任務1 :
+
+下載lego_parts.7z零件， 解開壓縮檔案後， 將所需零件檔放入 V:\home\lego\w14 目錄中，開啟creo，建立一個組立檔，先叫出Beam_angle零件檔，之後用軸與軸重合和面與面間的重合限制條件組上axle_10、crossblock_2、conn_3、Beam_3、bushing以及axle_5各零件，即可完成手動的樂高零組件之組立。
+
+任務2 : 
+
+使用camstudio錄下組立過程並且用formatfactory轉成flv.檔後上傳到vimeo以及copy.com。
+
+copy : https://copy.com/B8IcqouOxXBH
+
+vimeo : https://vimeo.com/96699815
+
+使用camstudio錄下組立過程並且用formatfactory轉成flv.檔後上傳到vimeo以及copy.com。
+
+* 40123202心得:
+
+- 任務1：
+
+參照 remsub6.asm，開啟零件檔Beam_angle、axle_5、axle_10、Beam_3、bushing、conn_3、crossblock_2進   行組立。跟上周一樣，使用面與面、軸與軸重合，以及平面建立讓他兩平面重合，使物件有置中效果。最後即完成手動組立樂高零件。
+
+- 任務2：
+
+copy : https://copy.com/MBfst4JiD7lj
+
+vimeo :https://vimeo.com/95987848
+
+   心得:感覺這次的稍為複雜一點，對於置中的方法研究的有點久，雖然最初希望可以靠定義解決，但好像弄不出來，最後只能用建立新平面的方法完成。
+
+* 40123242心得:
+
+ - 任務1 : 下載lego_parts.7z檔，解壓縮後將零件放入home\lego\w14目錄中，之後開啟creo，新增一個組立檔，先叫出Beam_angle零件檔檔後開始陸續與其他零件組裝，兩個零件檔之間增加幾個限制條件讓兩個零件接合，即可完成此組立圖。
 
 
+- 任務2:使用CamStudioPortable錄製組立過程，接著把影片檔轉成.flv檔，即可上傳。
+
+
+copy :https://copy.com/MBfst4JiD7lj
+
+ 
+
+vimeo :https://vimeo.com/96706398
 
 報告摘要
 ===
