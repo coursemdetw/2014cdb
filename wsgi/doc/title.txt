@@ -2,8 +2,7 @@
 % 機械設計工程系二乙
 % April 30, 2014
 
-前言
-===
+# 前言
 
 協同產品設計實習課程目標[^1]
 
@@ -21,34 +20,20 @@ note.]
 
 延續程式語言與電腦輔助設計實習課程, 學習如何建構協同產品設計環境所需的工具.
 
-Pandoc 手冊
-===
+# Pandoc 手冊
 
-http://johnmacfarlane.net/pandoc/README.html
+<http://johnmacfarlane.net/pandoc/README.html>
 
-footnotes
+<http://pages.tzengyuxio.me/pandoc/>
 
-tables
+共用圖片統一放在 doc 目錄外的 images/common 目錄中, 千萬不可以將圖片檔案放在 doc 目錄中.
 
-flexible ordered lists
+若要將圖片與內文放在一起,  可以在圖片後放一反斜線, 表示與隨後的內文結合在一起.
 
-definition lists
+![中美國旗](./../images/common/c2_w14_task2.png) \
 
-fenced code blocks
+各組 images 存放目錄與引用, 統一放在 doc 目錄外的 images 目錄中 (千萬不可放在 doc 目錄中), 並且按照組別建立子目錄存放.
 
-superscript
+若是要將圖片獨立為一個 figure, 則不要放連結符號.
 
-subscript
-
-strikeout
-
-title blocks
-
-automatic tables of contents
-
-embedded LaTeX math
-
-citations
-
-markdown inside HTML block elements
-
+![中美國旗](./../images/2bg1/c2_w14_task2.png)
