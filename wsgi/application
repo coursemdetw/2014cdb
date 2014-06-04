@@ -192,6 +192,7 @@ root.cdbg1 = cdbg1.CDBG1()
 # 以下為 cdbg2 的模組導入與連結設定
 import programs.cdbg2 as cdbg2
 root.cdbg2 = cdbg2.CDBG2()
+
 #####################################################
 # 導入協同程式 cdbg13
 #####################################################
@@ -221,6 +222,7 @@ import programs.cdbg30.man as cdbg30_man
 root.cdbg30.man = cdbg30_man.MAN()
 import programs.cdbg30.man2 as cdbg30_man2
 root.cdbg30.man2 = cdbg30_man2.MAN()
+###########################
 import programs.cdbg30.remsub6 as cdbg30_remsub6
 root.cdbg30.remsub6 = cdbg30_remsub6.MAIN()
 #####################################################
@@ -248,7 +250,7 @@ if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
 else:
     # 近端執行啟動
     '''
-    cherrypy.server.socket_port = 8083
+    cherrypy.server.socket_port = 8080
     cherrypy.server.socket_host = '127.0.0.1'
     '''
     cherrypy.quickstart(root, config = application_conf)

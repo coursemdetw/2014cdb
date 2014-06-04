@@ -173,3 +173,188 @@ A7CC4:7d4982682678327d5634124567b797571c1076d3:A7CC4:A7CC4@gm.nfu.edu.tw:user
 A9525:886cf5d39491b82a810b37dcfc3fd69482b9ee2e:A9525:A9525@gm.nfu.edu.tw:user
 
 最後再使用git add . 、 git commit -m 'My changes' 、 git push，將遠端的wiki更新。
+
+##################################
+
+組員
+
+40123208程千育
+
+40123209劉凱盈
+
+40123211蕭莉蓉(組長)
+
+ 
+
+每週評分
+
+W12
+
+任務一:請各組將第八週與第九週考試的摘要報告放入 Github 協同專案中的分組報告區, 並將內容放入各組控管的同步 OpenShift 網站中. (佔期末成績 5分)
+
+任務二:請各組設法利用 CherryPy 與 Pro/Web.Link 技術, 在 Github 協同專案中建立一個能夠透過連結或表單控制 Cube 零件, a, b, 或 c 零件尺寸的網際協同程式, 讓使用者可以藉以利用近端的 Creo 嵌入式瀏覽器控制 Cube 的尺寸後列出該零件的體積大小. (佔期末成績 5分)
+
+ 
+
+完成第一項，上傳W8W9考試摘要。
+
+
+總得分:5分
+
+滿分:10分
+
+ 
+
+W13
+
+任務一: 請以手動方式, 從下方下載 lego_man.7z 零件, 完成組立後, 以組員為單位, 在各分組報告區詳細說明組立過程的重點與注意事項. (5 分)
+
+任務二: 請利用 Vimeo 及 copy.com 存放任務一中的手動組立流程影片檔案, 以組員為單位, 將連結放入各分組報告區中. (5 分)
+
+任務三: 請仔細觀察協同程式中的 lego_man 自動組立程式, 並且從下方 lego_parts_edu.7z 中下載相同名稱的 lego_man 零件, 請詳細比較兩個壓縮檔案解開的 lego_man 零件檔案, 有哪些差別? 請將詳細比對結果以組為單位將資料放入各分組的報告中. (5 分)
+
+ 
+
+W13-組員:程千育40123208
+
+ 1.利用creo手動組裝小人偶
+
+ 2.影片錄製完成，但是沒有轉檔也沒有上傳
+
+ 3.
+
+ 
+
+總得分:8
+
+滿分:15分
+
+ 
+
+ 
+
+W13-組員:劉凱盈40123209
+
+ 1.上網下載老師檔案，並且手動組裝
+
+ 2.錄影並且轉檔，上傳到copy.com
+
+我的連結  
+
+影片 https://copy.com/mgu9ca2md9UA
+
+圖檔 https://copy.com/RBuyIEbnl6N2               
+
+總得分:10
+
+滿分:15分
+
+ 
+
+ 
+
+W13-組員:蕭莉蓉40123211
+
+任務一:
+用手動完成小人的組立操作，這次的組裝大部分都是選用Pin的性質(星期三5/21)。
+
+creo組立
+
+ 
+
+任務二:
+錄影軟體出問題，錄了三次，都沒成功，vimeo網站再維修(星期三5/21)，最後回到家錄終於成功錄起來了(星期六2014/5/24)，然後也成功用FormatFactory轉檔並上傳到vimeo。影片連結:vimeo copy
+
+ 
+
+任務三:
+首先到IE設定的網際網路選項，將"http://2014cdb-mdenfu.rhcloud.com/"設為信任網站，然後再自定等級裡，講關於ActiveX的選項都設為"啟用"。Creo裡的file>options>configuration editorg 設定 web_enable_javascript 設為 on, regen_failure_handling 設為 resolve_mode。連結到以下網址後"http://2014cdb-mdenfu.rhcloud.com/cdbg30/man/"，點擊"執行 MAN 類別中的 assembly 方法"，進入後將得到的網址"http://2014cdb-mdenfu.rhcloud.com/cdbg30/man/assembly"複製貼到，新開啟的ASM檔案，然後就能完成了(星期六2014/5/24)。 影片連結:vimeo copy
+
+Auto組立
+
+總得分:15分
+
+滿分:15分
+
+ 
+
+W14
+
+請下載 lego_parts.7z orlego_parts.7z, 解開壓縮檔案後, 將資料放入 V:\home\lego 目錄中.
+
+W14 任務 1 (5 分): 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+W14 任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+W14 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub6 函式, 當使用者連結至各組雲端網站中的 remsub6, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+
+ 
+
+W14-組員:程千育40123208
+
+ 1.
+
+ 2.
+
+ 3.
+
+ 
+
+總得分:
+
+滿分:分
+
+ 
+
+ 
+
+W14-組員:劉凱盈40123209
+
+ 1.下載老師給的檔案，並且手動組裝起來
+
+ 2.並錄影上傳至copy.com
+
+          
+
+總得分:10
+
+滿分:15分
+
+ 
+
+ 
+
+W14-組員:蕭莉蓉40123211
+
+任務一:
+以Creo手動完成remsub6.asm的組立操作，依序將零件beam_angle,axle_10,axle_5,crossblock_2(6個),bushing(2個),beam_3,conn_3(2個)組裝成形。(星期三5/28)
+
+ https://copy.com/IjbpFPEaBQai
+
+ 
+
+任務二:
+在學校都無法成功錄影，所以影片都是回家後在錄的。(星期三5/28)
+
+Copy: https://copy.com/GXRWILLJfSkL
+
+Vimeo:https://vimeo.com/96706338
+
+https://copy.com/iPg16EJkBZKk 
+
+ 
+
+任務三:
+
+
+ 
+
+總得分:10分
+
+滿分:15分
+
+ 
+
+成績登入
+
+http://calc-g0v.rhcloud.com/tuvyngbsjq
