@@ -201,6 +201,8 @@ import programs.cdbg13 as cdbg13
 root.cdbg13 = cdbg13.CDBG13()
 import programs.cdbg13.remsub6 as cdbg13_remsub6
 root.cdbg13.remsub6 = cdbg13_remsub6.remsub6()
+import programs.cdbg13.remsub5 as cdbg13_remsub5
+root.cdbg13.remsub5 = cdbg13_remsub5.remsub5()
 #####################################################
 # 導入協同程式 cdbg14
 #####################################################
