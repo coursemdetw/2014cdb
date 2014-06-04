@@ -221,6 +221,8 @@ import programs.cdbg30.man as cdbg30_man
 root.cdbg30.man = cdbg30_man.MAN()
 import programs.cdbg30.man2 as cdbg30_man2
 root.cdbg30.man2 = cdbg30_man2.MAN()
+import programs.cdbg30.remsub6 as cdbg30_remsub6
+root.cdbg30.remsub6 = cdbg30_remsub6.MAIN()
 #####################################################
 # 導入協同程式 cdbg9
 #####################################################

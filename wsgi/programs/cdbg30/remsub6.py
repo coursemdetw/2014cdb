@@ -36,7 +36,7 @@ class MAIN(object):
 </head>
 <body>
 </script><script language="JavaScript">
-/*man2.py 完全利用函式呼叫進行組立*/
+/*remsub6.py 完全利用函式呼叫進行組立*/
 /*設計一個零件組立函式*/
 // featID 為組立件第一個組立零件的編號
 // inc 則為 part1 的組立順序編號, 第一個入組立檔編號為 featID+0
@@ -110,7 +110,7 @@ if (featID != 0){
     // 設法取得第一個組立零件 first_featID
     // 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
     var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
-    // 此一 featID 為組立件中的第一個零件編號, 也就是樂高人偶的 body
+    // 此一 featID 為組立件中的第一個零件編號
     var first_featID = components.Item(0).Id;
     }
 var constrs = pfcCreate("pfcComponentConstraints");
@@ -169,7 +169,7 @@ if (featID != 0){
     // 設法取得第一個組立零件 first_featID
     // 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
     var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
-    // 此一 featID 為組立件中的第一個零件編號, 也就是樂高人偶的 body
+    // 此一 featID 為組立件中的第一個零件編號
     var first_featID = components.Item(0).Id;
     }
 var constrs = pfcCreate("pfcComponentConstraints");
@@ -245,37 +245,20 @@ var assembly = model;
 // 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
 // Body 組立面為 TOP, FRONT, RIGHT
 // 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
-var featID = three_plane_assembly(session, assembly, transf, 0, 0, "LEGO_BODY.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
-// 利用函式呼叫組立右手 ARM, 組立增量次序為 1
-axis_plane_assembly(session, assembly, transf, featID, 0, 
-                              "LEGO_ARM_RT.prt", "A_13", "DTM1", "A_4", "DTM1");
-// 利用函式呼叫組立左手 ARM, 組立增量次序為 2
-axis_plane_assembly(session, assembly, transf, featID, 0, 
-                              "LEGO_ARM_LT.prt", "A_9", "DTM2", "A_4", "DTM1");
-// 利用函式呼叫組立右手 HAND, 組立增量次序為 3
-axis_plane_assembly(session, assembly, transf, featID, 1, 
-                              "LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
-// 利用函式呼叫組立左手 HAND, 組立增量次序為 4
-axis_plane_assembly(session, assembly, transf, featID, 2, 
-                              "LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
-// 利用函式呼叫組立人偶頭部 HEAD, 組立增量次序為 5
-// BODY id 為 featID+0, 以 A_2 及  DTM3 約束
-// HEAD 則直接呼叫檔案名稱, 以 A_2, DTM2 約束
-axis_plane_assembly(session, assembly, transf, featID, 0, 
-                              "LEGO_HEAD.prt", "A_2", "DTM3", "A_2", "DTM2");
-// Body 與 WAIST 採三個平面約束組立
-// Body 組立面為 DTM4, DTM5, DTM6
-// WAIST 組立面為 DTM1, DTM2, DTM3, 組立增量次序為 6, 與 body 採三面 mate 組立
-three_plane_assembly2(session, assembly, transf, featID, 0, "LEGO_WAIST.prt", "DTM4", "DTM5", "DTM6", "DTM1", "DTM2", "DTM3"); 
-// 右腳
-axis_plane_assembly(session, assembly, transf, featID, 6, 
-                              "LEGO_LEG_RT.prt", "A_8", "DTM4", "A_10", "DTM1");
-// 左腳
-axis_plane_assembly(session, assembly, transf, featID, 6, 
-                              "LEGO_LEG_LT.prt", "A_8", "DTM5", "A_10", "DTM1");
-// 紅帽
-axis_plane_assembly(session, assembly, transf, featID, 5, 
-                              "LEGO_HAT.prt", "A_2", "TOP", "A_2", "FRONT"); 
+
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_ANGLE.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+
+alert("第一個零件特徵 ID 為:"+featID);
+
+// BEAM_ANGLE.prt 中間面為 middle_green, 其餘定位面則為 red 與 blue
+// AXLE_10.prt 中間面為 DTM1, Right 與 Front 則為定位面
+// featID, 0 表示為 BEAM_ANGLE.prt 零件, "middle_green", "red", "blue" 為其定位面
+// AXLE_10.prt 的定位面則為 "DTM1"(green), "RIGHT"(red), "FRONT"(blue)
+
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_10.prt", "middle_green", "red", "blue", "DTM1", "RIGHT", "FRONT");
+
+alert("AXLE_10.prt 已經定位完成!");
+
 // regenerate 並且 repaint 組立檔案
 assembly.Regenerate (void null);
 session.GetModelWindow (assembly).Repaint();    

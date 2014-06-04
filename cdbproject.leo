@@ -63,7 +63,7 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="2014spring.20140513154549.3596"><vh>@edit __init__.py</vh></v>
 <v t="2014spring.20140513154549.3597"><vh>@edit man.py</vh></v>
 <v t="2014spring.20140521133830.1904"><vh>@edit man2.py</vh></v>
-<v t="2014spring.20140528132415.1926"><vh>@edit remsub6.py</vh></v>
+<v t="2014spring.20140604160352.2218"><vh>@edit remsub6.py</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
