@@ -61,7 +61,8 @@ expanded="2014spring.20140509071814.2179,"><vh>@file cmsimply.py</vh></v>
 <v t="2014pythonE.20140514141707.2194"><vh>@edit __init__.py</vh></v>
 <v t="2014pythonE.20140604134816.1853"><vh>@edit man.py</vh></v>
 <v t="2014pythonE.20140604134816.1854"><vh>@edit man2.py</vh></v>
-<v t="2014pythonE.20140604140153.1858"><vh>@edit remsub6.py</vh></v>
+<v t="2014pythonE.20140605084820.1872"><vh>@edit remsub6.py</vh></v>
+<v t="2014pythonE.20140605084820.1874"><vh>@edit remsub5.py</vh></v>
 </v>
 <v t="2014spring.20140513154549.3595" a="E"><vh>@path wsgi/programs/cdbg30</vh>
 <v t="2014spring.20140513154549.3596"><vh>@edit __init__.py</vh></v>

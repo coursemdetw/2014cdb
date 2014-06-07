@@ -1,26 +1,26 @@
 
 import cherrypy
 
-# 這是 REMSUB6 類別的定義
+# 這是 REMSUB5 類別的定義
 '''
 # 在 application 中導入子模組
-import programs.cdag30.remsub6 as cdag30_remsub6
-# 加入 cdag30 模組下的 remsub6.py 且以子模組 remsub6 對應其 MAIN() 類別
-root.cdag30.remsub6 = cdag30_remsub6.MAIN()
+import programs.cdag30.remsub5 as cdag30_remsub5
+# 加入 cdag30 模組下的 remsub5.py 且以子模組 remsub5 對應其 MAIN() 類別
+root.cdag30.remsub5 = cdag30_remsub5.MAIN()
 
 # 完成設定後, 可以利用
-/cdag30/remsub6/assembly
-# 呼叫 remsub6.py 中 MAIN 類別的 assembly 方法
+/cdag30/remsub5/assembly
+# 呼叫 remsub5.py 中 MAIN 類別的 assembly 方法
 '''
 class MAIN(object):
     # 各組利用 index 引導隨後的程式執行
     @cherrypy.expose
     def index(self, *args, **kwargs):
         outstring = '''
-這是 2014CDA 協同專案下的 cdag30 模組下的 remsub6.py 檔案中的 MAIN 類別.<br /><br />
+這是 2014CDA 協同專案下的 cdag30 模組下的 remsub5.py 檔案中的 MAIN 類別.<br /><br />
 <!-- 這裡採用相對連結, 而非網址的絕對連結 (這一段為 html 註解) -->
 <a href="assembly">執行  MAIN 類別中的 assembly 方法</a><br /><br />
-請確定下列零件於 V:/home/lego/remsub6 目錄中, 且開啟空白 Creo 組立檔案.<br />
+請確定下列零件於 V:/home/lego/remsub5 目錄中, 且開啟空白 Creo 組立檔案.<br />
 <a href="https://copy.com/oEKNnJlWGTSV">lego_parts.7z</a><br />
 '''
         return outstring
@@ -45,7 +45,7 @@ class MAIN(object):
 // axis_plane_assembly 組立函式
 ////////////////////////////////////////////////
 function axis_plane_assembly(session, assembly, transf, featID, inc, part2, axis1, plane1, axis2, plane2){
-var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/remsub6/"+part2);
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/remsub5/"+part2);
 var componentModel = session.GetModelFromDescr(descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
