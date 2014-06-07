@@ -345,11 +345,51 @@ https://copy.com/iPg16EJkBZKk
  
 
 任務三:
+用寫程式的方式，將零件組裝完成。我改寫man2的程式來完成。
 
+ 原來為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "LEGO_BODY.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+// 利用函式呼叫組立右手 ARM, 組立增量次序為 1
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+"LEGO_ARM_RT.prt", "A_13", "DTM1", "A_4", "DTM1");
+// 利用函式呼叫組立左手 ARM, 組立增量次序為 2
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+"LEGO_ARM_LT.prt", "A_9", "DTM2", "A_4", "DTM1");
+// 利用函式呼叫組立右手 HAND, 組立增量次序為 3
+axis_plane_assembly(session, assembly, transf, featID, 1, 
+"LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
+...........
 
  
 
-總得分:10分
+改寫為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_ANGLE.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_10.prt", "MIDDLE_GREEN", "DTM1", "FRONT", "DTM1", "RIGHT", "FRONT");
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_5.prt", "MIDDLE_GREEN", "RED", "BLUE", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "CROSSBLOCK_2.prt", "TOP", "FRONT", "RIGHT", "DTM4", "DTM1", "RIGHT");
+..............
+
+ 
+
+總得分:15分
 
 滿分:15分
 
@@ -423,10 +463,29 @@ https://copy.com/AfDFxAIldCsU
 
 任務三:
 
+用寫程式的方式，將零件組裝完成。我改寫man2的程式來完成。
+
+改寫為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_7.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_3.prt", "TOP", "FRONT", "RIGHT", "TOP", "RIGHT", "FRONT");
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_EXTENDER.prt", "TOP", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_EXTENDER.prt", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "TOP", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT");
+........................
 
  
 
-總得分:10分
+總得分:15分
 
 滿分:15分
 

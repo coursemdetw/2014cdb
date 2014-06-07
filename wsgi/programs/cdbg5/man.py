@@ -408,26 +408,26 @@ for (var i = 0; i < 2; i++)
 // 請注意, 第二個變數必須為 void null 表示零件對零件進行約束, 若為 subPath, 則零件會與原始零件的平面進行約束
 asmcomp.SetConstraints (constrs, void null);
 // 利用函式呼叫組立左手 HAND
-axis_plane_assembly(session, assembly, transf, featID, 2, 
-                              "LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
+axis_plane_assembly(session, assembly, transf, featID, 2, "LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
+                              
 // 利用函式呼叫組立人偶頭部 HEAD
 // BODY id 為 featID+0, 以 A_2 及  DTM3 約束
 // HEAD 則直接呼叫檔案名稱, 以 A_2, DTM2 約束
-axis_plane_assembly(session, assembly, transf, featID, 0, 
-                              "LEGO_HEAD.prt", "A_2", "DTM3", "A_2", "DTM2");
+axis_plane_assembly(session, assembly, transf, featID, 0, "LEGO_HEAD.prt", "A_2", "DTM3", "A_2", "DTM2");
+                              
 // Body 與 WAIST 採三個平面約束組立
 // Body 組立面為 DTM4, DTM5, DTM6
 // WAIST 組立面為 DTM1, DTM2, DTM3
 three_plane_assembly(session, assembly, transf, featID, 0, "LEGO_WAIST.prt", "DTM4", "DTM5", "DTM6", "DTM1", "DTM2", "DTM3"); 
 // 右腳
-axis_plane_assembly(session, assembly, transf, featID, 6, 
-                              "LEGO_LEG_RT.prt", "A_8", "DTM4", "A_10", "DTM1");
+axis_plane_assembly(session, assembly, transf, featID, 6, "LEGO_LEG_RT.prt", "A_8", "DTM4", "A_10", "DTM1");
+                              
 // 左腳
-axis_plane_assembly(session, assembly, transf, featID, 6, 
-                              "LEGO_LEG_LT.prt", "A_8", "DTM5", "A_10", "DTM1");
+axis_plane_assembly(session, assembly, transf, featID, 6, "LEGO_LEG_LT.prt", "A_8", "DTM5", "A_10", "DTM1");
+                              
 // 紅帽
-axis_plane_assembly(session, assembly, transf, featID, 5, 
-                              "LEGO_HAT.prt", "A_2", "TOP", "A_2", "FRONT");
+axis_plane_assembly(session, assembly, transf, featID, 5, "LEGO_HAT.prt", "A_2", "TOP", "A_2", "FRONT");
+                              
 // regenerate 並且 repaint 組立檔案
 assembly.Regenerate (void null);
 session.GetModelWindow (assembly).Repaint();    
