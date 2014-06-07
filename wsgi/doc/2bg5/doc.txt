@@ -353,6 +353,83 @@ https://copy.com/iPg16EJkBZKk
 
 滿分:15分
 
+ W15
+
+請下載 lego_parts.7z orlego_parts.7z, 解開壓縮檔案後, 將資料放入 V:\home\lego 目錄中.
+
+W15 任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+W15 任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+W15 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub5 函式, 當使用者連結至各組雲端網站中的 remsub5, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+
+ 
+
+W15-組員:程千育40123208
+
+ 1.
+
+ 2.
+
+ 3.
+
+ 
+
+總得分:
+
+滿分:分
+
+ 
+
+ 
+
+W15-組員:劉凱盈40123209
+
+ 1.
+
+ 2.
+
+          
+
+總得分:
+
+滿分:分
+
+ 
+
+ 
+
+W15-組員:蕭莉蓉40123211
+
+https://copy.com/mjJ1qkvXbOVQ
+
+任務一:
+以Creo手動完成remsub5.asm的組立操作，依序將零件  beam_7,  axle_3,  axle_extender(2個),  axle_red(2個),  conn_axle_female(2個),  beam_angle_4x2,  conn組裝成形。(星期三6/4)
+
+ https://copy.com/N8sv2SfahQAO
+
+ 
+
+任務二:
+在學校都無法成功錄影，所以影片都是回家後在錄的。(星期三6/4)
+
+Copy: https://copy.com/xLiZPqyeYfRQ
+
+Vimeo:https://vimeo.com/97310723
+
+https://copy.com/AfDFxAIldCsU
+
+ 
+
+任務三:
+
+
+ 
+
+總得分:10分
+
+滿分:15分
+
  
 
 成績登入

@@ -4,12 +4,12 @@ import cherrypy
 # 這是 MAN 類別的定義
 '''
 # 在 application 中導入子模組
-import programs.cdag30.man as cdag30_man
-# 加入 cdag30 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
-root.cdag30.man = cdag30_man.MAN()
+import programs.cdag5.man as cdag5_man
+# 加入 cdag5 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
+root.cdag5.man = cdag5_man.MAN()
 
 # 完成設定後, 可以利用
-/cdag30/man/assembly
+/cdag5/man/assembly
 # 呼叫 man.py 中 MAN 類別的 assembly 方法
 '''
 class MAN(object):
@@ -17,7 +17,7 @@ class MAN(object):
     @cherrypy.expose
     def index(self, *args, **kwargs):
         outstring = '''
-這是 2014CDA 協同專案下的 cdag30 模組下的 MAN 類別.<br /><br />
+這是 2014CDA 協同專案下的 cdag5 模組下的 MAN 類別.<br /><br />
 <!-- 這裡採用相對連結, 而非網址的絕對連結 (這一段為 html 註解) -->
 <a href="assembly">執行  MAN 類別中的 assembly 方法</a><br /><br />
 請確定下列零件於 V:/home/lego/man 目錄中, 且開啟空白 Creo 組立檔案.<br />
