@@ -1,27 +1,27 @@
 
 import cherrypy
 
-# 這是 MAN 類別的定義
+# 這是 REMSUB6 類別的定義
 '''
 # 在 application 中導入子模組
-import programs.cdag5.man as cdag5_man
-# 加入 cdag5 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
-root.cdag5.man = cdag5_man.MAN()
+import programs.cdag5.remsub6 as cdag5_remsub6
+# 加入 cdag5 模組下的 remsub6.py 且以子模組 remsub6 對應其 MAIN() 類別
+root.cdag5.remsub6 = cdag5_remsub6.MAIN()
 
 # 完成設定後, 可以利用
-/cdag5/man/assembly
-# 呼叫 man.py 中 MAN 類別的 assembly 方法
+/cdag5/remsub6/assembly
+# 呼叫 remsub6.py 中 MAIN 類別的 assembly 方法
 '''
-class MAN(object):
+class MAIN(object):
     # 各組利用 index 引導隨後的程式執行
     @cherrypy.expose
     def index(self, *args, **kwargs):
         outstring = '''
-這是 2014CDA 協同專案下的 cdag5 模組下的 MAN 類別.<br /><br />
+這是 2014CDA 協同專案下的 cdag5 模組下的 nremsub6.py 檔案中的 MAIN 類別.<br /><br />
 <!-- 這裡採用相對連結, 而非網址的絕對連結 (這一段為 html 註解) -->
-<a href="assembly">執行  MAN 類別中的 assembly 方法</a><br /><br />
-請確定下列零件於 V:/home/lego/man 目錄中, 且開啟空白 Creo 組立檔案.<br />
-<a href="/static/lego_man.7z">lego_man.7z</a>(滑鼠右鍵存成 .7z 檔案)<br />
+<a href="assembly">執行  MAIN 類別中的 assembly 方法</a><br /><br />
+請確定下列零件於 V:/home/lego/nremsub6 目錄中, 且開啟空白 Creo 組立檔案.<br />
+<a href="https://copy.com/oEKNnJlWGTSV">lego_parts.7z</a><br />
 '''
         return outstring
 
@@ -45,7 +45,7 @@ class MAN(object):
 // axis_plane_assembly 組立函式
 ////////////////////////////////////////////////
 function axis_plane_assembly(session, assembly, transf, featID, inc, part2, axis1, plane1, axis2, plane2){
-var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/"+part2);
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/nremsub6/"+part2);
 var componentModel = session.GetModelFromDescr(descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
@@ -91,7 +91,7 @@ asmcomp.SetConstraints(constrs, void null);
 // three_plane_assembly 採 align 組立, 若 featID 為 0 表示為空組立檔案
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 function three_plane_assembly(session, assembly, transf, featID, inc, part2, plane1, plane2, plane3, plane4, plane5, plane6){
-var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/"+part2);
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/nremsub6/"+part2);
 var componentModel = session.GetModelFromDescr(descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
@@ -150,7 +150,7 @@ if (featID == 0)
 // three_plane_assembly2 採 mate 組立, 若 featID 為 0 表示為空組立檔案
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 function three_plane_assembly2(session, assembly, transf, featID, inc, part2, plane1, plane2, plane3, plane4, plane5, plane6){
-var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/"+part2);
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/nremsub6/"+part2);
 var componentModel = session.GetModelFromDescr(descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
@@ -244,11 +244,51 @@ var assembly = model;
 // Body 與空組立檔案採三個平面約束組立
 // 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
 // Body 組立面為 TOP, FRONT, RIGHT
-// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
-var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_ANGLE.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
-three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_10.prt", "MIDDLE_GREEN", "DTM1", "FRONT", "DTM1", "RIGHT", "FRONT");
-three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_5.prt", "MIDDLE_GREEN", "RED", "BLUE", "TOP", "RIGHT", "FRONT"); 
-three_plane_assembly(session, assembly, transf, featID, 0, "CROSSBLOCK_2.prt", "TOP", "FRONT", "RIGHT", "DTM4", "DTM1", "RIGHT"); 
+//若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+//N_AXLE_5組立增量次序為 0
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "N_B_ANGLE.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+//N_AXLE_10組立增量次序為 1
+three_plane_assembly2(session, assembly, transf, featID, 0, 
+                              "N_AXLE_10.prt",  "DTM2","RIGHT", "FRONT", "DTM1", "DTM2","FRONT");
+//N_AXLE_5組立增量次序為 2
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "N_AXLE_5.prt", "A_25", "DTM2", "A_1", "DTM1");
+//N_AXLE_5組立增量次序為 3
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "N_CROSS_2.prt", "A_26", "DTM1", "A_16", "DTM6");
+//N_AXLE_5組立增量次序為 4
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "N_CROSS_2.prt", "A_26", "DTM6", "A_16", "DTM4");
+//N_AXLE_5組立增量次序為 5
+axis_plane_assembly(session, assembly, transf, featID, 4, 
+                              "N_BUSHING.prt", "A_16", "DTM4", "A_15", "DTM1");
+//N_AXLE_5組立增量次序為 6
+axis_plane_assembly(session, assembly, transf, featID, 3, 
+                              "N_BUSHING.prt", "A_16", "DTM4", "A_15", "DTM1");
+//N_AXLE_5組立增量次序為 7
+axis_plane_assembly(session, assembly, transf, featID, 3, 
+                             "N_CONN_3.prt", "A_18", "DTM7", "A_20", "DTM1");
+//N_AXLE_5組立增量次序為 8
+axis_plane_assembly(session, assembly, transf, featID, 4, 
+                             "N_CONN_3.prt", "A_18", "DTM8", "A_20", "DTM1");
+//N_AXLE_5組立增量次序為 9
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "N_CROSS_2.prt", "A_25", "DTM6", "A_17", "DTM6");
+//N_AXLE_5組立增量次序為 10
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "N_CROSS_2.prt", "A_25", "DTM1", "A_17", "DTM4");
+//N_AXLE_5組立增量次序為 11
+axis_plane_assembly(session, assembly, transf, featID, 9, 
+                              "N_CROSS_2.prt", "A_17", "DTM6", "A_17", "DTM4");
+//N_AXLE_5組立增量次序為 12
+axis_plane_assembly(session, assembly, transf, featID, 10, 
+                              "N_CROSS_2.prt", "A_17", "DTM6", "A_17", "DTM4");
+//N_AXLE_5組立增量次序為 13
+axis_plane_assembly(session, assembly, transf, featID, 8, 
+                              "N_BEAM_3.prt", "A_20", "DTM1", "A_38", "TOP");
+//N_AXLE_5組立增量次序為 14
+axis_plane_assembly(session, assembly, transf, featID, 7, 
+                              "N_BEAM_3.prt", "A_20", "DTM1", "A_38", "TOP");
 
 // regenerate 並且 repaint 組立檔案
 assembly.Regenerate (void null);

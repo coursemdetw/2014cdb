@@ -489,7 +489,54 @@ three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "DTM1
 
 滿分:15分
 
+
+ W16
+
+W16-組員:蕭莉蓉40123211
+
+自我練習
+
+老師在上課時特別點出了我們在呈現作業時的缺點，所以特別製作這個自我練習來改進缺失。
+這裡我要練習Pro/Web.Link,利用寫程式來進行Creo的組立。
+題目-nremsub6
+
+此題目改自w14的任務remsub6。
+此題目的零件皆與remsub6的零件相同，組裝部分有改變。
+https://copy.com/LGBxvsAiaByi
+
  
+
+解題
+
+下載nremsub6的零件。
+https://copy.com/QxXpPIuARzNR
+將零件放在V:/home/lego/nremsub6目錄中。
+Creo web_enable_javascript 設為 on, regen_failure_handling 設為 resolve_mode。
+IE→工具→網際網路選項→安全性→信任的網站，將https://2014cdbg5-40123209.rhcloud.com設為信任網站。
+IE→工具→網際網路選項→安全性→信任的網站→自訂等級 允許信任網站執行 ActiveX。
+開啟空白Creo 組立檔案，在嵌入式 IE, 連接到 https://2014cdbg5-40123209.rhcloud.com/cdbg5/nremsub6/assembly。
+開始自動進行nremsub6組立。
+程式裡的函式大概可分為兩種
+
+固定三個平面
+three_plane_assembly2(session, assembly, transf, featID, 組裝到xx零件的組立增量次序,
+                                         "要組裝的零件名稱.prt", "裝到XX零件的面一","裝到XX零件的面二", "裝到XX零件的面三", "要組裝的零                                            的件面一", "要組裝的零件的面二","要組裝的零件的面三");
+固定一條軸和一個平面
+axis_plane_assembly(session, assembly, transf, featID, 組裝到xx零件的組立增量次序, 
+                                     "要組裝的零件名稱.prt", "裝到XX零件的軸一", "裝到XX零件的面一", "要組裝的零件的軸一", "要組裝的零                                       件的面一");
+程式
+
+可連結到 https://2014cdbg5-40123209.rhcloud.com/cdbg5/nremsub6/assembly →右鍵→檢視網頁原始碼，就能看見程式了。
+心得
+
+寫程式組立的過程中，最好一邊手動組立，確定此約束能手動完成，再寫入程式。
+若是憑空想像，常常會出現很多無法執行的問題。
+ 
+
+13-06-2014
+
+23:52:33
+
 
 成績登入
 

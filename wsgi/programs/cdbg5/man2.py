@@ -266,7 +266,7 @@ axis_plane_assembly(session, assembly, transf, featID, 0,
 // Body 與 WAIST 採三個平面約束組立
 // Body 組立面為 DTM4, DTM5, DTM6
 // WAIST 組立面為 DTM1, DTM2, DTM3, 組立增量次序為 6, 與 body 採三面 mate 組立
-three_plane_assembly2(session, assembly, transf, featID, 0, "LEGO_WAIST.prt", "DTM4", "DTM5", "DTM6", "DTM1", "DTM2", "DTM3"); 
+three_plane_assembly2(session, assembly, transf, featID, 0, "LEGO_WAIST.prt", "DTM5", "DTM4" ,"DTM6", "DTM2", "DTM1" ,"DTM3"); 
 // 右腳
 axis_plane_assembly(session, assembly, transf, featID, 6, 
                               "LEGO_LEG_RT.prt", "A_8", "DTM4", "A_10", "DTM1");

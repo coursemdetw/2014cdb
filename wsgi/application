@@ -200,14 +200,22 @@ import programs.cdbg5 as cdbg5
 root.cdbg5 = cdbg5.CDBG5()
 ###########################man
 import programs.cdbg5.man as cdbg5_man
-# 加入 cdag30 模組下的 man.py 且以子模組 man 對應其 MAN() 類別
 root.cdbg5.man = cdbg5_man.MAN()
 ###########################man2
 import programs.cdbg5.man2 as cdbg5_man2
 root.cdbg5.man2 = cdbg5_man2.MAN()
+###########################remsub61
+import programs.cdbg5.remsub61 as cdbg5_remsub61
+root.cdbg5.remsub61 = cdbg5_remsub61.MAIN()
+###########################remsub5
+import programs.cdbg5.remsub5 as cdbg5_remsub5
+root.cdbg5.remsub5 = cdbg5_remsub5.MAIN()
 ###########################remsub6
 import programs.cdbg5.remsub6 as cdbg5_remsub6
 root.cdbg5.remsub6 = cdbg5_remsub6.MAIN()
+###########################nremsub6
+import programs.cdbg5.nremsub6 as cdbg5_nremsub6
+root.cdbg5.nremsub6 = cdbg5_nremsub6.MAIN()
 #####################################################
 # 導入協同程式 cdbg13
 #####################################################
