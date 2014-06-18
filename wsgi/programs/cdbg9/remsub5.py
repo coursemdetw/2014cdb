@@ -1,26 +1,26 @@
 
 import cherrypy
 
-# 這是 REMSUB6 類別的定義
+# 這是 REMSUB5 類別的定義
 '''
 # 在 application 中導入子模組
-import programs.cdag30.remsub6 as cdag30_remsub6
-# 加入 cdag30 模組下的 remsub6.py 且以子模組 remsub6 對應其 MAIN() 類別
-root.cdag30.remsub6 = cdag30_remsub6.MAIN()
+import programs.cdbg9.remsub5 as cdbg9_remsub5
+# 加入 cdbg9 模組下的 remsub5.py 且以子模組 remsub5 對應其 MAIN() 類別
+root.cdbg9.remsub5 = cdbg9_remsub5.MAIN()
 
 # 完成設定後, 可以利用
-/cdag30/remsub6/assembly
-# 呼叫 remsub6.py 中 MAIN 類別的 assembly 方法
+/cdbg9/remsub5/assembly
+# 呼叫 remsub5.py 中 MAIN 類別的 assembly 方法
 '''
 class MAIN(object):
     # 各組利用 index 引導隨後的程式執行
     @cherrypy.expose
     def index(self, *args, **kwargs):
         outstring = '''
-這是 2014CDA 協同專案下的 cdag30 模組下的 remsub6.py 檔案中的 MAIN 類別.<br /><br />
+這是 2014CDB 協同專案下的 cdbg9 模組下的 remsub5.py 檔案中的 MAIN 類別.<br /><br />
 <!-- 這裡採用相對連結, 而非網址的絕對連結 (這一段為 html 註解) -->
-<a href="assembly">執行  MAIN 類別中的 assembly 方法</a><br /><br />
-請確定下列零件於 V:/home/lego/remsub6 目錄中, 且開啟空白 Creo 組立檔案.<br />
+<a href="assembly">執行  MAN 類別中的 assembly 方法</a><br /><br />
+請確定下列零件於 V:/home/lego/remsub5 目錄中, 且開啟空白 Creo 組立檔案.<br />
 <a href="https://copy.com/oEKNnJlWGTSV">lego_parts.7z</a><br />
 '''
         return outstring
@@ -36,7 +36,7 @@ class MAIN(object):
 </head>
 <body>
 </script><script language="JavaScript">
-/*remsub6.py 完全利用函式呼叫進行組立*/
+/*man2.py 完全利用函式呼叫進行組立*/
 /*設計一個零件組立函式*/
 // featID 為組立件第一個組立零件的編號
 // inc 則為 part1 的組立順序編號, 第一個入組立檔編號為 featID+0
@@ -110,7 +110,7 @@ if (featID != 0){
     // 設法取得第一個組立零件 first_featID
     // 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
     var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
-    // 此一 featID 為組立件中的第一個零件編號
+    // 此一 featID 為組立件中的第一個零件編號, 也就是樂高人偶的 body
     var first_featID = components.Item(0).Id;
     }
 var constrs = pfcCreate("pfcComponentConstraints");
@@ -169,7 +169,7 @@ if (featID != 0){
     // 設法取得第一個組立零件 first_featID
     // 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
     var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
-    // 此一 featID 為組立件中的第一個零件編號
+    // 此一 featID 為組立件中的第一個零件編號, 也就是樂高人偶的 body
     var first_featID = components.Item(0).Id;
     }
 var constrs = pfcCreate("pfcComponentConstraints");
@@ -252,13 +252,41 @@ alert("第一個零件特徵 ID 為:"+featID);
 
 // BEAM_ANGLE.prt 中間面為 middle_green, 其餘定位面則為 red 與 blue
 // AXLE_10.prt 中間面為 DTM1, Right 與 Front 則為定位面
-// featID, 0 表示為 BEAM_ANGLE.prt 零件, "middle_green", "red", "blue" 為其定位面
+// featID, 0 表示為 BEAM_7.prt 零件, "middle_green", "red", "blue" 為其定位面
 // AXLE_10.prt 的定位面則為 "DTM1"(green), "RIGHT"(red), "FRONT"(blue)
 
-three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_10.prt", "middle_green", "red", "blue", "DTM1", "RIGHT", "FRONT");
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_7.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
 
-alert("AXLE_10.prt 已經定位完成!");
+alert("BEAM_7.prt 已經定位完成!");
 
+// 利用函式呼叫組立零件 AXLE_3, 組立增量次序為 1
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "AXLE_3.prt", "A_41", "DTM1", "A_1", "DTM2");
+// 利用函式呼叫組立零件 AXLE_EXTENDER(左), 組立增量次序為 2
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "AXLE_EXTENDER.prt", "A_41", "DTM5", "A_11", "DTM3");
+// 利用函式呼叫組立零件 AXLE_EXTENDER(右), 組立增量次序為 3
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "AXLE_EXTENDER.prt", "A_41", "TOP", "A_11", "DTM6");    
+// 利用函式呼叫組立零件 AXLE_RED(左), 組立增量次序為 4
+axis_plane_assembly(session, assembly, transf, featID, 2, 
+                              "AXLE_RED.prt", "A_11", "TOP", "A_3", "DTM7"); 
+// 利用函式呼叫組立零件 AXLE_RED(右), 組立增量次序為 5
+axis_plane_assembly(session, assembly, transf, featID, 3, 
+                              "AXLE_RED.prt", "A_11", "TOP", "A_3", "DTM8");
+// 利用函式呼叫組立零件 CONN_AXLE_FEMALE(左), 組立增量次序為 6
+axis_plane_assembly(session, assembly, transf, featID, 2, 
+                              "CONN_AXLE_FEMALE.prt", "A_3", "DTM6", "A_23", "DTM9");
+// 利用函式呼叫組立零件 CONN_AXLE_FEMALE(右), 組立增量次序為 7
+axis_plane_assembly(session, assembly, transf, featID, 3, 
+                              "CONN_AXLE_FEMALE.prt", "A_3", "DTM3", "A_23", "DTM9"); 
+// 利用函式呼叫組立零件 BEAM_ANGLE_4x2(左), 組立增量次序為 8
+axis_plane_assembly(session, assembly, transf, featID, 6, 
+                              "BEAM_ANGLE_4x2.prt", "A_23", "TOP", "A_30", "DTM10");
+// 利用函式呼叫組立零件 CONN, 組立增量次序為 9
+axis_plane_assembly(session, assembly, transf, featID, 6, 
+                              "CONN.prt", "A_29", "DTM11", "A_18", "DTM13");  
+   
 // regenerate 並且 repaint 組立檔案
 assembly.Regenerate (void null);
 session.GetModelWindow (assembly).Repaint();    

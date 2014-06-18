@@ -108,6 +108,8 @@ copy.com連結
 
 vimeo連結:https://vimeo.com/96676542
 
+
+
 40123246 劉哲宇 心得
 
 第一題:
@@ -126,3 +128,65 @@ vimeo連結:https://vimeo.com/96676542
 vimeo網址:https://vimeo.com/96676868
 
 copy網址:https://copy.com/BJat3rX3SUO0
+
+第十五週各組員心得
+===
+
+40123223 林重佑 心得
+
+第一題:
+
+1.將BEAM_7零件TOP,FRONT,RIGHT面與基準面之相對的面(ASM_TOP,ASM_FRONT,ASM_RIGHT)重合
+
+2.新增BEAM_7的中央基準面(DTM1),距TOP面0.40325及AXLE_3之中心軸與中央基準面(DTM1)距TOP面1.21
+
+3.加入AXLE_3與BEAM_7重合中心軸,以及重合步驟2所新增之中央基準面
+
+4.加入AXLE_EXTENDER軸之內頂面與AXLE_3軸之外頂面重合,再將AXLE_EXTENDER左端面與AXLE_3右端面重合
+
+5.加入AXLE_EXTENDER軸之內頂面與AXLE_3軸之外頂面重合,再將AXLE_EXTENDER右端面與AXLE_3左端面重合
+
+6.加入AXLE_RED軸之外頂面與AXLE_EXTENDER內頂面重合,再將AXLE_RED右端面與AXLE_3軸之左端面重合
+
+7.加入AXLE_RED軸之外頂面與AXLE_EXTENDER內頂面重合,再將AXLE_RED左端面與AXLE_3軸之右端面重合
+
+8.加入CONN_AXLE_FEMALE與AXLE_RED中心軸重合,再將CONN_AXLE_FEMALE右端面與AXLE_EXTENDER左端面重合
+
+9.加入CONN_AXLE_FEMALE與AXLE_RED中心軸重合,再將CONN_AXLE_FEMALE左端面與AXLE_EXTENDER右端面重合
+
+10.加入BEAM_ANGLE_4X2中心軸與CONN_AXLE_FEMALE中心軸重合,再將BEAM_ANGLE_4X2左端面與CONN_AXLE_FEMAL右端面重合
+
+11.加入CONN中心軸與BEAM_ANGLE_4X2上面孔的中心軸重合,再將CONN凸緣左端面與BEAM_ANGLE_4X2孔之右端面重合
+
+第二題:
+copy.com連結
+組合件檔案:https://copy.com/8rg2vJw1wamY
+影片檔案:https://copy.com/OURPhIChu2ML
+
+vimeo連結:https://vimeo.com/97300300
+
+
+
+40123246 劉哲宇 心得
+
+ 第一題:
+
+1.先單獨開啟beam7,axle3的零件檔,並在裡面設置平面,以方便置中
+
+2.以beam7為基準,插入axle3對準平面後並置中
+
+3.加入2個axle extender,將面看軸對應好,在與beam7貼合
+
+4.加入axle red到axle extender裡面,並把面和軸對應好
+
+5.加入兩個conn axle female並與axle extender對應好
+
+6.加入beam angle 4X2,和conn axle female對應好
+
+7.將conn插入到beam angle 4x2的插槽內並將面對好
+
+ 
+
+copy連結:https://www.copy.com/s/qC7VjZQCg7NU
+
+vimeo連結:http://vimeo.com/97301079

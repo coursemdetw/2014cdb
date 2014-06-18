@@ -173,3 +173,371 @@ A7CC4:7d4982682678327d5634124567b797571c1076d3:A7CC4:A7CC4@gm.nfu.edu.tw:user
 A9525:886cf5d39491b82a810b37dcfc3fd69482b9ee2e:A9525:A9525@gm.nfu.edu.tw:user
 
 最後再使用git add . 、 git commit -m 'My changes' 、 git push，將遠端的wiki更新。
+
+##################################
+
+組員
+
+40123208程千育
+
+40123209劉凱盈
+
+40123211蕭莉蓉(組長)
+
+ 
+
+每週評分
+
+W12
+
+任務一:請各組將第八週與第九週考試的摘要報告放入 Github 協同專案中的分組報告區, 並將內容放入各組控管的同步 OpenShift 網站中. (佔期末成績 5分)
+
+任務二:請各組設法利用 CherryPy 與 Pro/Web.Link 技術, 在 Github 協同專案中建立一個能夠透過連結或表單控制 Cube 零件, a, b, 或 c 零件尺寸的網際協同程式, 讓使用者可以藉以利用近端的 Creo 嵌入式瀏覽器控制 Cube 的尺寸後列出該零件的體積大小. (佔期末成績 5分)
+
+ 
+
+完成第一項，上傳W8W9考試摘要。
+
+
+總得分:5分
+
+滿分:10分
+
+ 
+
+W13
+
+任務一: 請以手動方式, 從下方下載 lego_man.7z 零件, 完成組立後, 以組員為單位, 在各分組報告區詳細說明組立過程的重點與注意事項. (5 分)
+
+任務二: 請利用 Vimeo 及 copy.com 存放任務一中的手動組立流程影片檔案, 以組員為單位, 將連結放入各分組報告區中. (5 分)
+
+任務三: 請仔細觀察協同程式中的 lego_man 自動組立程式, 並且從下方 lego_parts_edu.7z 中下載相同名稱的 lego_man 零件, 請詳細比較兩個壓縮檔案解開的 lego_man 零件檔案, 有哪些差別? 請將詳細比對結果以組為單位將資料放入各分組的報告中. (5 分)
+
+ 
+
+W13-組員:程千育40123208
+
+ 1.利用creo手動組裝小人偶
+
+ 2.影片錄製完成，但是沒有轉檔也沒有上傳
+
+ 3.
+
+ 
+
+總得分:8
+
+滿分:15分
+
+ 
+
+ 
+
+W13-組員:劉凱盈40123209
+
+ 1.上網下載老師檔案，並且手動組裝
+
+ 2.錄影並且轉檔，上傳到copy.com
+
+我的連結  
+
+影片 https://copy.com/mgu9ca2md9UA
+
+圖檔 https://copy.com/RBuyIEbnl6N2               
+
+總得分:10
+
+滿分:15分
+
+ 
+
+ 
+
+W13-組員:蕭莉蓉40123211
+
+任務一:
+用手動完成小人的組立操作，這次的組裝大部分都是選用Pin的性質(星期三5/21)。
+
+creo組立
+
+ 
+
+任務二:
+錄影軟體出問題，錄了三次，都沒成功，vimeo網站再維修(星期三5/21)，最後回到家錄終於成功錄起來了(星期六2014/5/24)，然後也成功用FormatFactory轉檔並上傳到vimeo。影片連結:vimeo copy
+
+ 
+
+任務三:
+首先到IE設定的網際網路選項，將"http://2014cdb-mdenfu.rhcloud.com/"設為信任網站，然後再自定等級裡，講關於ActiveX的選項都設為"啟用"。Creo裡的file>options>configuration editorg 設定 web_enable_javascript 設為 on, regen_failure_handling 設為 resolve_mode。連結到以下網址後"http://2014cdb-mdenfu.rhcloud.com/cdbg30/man/"，點擊"執行 MAN 類別中的 assembly 方法"，進入後將得到的網址"http://2014cdb-mdenfu.rhcloud.com/cdbg30/man/assembly"複製貼到，新開啟的ASM檔案，然後就能完成了(星期六2014/5/24)。 影片連結:vimeo copy
+
+Auto組立
+
+總得分:15分
+
+滿分:15分
+
+ 
+
+W14
+
+請下載 lego_parts.7z orlego_parts.7z, 解開壓縮檔案後, 將資料放入 V:\home\lego 目錄中.
+
+W14 任務 1 (5 分): 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+W14 任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+W14 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub6 函式, 當使用者連結至各組雲端網站中的 remsub6, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+
+ 
+
+W14-組員:程千育40123208
+
+ 1.
+
+ 2.
+
+ 3.
+
+ 
+
+總得分:
+
+滿分:分
+
+ 
+
+ 
+
+W14-組員:劉凱盈40123209
+
+ 1.下載老師給的檔案，並且手動組裝起來
+
+ 2.並錄影上傳至copy.com
+
+          
+
+總得分:10
+
+滿分:15分
+
+ 
+
+ 
+
+W14-組員:蕭莉蓉40123211
+
+任務一:
+以Creo手動完成remsub6.asm的組立操作，依序將零件beam_angle,axle_10,axle_5,crossblock_2(6個),bushing(2個),beam_3,conn_3(2個)組裝成形。(星期三5/28)
+
+ https://copy.com/IjbpFPEaBQai
+
+ 
+
+任務二:
+在學校都無法成功錄影，所以影片都是回家後在錄的。(星期三5/28)
+
+Copy: https://copy.com/GXRWILLJfSkL
+
+Vimeo:https://vimeo.com/96706338
+
+https://copy.com/iPg16EJkBZKk 
+
+ 
+
+任務三:
+用寫程式的方式，將零件組裝完成。我改寫man2的程式來完成。
+
+ 原來為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "LEGO_BODY.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+// 利用函式呼叫組立右手 ARM, 組立增量次序為 1
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+"LEGO_ARM_RT.prt", "A_13", "DTM1", "A_4", "DTM1");
+// 利用函式呼叫組立左手 ARM, 組立增量次序為 2
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+"LEGO_ARM_LT.prt", "A_9", "DTM2", "A_4", "DTM1");
+// 利用函式呼叫組立右手 HAND, 組立增量次序為 3
+axis_plane_assembly(session, assembly, transf, featID, 1, 
+"LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
+...........
+
+ 
+
+改寫為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_ANGLE.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_10.prt", "MIDDLE_GREEN", "DTM1", "FRONT", "DTM1", "RIGHT", "FRONT");
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_5.prt", "MIDDLE_GREEN", "RED", "BLUE", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "CROSSBLOCK_2.prt", "TOP", "FRONT", "RIGHT", "DTM4", "DTM1", "RIGHT");
+..............
+
+ 
+
+總得分:15分
+
+滿分:15分
+
+ W15
+
+請下載 lego_parts.7z orlego_parts.7z, 解開壓縮檔案後, 將資料放入 V:\home\lego 目錄中.
+
+W15 任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+W15 任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+W15 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub5 函式, 當使用者連結至各組雲端網站中的 remsub5, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+
+ 
+
+W15-組員:程千育40123208
+
+ 1.
+
+ 2.
+
+ 3.
+
+ 
+
+總得分:
+
+滿分:分
+
+ 
+
+ 
+
+W15-組員:劉凱盈40123209
+
+ 1.
+
+ 2.
+
+          
+
+總得分:
+
+滿分:分
+
+ 
+
+ 
+
+W15-組員:蕭莉蓉40123211
+
+https://copy.com/mjJ1qkvXbOVQ
+
+任務一:
+以Creo手動完成remsub5.asm的組立操作，依序將零件  beam_7,  axle_3,  axle_extender(2個),  axle_red(2個),  conn_axle_female(2個),  beam_angle_4x2,  conn組裝成形。(星期三6/4)
+
+ https://copy.com/N8sv2SfahQAO
+
+ 
+
+任務二:
+在學校都無法成功錄影，所以影片都是回家後在錄的。(星期三6/4)
+
+Copy: https://copy.com/xLiZPqyeYfRQ
+
+Vimeo:https://vimeo.com/97310723
+
+https://copy.com/AfDFxAIldCsU
+
+ 
+
+任務三:
+
+用寫程式的方式，將零件組裝完成。我改寫man2的程式來完成。
+
+改寫為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_7.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_3.prt", "TOP", "FRONT", "RIGHT", "TOP", "RIGHT", "FRONT");
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_EXTENDER.prt", "TOP", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_EXTENDER.prt", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "TOP", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT");
+........................
+
+ 
+
+總得分:15分
+
+滿分:15分
+
+
+ W16
+
+W16-組員:蕭莉蓉40123211
+
+自我練習
+
+老師在上課時特別點出了我們在呈現作業時的缺點，所以特別製作這個自我練習來改進缺失。
+這裡我要練習Pro/Web.Link,利用寫程式來進行Creo的組立。
+題目-nremsub6
+
+此題目改自w14的任務remsub6。
+此題目的零件皆與remsub6的零件相同，組裝部分有改變。
+https://copy.com/LGBxvsAiaByi
+
+ 
+
+解題
+
+下載nremsub6的零件。
+https://copy.com/QxXpPIuARzNR
+將零件放在V:/home/lego/nremsub6目錄中。
+Creo web_enable_javascript 設為 on, regen_failure_handling 設為 resolve_mode。
+IE→工具→網際網路選項→安全性→信任的網站，將https://2014cdbg5-40123209.rhcloud.com設為信任網站。
+IE→工具→網際網路選項→安全性→信任的網站→自訂等級 允許信任網站執行 ActiveX。
+開啟空白Creo 組立檔案，在嵌入式 IE, 連接到 https://2014cdbg5-40123209.rhcloud.com/cdbg5/nremsub6/assembly。
+開始自動進行nremsub6組立。
+程式裡的函式大概可分為兩種
+
+固定三個平面
+three_plane_assembly2(session, assembly, transf, featID, 組裝到xx零件的組立增量次序,
+                                         "要組裝的零件名稱.prt", "裝到XX零件的面一","裝到XX零件的面二", "裝到XX零件的面三", "要組裝的零                                            的件面一", "要組裝的零件的面二","要組裝的零件的面三");
+固定一條軸和一個平面
+axis_plane_assembly(session, assembly, transf, featID, 組裝到xx零件的組立增量次序, 
+                                     "要組裝的零件名稱.prt", "裝到XX零件的軸一", "裝到XX零件的面一", "要組裝的零件的軸一", "要組裝的零                                       件的面一");
+程式
+
+可連結到 https://2014cdbg5-40123209.rhcloud.com/cdbg5/nremsub6/assembly →右鍵→檢視網頁原始碼，就能看見程式了。
+心得
+
+寫程式組立的過程中，最好一邊手動組立，確定此約束能手動完成，再寫入程式。
+若是憑空想像，常常會出現很多無法執行的問題。
+ 
+
+13-06-2014
+
+23:52:33
+
+
+成績登入
+
+http://calc-g0v.rhcloud.com/tuvyngbsjq

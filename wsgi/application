@@ -193,6 +193,30 @@ root.cdbg1 = cdbg1.CDBG1()
 import programs.cdbg2 as cdbg2
 root.cdbg2 = cdbg2.CDBG2()
 #####################################################
+# 導入協同程式 cdbg5
+#####################################################
+# 以下為 cdbg5 的模組導入與連結設定
+import programs.cdbg5 as cdbg5
+root.cdbg5 = cdbg5.CDBG5()
+###########################man
+import programs.cdbg5.man as cdbg5_man
+root.cdbg5.man = cdbg5_man.MAN()
+###########################man2
+import programs.cdbg5.man2 as cdbg5_man2
+root.cdbg5.man2 = cdbg5_man2.MAN()
+###########################remsub61
+import programs.cdbg5.remsub61 as cdbg5_remsub61
+root.cdbg5.remsub61 = cdbg5_remsub61.MAIN()
+###########################remsub5
+import programs.cdbg5.remsub5 as cdbg5_remsub5
+root.cdbg5.remsub5 = cdbg5_remsub5.MAIN()
+###########################remsub6
+import programs.cdbg5.remsub6 as cdbg5_remsub6
+root.cdbg5.remsub6 = cdbg5_remsub6.MAIN()
+###########################nremsub6
+import programs.cdbg5.nremsub6 as cdbg5_nremsub6
+root.cdbg5.nremsub6 = cdbg5_nremsub6.MAIN()
+#####################################################
 # 導入協同程式 cdbg13
 #####################################################
 # 以下為 cdbg13 的模組導入與連結設定
@@ -200,6 +224,8 @@ import programs.cdbg13 as cdbg13
 root.cdbg13 = cdbg13.CDBG13()
 import programs.cdbg13.remsub6 as cdbg13_remsub6
 root.cdbg13.remsub6 = cdbg13_remsub6.remsub6()
+import programs.cdbg13.remsub5 as cdbg13_remsub5
+root.cdbg13.remsub5 = cdbg13_remsub5.remsub5()
 #####################################################
 # 導入協同程式 cdbg14
 #####################################################
@@ -221,12 +247,19 @@ import programs.cdbg30.man as cdbg30_man
 root.cdbg30.man = cdbg30_man.MAN()
 import programs.cdbg30.man2 as cdbg30_man2
 root.cdbg30.man2 = cdbg30_man2.MAN()
+###########################
+import programs.cdbg30.remsub6 as cdbg30_remsub6
+root.cdbg30.remsub6 = cdbg30_remsub6.MAIN()
 #####################################################
 # 導入協同程式 cdbg9
 #####################################################
 # 以下為 cdbg9 的模組導入與連結設定
 import programs.cdbg9 as cdbg9
 root.cdbg9 = cdbg9.CDBG9()
+import programs.cdbg9.remsub6 as cdbg9_remsub6
+root.cdbg9.remsub6 = cdbg9_remsub6.MAIN()
+import programs.cdbg9.remsub5 as cdbg9_remsub5
+root.cdbg9.remsub5 = cdbg9_remsub5.MAIN()
 #####################################################
 # 導入協同程式 cdbg6
 #####################################################
@@ -246,7 +279,7 @@ if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
 else:
     # 近端執行啟動
     '''
-    cherrypy.server.socket_port = 8083
+    cherrypy.server.socket_port = 8080
     cherrypy.server.socket_host = '127.0.0.1'
     '''
     cherrypy.quickstart(root, config = application_conf)
