@@ -1,12 +1,7 @@
-﻿2bg13報告內容
+2bg13報告內容
 ===
 
-這是 2bg13報告內容
-
-報告摘要
-===
-
-這是 2bg13 報告摘要內容
+以下是 2bg13報告內容
 
 2bg13 w8.9工作
 ===
@@ -36,3 +31,510 @@ technology, collaboration functionality is developed into a set of groupware tha
 4.注意，Creo須為64位元版。畫好零件檔便能於內嵌式IE執行程式了(請先將零件放置指定位置)。
 5.由於我push程式後，別組沒有重新clone檔案下來改就push，造成版次衝突，以致leo開不起來。
 6.我花了一些時間處理錯誤，其實還蠻簡單的。
+
+2bg13 w12工作
+===
+
+詳情請參考小組網站
+<https://2014bg13-cdbg13.rhcloud.com/cmsimply/get_page?heading=w12%E5%B7%A5%E4%BD%9C>
+
+執行過程:
+
+已經將八九週之工作放入openshift。
+以下為我新增加的程式碼，我將它取名為 cube2 過程圖:
+
+1.設定abc值
+
+![w12-1](./../images/2bg13/w12-2.jpg)\
+
+2.https://2014bg13-cdbg13.rhcloud.com/cdbg13/cube2?A=100&B=200&C=300
+
+![w12-2](./../images/2bg13/w12-3.jpg)\
+
+3.完成圖
+
+![w12-3](./../images/2bg13/w12-4.jpg)\
+
+
+
+2bg13 w13-40123222工作
+===
+
+<https://2014bg13-cdbg13.rhcloud.com/cmsimply/get_page?heading=40123222>
+
+第一題:以手動方式組立lego_man.7z
+
+組立過程的重點:首先開啟lego_body.prt後須先將其與基準面作重和使其固定, 接下來依序開啟其餘樂高零件並依序組裝.
+
+注意事項:組合零件時須注意所點選之面或軸是否正確, 否則會造成組合錯誤之狀況.
+
+第二題:利用Vimeo及copy.com 存放任務一中的手動組立流程影片檔案
+
+Vimeo:無法登陸
+
+copy:<https://copy.com/tXJWFmAlvHTT>
+
+第三題:比較兩個壓縮檔案解開的 lego_man 零件檔案的差異
+
+以程式自動組立 lego_man(不是開man內的組立檔)：
+
+1. 零件檔案位置需放置組立程式指定的位置
+
+2. 自動組立程式組立零件 "特徵 ID" 有相互關係
+
+3. 組立順序為"身體 、 雙臂 、 雙手 、 頭 、 下盤 、 雙腳 、 帽子"，ID順序為40~49。
+
+4. 程式組立非常方便快速，只要會寫的話。
+
+lego_parts_edu內的組立檔 :
+
+1. 組立順序為"身體 、 雙臂 、 雙手 、 頭 、 下盤 、 雙腳 、 帽子"，但ID順序卻是"39、44、45、46、47、50、51、54、55、56"。
+
+2. 在組立過程中會發生很多問題，如固定好位置後按確定，卻會顛倒等等。
+
+差異:
+
+1. ID順序會不同。
+
+2. creo很便利的地方就是，當零件檔全部組起來後，之後都會顯示出連結過的參考面。(但我覺得很白癡，因為圖看起來很雜)
+
+2bg13 w13-40123231工作
+===
+
+請參考<https://2014bg13-cdbg13.rhcloud.com/cmsimply/get_page?heading=40123231>
+
+任務一: 手動方式組立lego_man.7z(完成)
+
+首先在組合件加入lego_body.prt(核心)再對齊預設的三個平面
+
+再依照其中心線重合與平面重合完成組立
+
+任務二: 利用Vimeo及copy.com 存放任務一中的手動組立流程影片檔案(完成)
+
+Vimeo: <https://vimeo.com/96318041>
+
+copy.com: <https://copy.com/ZPN1QeBVLOBd>
+
+=>因為老師中途廣播多次  因此有部分時段沒有動作 (´,•ω•`)
+
+任務三: 比較兩個壓縮檔案解開的 lego_man 零件檔案(完成).
+
+以程式自動組立 lego_man(不是開man內的組立檔)：
+
+1. 零件檔案位置需放置組立程式指定的位置
+
+2. 自動組立程式組立零件 "特徵 ID" 有相互關係
+
+3. 組立順序為"身體 、 雙臂 、 雙手 、 頭 、 下盤 、 雙腳 、 帽子"，ID順序為40~49。
+
+4. 程式組立非常方便快速，只要會寫的話。
+
+lego_parts_edu內的組立檔 :
+
+1. 組立順序為"身體 、 雙臂 、 雙手 、 頭 、 下盤 、 雙腳 、 帽子"，但ID順序卻是"39、44、45、46、47、50、51、54、55、56"。
+
+2. 在組立過程中會發生很多問題，如固定好位置後按確定，卻會顛倒等等。
+
+差異:
+
+1. ID順序會不同。
+
+2. creo很便利的地方就是，當零件檔全部組起來後，之後都會顯示出連結過的參考面。(但我覺得很白癡，因為圖看起來很雜)
+
+2bg13 w13-40123253工作
+===
+
+第一題:
+
+在組立過程中，需要注意零件的基準面是否正確，軸與軸的連接是否OK，用甚麼方法將零件與零件組合起來，組立順序。
+
+一開始先選擇本體開始組立，本體基準面最好和組立圖的基準面都重合。盡量以簡單的條件來連接，像是孔和洞的接法就有兩種，一種是面和面接合，另一種是軸和軸共線，方法不同但是結果相同。可是在之後更複雜的零件就會出現問題了。
+
+![w13-1](./../images/2bg13/13-1.jpg)
+
+第二題:
+
+vimeo: <https://vimeo.com/95939504>
+
+copy: <https://copy.com/2txBn06o6u2N>
+
+第三題:
+
+以程式自動組立 lego_man(不是開man內的組立檔)：
+
+1. 零件檔案位置需放置組立程式指定的位置
+
+2. 自動組立程式組立零件 "特徵 ID" 有相互關係
+
+3. 組立順序為"身體 、 雙臂 、 雙手 、 頭 、 下盤 、 雙腳 、 帽子"，ID順序為40~49。
+
+4. 程式組立非常方便快速，只要會寫的話。
+
+lego_parts_edu內的組立檔 :
+
+1. 組立順序為"身體 、 雙臂 、 雙手 、 頭 、 下盤 、 雙腳 、 帽子"，但ID順序卻是"39、44、45、46、47、50、51、54、55、56"。
+
+2. 在組立過程中會發生很多問題，如固定好位置後按確定，卻會顛倒等等。
+
+差異:
+
+1. ID順序會不同。
+
+2. creo很便利的地方就是，當零件檔全部組起來後，之後都會顯示出連結過的參考面。(但我覺得很白癡，因為圖看起來很雜)
+
+2bg13 w14工作
+===
+
+W14-40123222
+
+W14 任務 1 (5 分): 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+W14 任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+vimeo: <https://vimeo.com/96677701>
+
+copy.com:  <https://copy.com/39Z8OvPGQXda>
+
+ 
+W14-40123231
+
+任務一 + 任務二 : (10分)
+
+下載 lego_parts.7z orlego_parts.7z, 解開壓縮檔案後, 將資料放入 V:\home\lego 目錄中.
+
+手動組立流程拍成 flv 檔案後, 分別上傳到
+
+=>copy: <https://copy.com/ZPN1QeBVLOBd>
+
+=>Vimeo: <https://vimeo.com/96711209>
+
+
+W14-40123253
+
+請先將零件檔載下來後，丟至程式指定處v:home/lego下
+
+<https://copy.com/xK4s04nO2xUj>
+
+執行程式之網頁
+
+<http://2014bg13-cdbg13.rhcloud.com/cdbg13/remsub6/assembly>
+
+######第一題######
+
+在組立過程中，需要注意零件的基準面是否正確，軸與軸的連接是否OK，用甚麼方法將零件與零件組合起來，組立順序。
+
+一開始先選擇本體開始組立，本體基準面最好和組立圖的基準面都重合。盡量以簡單的條件來連接，像是孔和洞的接法就有兩種，一種是面和面接合，另一種是軸和軸共線，方法不同但是結果相同。可是在之後更複雜的零件就會出現問題了。
+
+因為是手動組，所以沒有增加基準面，而是直接使用曲面來接合。
+
+![w14-1](./../images/2bg13/w14_1.jpg)
+
+######第二題######
+
+vimeo: https://vimeo.com/96689585
+
+copy:　https://copy.com/Qoa8AsqQobCB
+
+
+W14 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub6 函式, 當使用者連結至各組雲端網站中的 remsub6, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+
+因為發現老師給的函式只有：１軸１面、３面＊２，我覺得有點不夠，所以多新增一個１軸２面的函式。
+
+以下為新增之函式：
+
+////////////////////////////////////////////////
+// axis_plane_assembly2 組立函式
+////////////////////////////////////////////////
+function axis_plane_assembly2(session, assembly, transf, featID, inc, part2, axis1, plane1, plane2, axis2, plane3, plane4){
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/"+part2);
+var componentModel = session.GetModelFromDescr(descr);
+var componentModel = session.RetrieveModel(descr);
+if (componentModel != void null)
+{
+    var asmcomp = assembly.AssembleComponent (componentModel, transf);
+}
+var ids = pfcCreate("intseq");
+if (featID != 0){
+    ids.Append(featID+inc);
+    var subPath = pfcCreate("MpfcAssembly").CreateComponentPath(assembly, ids);
+    subassembly = subPath.Leaf;
+    }else{
+    var subPath = pfcCreate("MpfcAssembly").CreateComponentPath(assembly, ids);
+    subassembly = assembly;
+    // 設法取得第一個組立零件 first_featID
+    // 取得 assembly 項下的元件 id, 因為只有一個零件, 採用 index 0 取出其 featID
+    var components = assembly.ListFeaturesByType(true, pfcCreate ("pfcFeatureType").FEATTYPE_COMPONENT);
+    // 此一 featID 為組立件中的第一個零件編號, 也就是樂高人偶的 body
+    var first_featID = components.Item(0).Id;
+    }
+var subPath = pfcCreate("MpfcAssembly").CreateComponentPath(assembly, ids);
+subassembly = subPath.Leaf;
+var asmDatums = new Array(axis1, plane1, plane2);
+var compDatums = new Array(axis2, plane3, plane4);
+var relation = new Array (pfcCreate("pfcComponentConstraintType").ASM_CONSTRAINT_ALIGN, pfcCreate("pfcComponentConstraintType").ASM_CONSTRAINT_MATE, pfcCreate("pfcComponentConstraintType").ASM_CONSTRAINT_MATE);
+var relationItem = new Array(pfcCreate("pfcModelItemType").ITEM_AXIS, pfcCreate("pfcModelItemType").ITEM_SURFACE, pfcCreate("pfcModelItemType").ITEM_SURFACE);
+var constrs = pfcCreate("pfcComponentConstraints");
+var MpfcSelect = pfcCreate("MpfcSelect");
+    for (var i = 0; i < 3; i++)
+    {
+        var asmItem = subassembly.GetItemByName (relationItem[i], asmDatums [i]);
+        if (asmItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var compItem = componentModel.GetItemByName (relationItem[i], compDatums [i]);
+        if (compItem == void null)
+        {
+            interactFlag = true;
+            continue;
+        }
+        var MpfcSelect = pfcCreate ("MpfcSelect");
+        var asmSel = MpfcSelect.CreateModelItemSelection (asmItem, subPath);
+        var compSel = MpfcSelect.CreateModelItemSelection (compItem, void null);
+        var constr = pfcCreate("pfcComponentConstraint").Create (relation[i]);
+        constr.AssemblyReference  = asmSel;
+        constr.ComponentReference = compSel;
+        constr.Attributes = pfcCreate("pfcConstraintAttributes").Create (true, false);
+        constrs.Append(constr);
+    }
+asmcomp.SetConstraints(constrs, void null);
+}
+// 以上為 axis_plane_assembly2() 函式
+////////////////////////////////////////////////
+ 
+
+因為程式組立的問題，需增加其他基準面。又因增加之基準面過多，因此以影片來介紹。
+
+以下為開始組立之程式：
+
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "new_beam_angle.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+three_plane_assembly2(session, assembly, transf, featID, 0, "NEW_AXLE_10.prt", "FRONT", "DTM7", "DTM1", "FRONT", "RIGHT", "TOP"); 
+three_plane_assembly2(session, assembly, transf, featID, 0, "NEW_AXLE_5.prt", "DTM9", "DTM10", "DTM3", "FRONT", "RIGHT", "TOP"); 
+axis_plane_assembly2(session, assembly, transf, featID, 0, 
+                              "NEW_CROSSBLOCK_2.prt", "A_25", "DTM7", "DTM12", "A_10", "DTM9", "DTM6");
+axis_plane_assembly2(session, assembly, transf, featID, 0, 
+                              "NEW_CROSSBLOCK_2.prt", "A_25", "DTM7", "DTM6", "A_10", "DTM9", "DTM6");
+axis_plane_assembly2(session, assembly, transf, featID, 0, 
+                              "NEW_CROSSBLOCK_2.prt", "A_27", "DTM9", "DTM12", "A_10", "DTM1", "DTM6");
+axis_plane_assembly2(session, assembly, transf, featID, 0, 
+                              "NEW_CROSSBLOCK_2.prt", "A_27", "DTM9", "DTM6", "A_10", "DTM1", "DTM6");
+axis_plane_assembly2(session, assembly, transf, featID, 0, 
+                              "NEW_CROSSBLOCK_2.prt", "A_27", "DTM9", "DTM13", "A_10", "DTM1", "DTM6");
+axis_plane_assembly2(session, assembly, transf, featID, 0, 
+                              "NEW_CROSSBLOCK_2.prt", "A_27", "DTM9", "DTM14", "A_10", "DTM1", "DTM6");
+axis_plane_assembly2(session, assembly, transf, featID, 3, 
+                              "NEW_BUSHING.prt", "A_10", "DTM1", "DTM6", "A_3", "FRONT", "DTM3");
+axis_plane_assembly2(session, assembly, transf, featID, 4, 
+                              "NEW_BUSHING.prt", "A_10", "DTM1", "DTM4", "A_4", "FRONT", "DTM3");
+axis_plane_assembly(session, assembly, transf, featID, 3, 
+                              "NEW_CONN_3.prt", "A_2", "DTM13", "A_4", "DTM2");
+axis_plane_assembly(session, assembly, transf, featID, 4, 
+                              "NEW_CONN_3.prt", "A_2", "DTM13", "A_4", "DTM2");
+axis_plane_assembly2(session, assembly, transf, featID, 3, 
+                              "NEW_BEAM_3.prt", "A_2", "DTM12", "DTM10", "A_36", "DTM2", "FRONT");
+ 
+
+以下是新增基準面介紹：
+
+vimeo:　<https://vimeo.com/96705375>
+
+copy:　<https://copy.com/GQFoavez3GcX>
+
+
+2bg13 w15工作
+===
+
+W15-40123222
+
+W15 任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+W15 任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+vimeo:<https://vimeo.com/97299479>
+
+copy:<https://copy.com/Z7X8MwaF2nmK>
+
+
+W15-40123231
+
+任務一 + 任務二 : (10分)
+
+下載 lego_parts.7z orlego_parts.7z, 解開壓縮檔案後, 將資料放入 V:\home\lego 目錄中.
+
+手動組立流程拍成 flv 檔案後, 分別上傳到
+
+=>copy: <https://copy.com/G34kgLaZYjp0>
+
+=>Vimeo:<https://vimeo.com/97298975>
+
+
+W15-40123253
+
+請先將零件檔載下來，解壓縮後將資料夾內之零件檔，丟至程式指定處v:home/lego下
+
+<https://copy.com/pMPmmUx2tRwy>
+
+執行程式的網頁
+
+<http://2014bg13-cdbg13.rhcloud.com/cdbg13/remsub5/assembly>
+
+######第一題######
+
+在組立過程中，需要注意零件的基準面是否正確，軸與軸的連接是否OK，用甚麼方法將零件與零件組合起來，組立順序。
+
+一開始先選擇本體開始組立，本體基準面最好和組立圖的基準面都重合。盡量以簡單的條件來連接，像是孔和洞的接法就有兩種，一種是面和面接合，另一種是軸和軸共線，方法不同但是結果相同。可是在之後更複雜的零件就會出現問題了。
+
+因為是手動組，所以沒有增加基準面，而是直接使用曲面來接合。
+
+![w15-1](./../images/2bg13/w15.jpg)
+
+######第二題######
+
+vimeo: <https://vimeo.com/97312377>
+
+copy: <https://copy.com/ywgyNcE0n3Hm>
+
+
+W15 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub5 函式, 當使用者連結至各組雲端網站中的 remsub5, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+
+以下是新增基準面介紹和程式組立過程影片：
+
+vimeo:　<https://vimeo.com/97329303>
+
+copy:　<https://copy.com/LiR8kyeIVN4Q>
+
+
+以下為開始組立之程式：
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "remsub5_BEAM_7.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+                              "remsub5_AXLE_3.prt", "A_40", "TOP", "A_1", "DTM2");
+axis_plane_assembly2(session, assembly, transf, featID, 1, 
+                              "axle_extender.prt", "A_1", "TOP", "RIGHT", "A_2", "TOP", "RIGHT");
+axis_plane_assembly2(session, assembly, transf, featID, 1, 
+                              "axle_extender.prt", "A_1", "DTM3", "RIGHT", "A_2", "TOP", "RIGHT");
+axis_plane_assembly2(session, assembly, transf, featID, 1, 
+                              "remsub5_axle_red.prt", "A_1", "DTM6", "RIGHT", "A_2", "DTM1", "RIGHT");
+axis_plane_assembly2(session, assembly, transf, featID, 1, 
+                              "remsub5_axle_red.prt", "A_2", "DTM3", "RIGHT", "A_2", "DTM2", "RIGHT");
+axis_plane_assembly2(session, assembly, transf, featID, 5, 
+                              "conn_axle_female.prt", "A_2", "DTM1", "RIGHT", "A_17", "TOP", "RIGHT");
+axis_plane_assembly2(session, assembly, transf, featID, 4, 
+                              "conn_axle_female.prt", "A_2", "DTM1", "RIGHT", "A_17", "TOP", "RIGHT");
+axis_plane_assembly(session, assembly, transf, featID, 6, 
+                              "beam_angle_4x2.prt", "A_17", "DTM1", "A_7", "DTM1");
+axis_plane_assembly(session, assembly, transf, featID, 8, 
+                              "remsub5_conn.prt", "A_8", "DTM1", "A_3", "TOP");
+
+ 
+
+ ########發現問題#######
+
+1.零件檔名不知道為甚麼不能打太長，會發生錯誤，因此我將原來零件檔改好後直接存檔而不是另存新檔。
+
+ 
+2bg13 期末報告
+===
+ 
+請先將零件檔放置v:home內，<https://copy.com/waRTojtYEtAJ>
+
+
+第一章 專案介紹
+
+1.1讀卡機構造(以CREO繪製)，參考面都是以手動的方式建立。
+
+![蓋子1](./../images/2bg13/final-1.png)
+![USB](./../images/2bg13/final-2.png)
+![蓋子2](./../images/2bg13/final-3.png)
+![SD卡](./../images/2bg13/final-4.png)
+
+組合圖:
+![組合圖](./../images/2bg13/final-5.png)
+
+1.2程式組立
+
+
+第二章 專案結構
+
+2.1運用技術
+(1)在近端利用 Creo 繪製零件
+(2)利用遠端 Pro/Web.Link 程式修改近端 Creo 零件尺寸
+(3)將近端零件轉為 STL, 上傳至遠端 CMSimply 網站中檢視
+(4)在近端利用手動組立零件	
+(5)在近端利用遠端網站上的 Pro/Web.Link 進行自動組立
+(6)在近端與雲端建立 CMSimply 網站
+(7)利用 Github管理所有文字資料的版次
+(8)利用近端 Leo Editor 與可攜程式系統管理所有資料
+(9)利用近端環境產生 pdf 與 html 格式報告資料
+
+2.2專案製作流程
+(1)在近端，各組員以CREO繪製讀卡機的各零件。
+(2)以手動方式建立參考面。
+(3)在近端以手動方式將讀卡機組立起來。
+(4)將零件檔存放至雲端。
+(5)近端編寫組立程式and修改尺寸之程式。
+(6)將程式整合至Leo Editor，藉此管理近端的資料。
+(7)將近端資料利用 Github進行遠端管理所有文字資料的版次。
+(8)在近端利用遠端網站上的 Pro/Web.Link 進行自動組立。
+(9)將各資料及報告整理後，於CMSimply上呈現出來。
+
+2.3架構圖
+我們利用教材三(下圖)的流程圖，對我們的專案進行流程的建構。
+
+![教材三](./../images/2bg13/final-7.png)
+
+以下為我們專案的架構
+
+![讀卡機專案架構](./../images/2bg13/final-6.png)
+
+
+第三章 問題討論
+
+其實，此次的專案讓我了解到身為協同產品設計師，有甚麼所要學會的，並且哪些事是我們可以交給底下的組員去做的。
+
+針對事情的分配，我覺得應該是:
+
+一位設計師是只須將專案的大鋼架構好，程式開發好，其餘便不必再做了。為何要我們做像畫零件和增加參考面這些如此低層的工作呢。
+
+現在就來討論我們此專案的問題:
+
+1.	協同產品設計為同步協同或非同步協同?
+
+基本上算是同步協同，但我們只是腳沾了水，就說已經是下水了。更進一步的工作就不會了，像是每組都畫好一部份的組合件，之後再藉由程式來將各組的零件組立起來，這就真的是大工程了。
+
+2.	在做此專案的過程中，我只有一句話，建立零件參考面也太麻煩了吧!!其實跟老師對談過，我了解到我們對CREO還只是停留在基礎的地方而已，我們沒有辦法理解更多細節。但我們可以花時間想一套程式是來負責建立參考面，但這樣程式的能力就要更強，這也是我們不足的地方。可是之後的效益會很大，雖然一開始要花很長時間來開發程式，但之後便可以縮短建立參考面的時間。
+
+3.	組立為何要利用CREO呢?
+
+當我們利用CREO畫零件並組立時，這能叫協同嗎?當然不是。我們應該利用遠端的網頁來建立一個能夠直接修改重要尺寸，並立刻能夠以STL方式show出來給我們看，之後能在網頁上直接組立。
+
+4.	程式如何加強?之後如何運用到協同上?
+
+基本上當一個專案開始建立時，便會產生一個問題，該如何分工呢?這時絕大多數的人就會說，我要畫圖。嗯，這是人之常情，大家都不想做寫程式這種困難的事，但是最後由誰來做呢?還不是某位一開始就從頭到尾幫大家寫程式的人來寫。試問，那位程式很強嗎?絕對不強，因為協同應該是由多位的工程師一起完成程式的開發，而今天要一個人做大家一起做的事，那是不可能完成的。好的，那如何加強程式能力呢?自然是多寫就對了，但不是去寫那種像是呼叫函式庫出來的程式，而是去寫出一個函式庫。
+
+我認為唯有當大家都能一起往上爬時，才能說是開始協同。
+
+當大家都會寫程式時，才有辦法一起開發像是建立參考面、網頁上直接修改尺寸、網頁上直接組立等程式。
+
+
+2bg13 期末結語
+===
+
+協同是大家的事，唯有大家一起努力，才能創造價值。
+
+別抱著有人會幫忙做的心態，只當伸手族是乞丐在做的事。
+
+
+
+

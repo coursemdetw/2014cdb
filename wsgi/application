@@ -226,6 +226,8 @@ import programs.cdbg13.remsub6 as cdbg13_remsub6
 root.cdbg13.remsub6 = cdbg13_remsub6.remsub6()
 import programs.cdbg13.remsub5 as cdbg13_remsub5
 root.cdbg13.remsub5 = cdbg13_remsub5.remsub5()
+import programs.cdbg13.cardreader as cdbg13_cardreader
+root.cdbg13.cardreader = cdbg13_cardreader.cardreader()
 #####################################################
 # 導入協同程式 cdbg14
 #####################################################
