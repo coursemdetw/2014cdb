@@ -190,3 +190,106 @@ vimeo連結:https://vimeo.com/97300300
 copy連結:https://www.copy.com/s/qC7VjZQCg7NU
 
 vimeo連結:http://vimeo.com/97301079
+
+
+第十六~十八週Teamproject套件簡介
+===
+
+一.摘要
+
+自從上了這門課後，常常會去關注一些國際的協同新聞，”結力量大─中國開發者完成《Swift》中文版”，蘋果公司6月3日凌晨的2014年WWDC上，向工程師圈投下重磅炸彈—推出全新程式語言 Swift。整個程式界頓時一片沸騰。正當大家熱議這門新語言的特性之時，一群中國開發者在 GitHub 上開啓「《The Swift Programming Language》in Chinese 」開源翻譯專案，採用眾包翻譯的方式，整個翻譯團隊在9天內完成了近670頁的 Swift 語言文件翻譯工作。翻譯成員更是來自網上各個角落。該專案開始一周左右，在GitHub上獲得了1300多個Star和300多個Fork，GitHub週總榜最高排名第 4。這個專案的成功，給我們帶來一個新的思考話題：協同寫作，或許是未來寫作的趨勢。
+
+《The Swift Programming Language》in Chinese關鍵時間點
+
+6 月 3 日，凌晨 3 點，蘋果發布 Swift 語言；
+6 月 3 日，翻譯專案啟動，專案在 GitHub 上獲得 50 個 Star；
+6 月 4 日，開始有人關注，專案在 GitHub 上獲得 300+Star；
+6 月 5 日 --6 日，協作機制基礎建立，翻譯工作開始步入正軌；
+6 月 7 日 --8 日，翻譯緩慢加速；
+6 月 9 日 --11 日，翻譯全速進行，完成全部翻譯；
+6 月 12 日，完成校對全過程。《The Swift Programming Language》中文版正式發布！
+《The Swift Programming Language》in Chinese協作形式
+
+整個翻譯專案通過 GitHub 進行協作，使用 Markdown 進行文本編輯和排版，使用 Gitbook 製作成靜態頁面並託管到 GitHub 上，供線上閱讀。Markdown 文本也可以轉換成 Epub、PDF、mobi 等多種電子書格式。
+
+參與翻譯的網友首先需要在 GitHub 專案上認領章節，認領成功後只需要不斷更新 Markdown 格式的文本文件，直到翻譯完成。在某章翻譯完成後，再會將網友翻譯完成的內容合併起來，通過 Gitbook 轉換成在線頁面並更新到 GitHub。
+
+這個事件給我們這組同學一個很大的啟示，未來也包括現在，大家一起做一件Project是理所當然的，在遠端和近端與自世界各地的人一起執行作業，如何有效地做一件事情，降低作業成本，提升企業競爭力是你我必須努力的方向。
+
+ 
+
+二.簡介:
+
+當客戶端使用者,擁有零件檔及Creo程式,就能透過Pro/Web.Link程式,就能將零件自動組立.
+
+本學期所學到的內容就包含編寫Pro/Web.Link程式,完成後上傳至Openshift上,客戶端只要設定好網頁安全性(允許ActiveX).信任的網站以及在Creo內建瀏覽器啟用Pro/Web.Link,之後在內建瀏覽器鍵入自動組立程式的網址即可完成組立.
+
+ 
+
+三.目前擁有技術:
+
+1.在近端利用 Creo 繪製零件
+
+2.利用遠端 Pro/Web.Link 程式修改近端 Creo 零件尺寸
+
+3.將近端零件轉為 STL, 上傳至遠端 CMSimply 網站中檢視
+
+4.在近端利用手動組立零件
+
+5.在近端利用遠端網站上的 Pro/Web.Link 進行自動組立
+
+6.在近端與雲端建立 Dokuwiki 網站
+
+7.利用手動或半自動方式管理 Dokuwiki 的使用者
+
+8.在近端與雲端建立 CMSimply 網站
+
+9.利用 Github 與 Bitbucket 管理所有文字資料的版次
+
+10.利用近端 Leo Editor 與可攜程式系統管理所有資料
+
+11.利用近端環境產生 pdf 與 html 格式報告資料
+
+ 
+
+套件架構流程圖:http://i.imgur.com/a6Dj0qc.png
+
+
+
+三.一.希望擁有技術:
+
+1.在手動組立過程,就同時完成自動組立程式
+
+2.自動產生零件基準面,方便組立
+
+3.可直接在Creo執行並偵錯
+
+4.有一程式方便管理網站,以上傳方式加入自動組立程式
+
+5.可變更組立零件各別零件尺寸
+
+6.可在限制條件允許下替換組立件內的不同零件
+
+ 
+
+四.問題及解決:
+
+一開始遇到問題就是課程協同的GitHub常常使Leo檔出錯,後來透過近端執行applicaton並到locahost測試檢查是否達到預期功能之後上傳到自己的GitHub及Openshift進行遠端測試後,就可以確保不會出錯.
+
+另一部分,在編寫組立程式時,時常要自己建立基準面,若在協同組立一大型組件時,未告知及給予更改過後的零件,將會影響自動組立程式的執行,所以有對零件做任何更動時,都必須告知,才能使得組立順利進行.
+
+ 
+
+五.結論:
+
+透過本課程教授的協同產品設計技術,我們將程式透過Leo Editor管理並執行近端測試,再將其上傳至GitHub及Openshift執行遠端測試,並結合CMSimply 網站,形成完整的協同計畫,客戶端只需鍵入網址即能完成組立,背後我們必須做的事情非常多,我們需要先手動組立零件,才能了解所結合的條件,我們也時常需要自己建立零件參考面.軸,這都是寫出程式的前置作業,下一步才有辦法編寫Pro/Web.Link程式,這些技術也能讓組員分配一大型組件中不同的小組件,編寫好程式,透過Pro/Web.Link即能快速又有效率地完成一大型組件.
+
+ 
+
+六.參考文獻:
+
+1.MDE課程網頁https://wiki.mde.tw
+
+2. Benoıt Eynard,Sebastien Lienard,Sebastien Charlesand Aurelien Odinot (2005).
+
+Web-based Collaborative Engineering Support System

@@ -1,3 +1,10 @@
+
+此為第九組報告,以下為組員
+
+40123235-陳奕宏
+40123217-吳柏叡
+40123226-洪宗宇
+
 ====
 Wiki Discussion Protocols(Wiki的討論和協議)
 ====
@@ -43,15 +50,438 @@ Wiki Discussion Protocols(Wiki的討論和協議)
 
 9.最後.學生們一致認為,在團體中工作在學習過程中更有利於單獨工作
 
-W8,W9整理:https://2014cdbg9cmsimply-cadp13ag35.rhcloud.com/cmsimply/get_page?heading=
+====
+W12報告
+====
+1.請各組將第八週與第九週考試的摘要報告放入 Github 協同專案中的分組報告區, 並將內容放入各組控管的同步 OpenShift 網站中. (佔期末成績 5分)
+
+W8整理
+====
+ 第一題: 
+ 
+請寫一個執行時可以列出 9×9 乘法表的網際 Python 程式, 然後 Push 到個人 bitbucket 空間, 而且同步指到 OpenShift 個人帳號上執行.
+ 
+   --以下為程式的程式碼:
+ 
+for x in range(0,10):
+ 
+        for y in range(0,10):
+ 
+            print(x,'*',y,'=',x*y)
+ 
+  --解題過程:
+ 
+程式打完之後,把程式的Python存檔放置在想要上傳的openshift資料夾下,而以下為push之過程,須先開啟cmd
+ 
+1.   先開啟欲push之資料夾=>cd 40123235spring
+ 
+2.   git add .
+ 
+3.   git commit -m "99"   ps:"99"為欲顯示知名稱
+ 
+4.   git push
+ 
+上述過程會把資料夾內的資料同步更新到與openshift連結之bitbucket上
+ 
+而之後欲把99乘法表以網際網路的方式呈現
+ 
+必須以FileZilla連線網頁資料把近端之資料同步到遠端網頁
+ 
+問了別人之後似乎需把push上去的資料夾中的wsgi資料夾→ application檔案理新增一個class格式
+ 
+在到連線中的FileZilla把application檔案丟到app-root/runtime/repo/wsgi的application檔案下覆蓋原始檔
+ 
+如此便能在網站中執行99乘法表程式
+ 
+  --心得:
+ 
+雖然自己在push以及同步bitbucket資料上和近端資料以FileZilla送到遠端沒有問題
+ 
+但自己不知道如何在application檔案中新增一個class格式
+ 
+所以自己對於程式的應用還是不純熟,自己必須更加加強或請教老師及TA以尋求解答
+ 
+第二題:
+ 
+請將上述執行過程錄為 flv 後, 上傳到個人的 Vemeo 空間中, 並將網址回報到各組網站 (dokuwiki 與 CMSimply)與報告中, 並且將相關心得與報告連結登錄到 wiki.mde.tw 第八週的分組頁面中.
+ 
+  --心得:由於自己並沒有完全完成這題,故無相關影片
+ 
+第三題:
+ 
+(協同計分, 分組進行) 請在各組的雲端 dowiki 中,根據下列 40 個帳號與密碼, 新增對應的使用者帳號與密碼後, 將雲端網址登錄在 wiki.mde.tw 各組第八週頁面中, 並說明操作過程與心得後, 將心得整理成 pdf 後繳交到 course@mde.tw.
+ 
+ 
+ 
+  --解題過程:
+ 
+由於自己和組員並不會寫相關程式,所以只能在近端環境下以手動方式一位一位增加
+ 
+以下為程式碼:
+ 
+58B39:2d677ef47c7f9ece096382395a9b6264d5a98b2a:58B39:58B39@gm.nfu.edu.tw:user
+3624D:a93c450b982947f5b3999eba098b5ed1214bb08d:3624D:3624D@gm.nfu.edu.tw:user
+7345B:989b41f7e227924871c07bf7c195f0072a7eb027:7345B:7345B@gm.nfu.edu.tw:user
+358DA:95a16ac4365072726673248f444df7eba75ee1e0:358DA:358DA@gm.nfu.edu.tw:user
+3BC7B:bb6219ca2f108bbbab3fcb66427214ca60a19fe2:3BC7B:3BC7B@gm.nfu.edu.tw:user
+CA55C:70a896fb643df4c19244eefdfe0c3b6068e24c4c:CA55C:CA55C@gm.nfu.edu.tw:user
+D2756:c7fd75ec1dfb78d1ed570e7160e738d03cf49296:D2756:D2756@gm.nfu.edu.tw:user
+368B8:f60809a4518948a58db7c5d6250c9649804f618d:368B8:368B8@gm.nfu.edu.tw:user
+7948A:7be5082ab55621c595dea481d44be9bfc5aceb9c:7948A:7948A@gm.nfu.edu.tw:user
+C65C4:6d179f09c3208d7ee647ecc7ef2382fec8526c68:C65C4:C65C4@gm.nfu.edu.tw:user
+A8964:da61c767b42b77f48638747f90c2f53eb6521c8a:A8964:A8964@gm.nfu.edu.tw:user
+22422:6891153e9320c657d8b11a951583a3f3d3f94fd5:22422:22422@gm.nfu.edu.tw:user
+9A5B4:ce3d965fee0f798491642ddb3dd22ba9d2dced02:9A5B4:9A5B4@gm.nfu.edu.tw:user
+B5A76:644de6fc11d121d957bf808c9b56d9ca4d059a89:B5A76:B5A76@gm.nfu.edu.tw:user
+57388:091f5b9e1a4d1c1d5ea7cce75de24d4b01566250:57388:57388@gm.nfu.edu.tw:user
+8A833:1afac707986f2e384173c677446f1d2a5e898cd3:8A833:8A833@gm.nfu.edu.tw:user
+29AB8:41b6c656f43a0f47657cbd35ea98d2bcec6abeef:29AB8:29AB8@gm.nfu.edu.tw:user
+5ABD2:2e948d36ea4a4bf8658f3a2a661d15672ed0db9b:5ABD2:5ABD2@gm.nfu.edu.tw:user
+86293:e13d11b5cbf8d187fa0979cd0d7f03bf908ac21a:86293:86293@gm.nfu.edu.tw:user
+9DCBC:0025e37ed719f52d0a30b65464de7f65c45fe023:9DCBC:9DCBC@gm.nfu.edu.tw:user
+276DD:b385a60399444c8d209252a409306b87617a70f9:276DD:276DD@gm.nfu.edu.tw:user
+599AA:128496b6c099e3a0636c9ae010453846d9c106c5:599AA:599AA@gm.nfu.edu.tw:user
+9C449:d8ccf636283af15a1a8c5019bc566fa3f3029f96:9C449:9C449@gm.nfu.edu.tw:user
+64236:3d7bf3bc19254caa8a753e3f0640ecd92097ed72:64236:64236@gm.nfu.edu.tw:user
+43AAC:355cd48ab783d5c706f69e17ce4d3a906d235882:43AAC:43AAC@gm.nfu.edu.tw:user
+73B93:cdc7dd45d42e20b08093ec6bebdcaa5e75f14eb7:73B93:73B93@gm.nfu.edu.tw:user
+36283:069fc23c8f5e0de260ea661a380b5f6e645c1349:36283:36283@gm.nfu.edu.tw:user
+7447C:1dfa6eceeb1adf5ad90812f0303a49f1d51ee0ad:7447C:7447C@gm.nfu.edu.tw:user
+C73AB:03f557895599312f51b105bea8c7beba7e229e22:C73AB:C73AB@gm.nfu.edu.tw:user
+8284B:36155aa12ba14f9a5f228c1968433257a72b15ce:8284B:8284B@gm.nfu.edu.tw:user
+62454:cfad59f3ec2a14ab35165cb9bd70912c95d1d438:62454:62454@gm.nfu.edu.tw:user
+44B3C:08b10cf81fb5b427cf5207b1740f786a523fa73c:44B3C:44B3C@gm.nfu.edu.tw:user
+C75CB:6bc91eec32e227f7e403c0a04e77d8d8c24131a5:C75CB:C75CB@gm.nfu.edu.tw:user
+4A3CB:02c4f5bb76ee31308b6fa1840d8c6b36cc2208c3:4A3CB:4A3CB@gm.nfu.edu.tw:user
+7D248:7302dc92744cec96317181dda2f76fff73012153:7D248:7D248@gm.nfu.edu.tw:user
+A7CC4:7d4982682678327d5634124567b797571c1076d3:A7CC4:A7CC4@gm.nfu.edu.tw:user
+99BCC:4e6e5471ffe59aa2642b71e5bf20107a217fa411:99BCC:99BCC@gm.nfu.edu.tw:user
+6DA77:d1f2d06aa7e8728998f4f7231bfb34801541eed4:6DA77:6DA77@gm.nfu.edu.tw:user
+357AB:ea761c7c7751066d42635bdca37b9b9df8b3a7e4:357AB:357AB@gm.nfu.edu.tw:user
+A9525:886cf5d39491b82a810b37dcfc3fd69482b9ee2e:A9525:A9525@gm.nfu.edu.tw:user
+ 
+  --心得:
+ 
+自己和組員對於程式的能力還是非常不熟,所以才只能用手動方式
+ 
+希望自己和組員可以在以後增進程式相關能力
+==========================================================
+W9整理
+====
+第一題:
+ 
+請寫一個執行時可以列出以十為底對數表的網際 Python 程式, 然後 Push 到個人 bitbucket 空間, 而且同步指到 OpenShift 個人帳號上執行.
+ 
+第二題:
+ 
+請在個人的 OpenShift 平台上建立一個能夠列印出與九九乘法表結果完全相同的網際程式, 接著在乘法表上端加上兩個輸入表單, 讓使用者輸入兩個整數, 按下送出鍵後, 程式會列出以此兩個整數為基底的乘法表, 例如: 若兩個欄位都輸入: 9, 則列出九九乘法表, 若輸入 9, 20, 則列出 9×20 的乘法表.
+ 
+第三題:
+ 
+請在各組的雲端 dokuwiki 中, 新增帳號與密碼都是由 abc001 ~ abc399 字串所組成的 399 名用戶登入對應資料, 並將製作過程與驗證流程拍成 flv 後上傳到個人的 Vimeo 資料區, 並將連結放在個人第九週頁面.
+ 
+--解題過程:
+ 
+我使用程式將abc001~abc399的密碼產生出程式碼(貼在user.auth.php上的),程式碼如下:
+ 
+import hashlib
+ 
+import string
+ 
+import random
+ 
+ 
+ 
+''' sha1 secure hashes '''
+ 
+ 
+ 
+# convert user_password into sha1 encoded string
+ 
+def gen_password(password):
+ 
+return hashlib.sha1(password.encode("utf-8")).hexdigest()
+ 
+ 
+ 
+# read lines from file
+ 
+lines = open("2b-student-test.txt", "r", encoding="utf-8").read().splitlines()
+ 
+# we may also need to notice every user with computer generated passwords
+ 
+for i in range(len(lines)):
+ 
+password = lines[i].split()[1]
+ 
+print(gen_password(password))
+ 
+ 
+ 
+不過這樣還不是符合在user.auth.php上的格式,因為只產生密碼而以
+ 
+因此我用Excel做整理,把user.auth.php中的程式碼格式複製下來只需改名稱以及密碼那欄即可
+ 
+改完之後複製到txt檔裡會發現間隔的地方會有空格,以手動的方式刪除空格即完成可貼在user.auth.php上的程式碼
+ 
+再來把txt檔裡的程式碼複製到user.auth.php上即可
+ 
+如果想把資料同步到遠端的話則以FileZilla連線到欲同步之網站資料再把user.auth.php丟到app-root/data/conf下
+ 
+以下為程式碼(由於太繁長所以只貼幾個作為參考):
+ 
+abc001:a3325cf1c081db0cb9992f1716a66a7f44b4f522:abc001:abc001@gm.nfu.edu.tw:user
+abc002:c12dd1cbbc17362579a617fde0e287a1bea09504:abc002:abc002@gm.nfu.edu.tw:user
+abc003:24c0219a84b5b8585256a7e9d66468c40fdc10ff:abc003:abc003@gm.nfu.edu.tw:user
+abc004:9154095b37ba24e2b1f38bdfc815da25c60f045c:abc004:abc004@gm.nfu.edu.tw:user
+abc005:9eeec88bfc50376c49da4dc2165c84d228bd5bad:abc005:abc005@gm.nfu.edu.tw:user
+abc006:4eae2d8134d7ecb0faca5b0b95ba6f31fb87a215:abc006:abc006@gm.nfu.edu.tw:user
+abc007:2dff70403a3fc319c09402afac07aed9e322bc9e:abc007:abc007@gm.nfu.edu.tw:user
+abc008:92050e6e2b5349911a9bb2e6870a380fbd260115:abc008:abc008@gm.nfu.edu.tw:user
+abc009:67d105db16babc59c6e1b47eb9d98360171b5837:abc009:abc009@gm.nfu.edu.tw:user
+abc010:2034a050e24829c2bcfe5a6e57a0ba2a7cbab75d:abc010:abc010@gm.nfu.edu.tw:user
+ 
+ 
+ 
+心得:由於自己還是不會撰寫關於產生出一整個程式碼之程式,所以雖然不是以手動方式增加abc001~abc399之會員資料
+ 
+但還是有動用的手動的方式
+ 
+ 
+ 
+第九組之dokuwiki:   http://wiki-cadp13ag35.rhcloud.com/doku.php
+
+2.請各組設法利用 CherryPy 與 Pro/Web.Link 技術, 在 Github 協同專案中建立一個能夠透過連結或表單控制 Cube 零件, a, b, 或 c 零件尺寸的網際協同程式, 讓使用者可以藉以利用近端的 Creo 嵌入式瀏覽器控制 Cube 的尺寸後列出該零件的體積大小. (佔期末成績 5分)
+
+
+在聽完TA的講解之後,以知道如何使用leo裡的path wsgi/programs/cdbg9(各組的程式)
+ 
+修改完的程式在leo裡的path wsgi/programs/cdbg9下的edit __init__.py下
+ 
+不過在Creo近端下開啟時會產生網頁錯誤,我自己並不是很清楚為何會這樣
+
+
 
 ====
 W13個人報告
 ====
-40123235-陳奕宏=>報告相關資料放在https://2014cdbg9cmsimply-cadp13ag35.rhcloud.com/(CMSimply)
-而影片在個人Viemo:https://vimeo.com/user27235203/videos
+                                                    40123235-陳奕宏
+
+任務一: 請以手動方式, 從下方下載 lego_man.7z 零件, 完成組立後, 以組員為單位, 在各分組報告區詳細說明組立過程的重點與注意事項. (5 分)
+ 
+ 
+ 
+開啟新檔案,建立零組件,先開啟身體的組件,並且須注意面必須對面
+ 
+而接下來我是依手=>頭=>帽子=>腳的順序組立
+ 
+ps:組立時須注意所要組的面和軸有無對好,否則會產生錯誤
+========================================================================
+任務二: 請利用 Vimeo 及 copy.com 存放任務一中的手動組立流程影片檔案, 以組員為單位, 將連結放入各分組報告區中. (5 分)
+ 
+ 
+ Vimeo：https://vimeo.com/user27235203/videos
+ 
+copy.com：https://www.copy.com/s/JUKgF0bBljvy/
+ 
+ps:此影片為後來拍攝,因為原本拍攝之影片裡面有畫面被切過去時來不及暫停之多餘片段
+========================================================================
+任務三: 請仔細觀察協同程式中的 lego_man 自動組立程式, 並且從下方 lego_parts_edu.7z 中下載相同名稱的 lego_man 零件, 請詳細比較兩個壓縮檔案解開的 lego_man 零件檔案, 有哪些差別? 請將詳細比對結果以組為單位將資料放入各分組的報告中. (5 分)
+ 
+ps:程式以leo裡的cdbg30下的edit 2為比較
+ 
+程式組立(lego_man):
+ 
+1.須先用application開啟近端,並且所有零組件須放在系統指定之資料夾下
+ 
+2.組立程式有設定特徵ID的互相關係 ex:
+ 
+axis_plane_assembly（會議，集會，互感器，featID，0，
+                              “LEGO_ARM_RT.prt”，“A_13”，“DTM1”，“A_4”，“DTM1”）;
+ 
+此為組立右手之程式,其中featID後的0為代表body
+ 
+3.組立是有順序性的,並且ID也是依序而排下去的
+ 
+身體=>右手(ARM)=>左手(ARM)=>右手(HAND)=>左手(HAND)=>頭部(HEAD)=>下半身(WAIST)=>右腳=>左腳=>紅帽
+ 
+其中身體以及下半身是以組立面為約束條件,ID順序為40~49
+ 
+ ================================================== 
+手動組立(lego_parts_edu內的組立檔):
+ 
+1.組立有順序性,但ID是無順序性的
+ 
+身體=>雙臂=>雙手=>頭=>下半身=>雙腳=>帽子
+ 
+ID順序:39=>44=>45=>46=>47=>50=>51=>54=>55=>56
+ 
+2.手動組立無法像程式那樣可以精準定位,所以過程中可能會發生錯誤自己也不知道
+
+================================================== 
+
+                                                  40123217-吳柏叡
+任務一: 請以手動方式, 從下方下載 lego_man.7z 零件, 完成組立後, 以組員為單位, 在各分組報告區詳細說明組立過程的重點與注意事項. (5 分)
+ 
+ 
+ 
+開啟Creo零組件→先載入本體(須對基準面)→分別載入頭與四肢個零件(須對本體，利用軸或面)。
+
+
+任務二: 請利用 Vimeo 及 copy.com 存放任務一中的手動組立流程影片檔案, 以組員為單位, 將連結放入各分組報告區中. (5 分)
+ 
+ 
+ 
+或是Vimeo： https://vimeo.com/96588112
+ 
+copy.com： https://copy.com/VzCUuG0g2PwH
+
+
+任務三: 請仔細觀察協同程式中的 lego_man 自動組立程式, 並且從下方 lego_parts_edu.7z 中下載相同名稱的 lego_man 零件, 請詳細比較兩個壓縮檔案解開的 lego_man 零件檔案, 有哪些差別? 請將詳細比對結果以組為單位將資料放入各分組的報告中. (5 分)
+================================================== 
+
+                                                  40123226-洪宗宇
+任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+ 
+ 
+ 
+ 
+ 
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+ 
+ 
+ 
+Vimeo:https://vimeo.com/97303592
+ 
+Copy.com:https://copy.com/ZQGoOYshlzqg
+
+====
+W14個人報告
+====
+                                                   40123235-陳奕宏
+
+任務 1 (5 分): 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立
+ 
+
+心得:  組立時須注意事項大致上和上禮拜相同,不過這裡拜多學習了新增面和軸的功能
+ 
+以便能更方便及更快速組立
+
+
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中
+ 
+ Vimeo: https://vimeo.com/96683780
+ 
+ copy.com: https://copy.com/oVjeqmQ8jMtR
+
+
+任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub6 函式, 當使用者連結至各組雲端網站中的 remsub6, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+================================================== 
+
+                                                  40123226-洪宗宇
+任務 1 (5 分): 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立
+ 
+
+組立時須注意事項大致上和上禮拜相同,不過這裡拜多學習了新增面和軸的功能
+ 
+以便能更方便及更快速組立
+
+
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中
+ 
+ Vimeo:https://vimeo.com/96694354
+
+ copy.com:https://copy.com/vNNFWZQsZwk1
+ ================================================== 
+
+                                                  40123217-吳柏叡
+任務 1 (5 分): 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立
+ 
+
+組立時須注意事項大致上和上禮拜相同,不過這裡拜多學習了新增面和軸的功能
+ 
+以便能更方便及更快速組立
+
+
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中
+ 
+ Vimeo:https://vimeo.com/96708111
+
+ copy.com: https://copy.com/SiVsnoLI6zxi
+
+
+====
+W15個人報告
+====
+                                                   40123235-陳奕宏
+任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+心得:  這次和上次相比又更加簡單許多,只要注意好軸和軸以及面對面即可
+
+
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+ 
+ 
+ Vimeo:https://vimeo.com/97302282
+ 
+Copy.com:https://copy.com/jV4MHk3pYdVg
+
+
+任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub5 函式, 當使用者連結至各組雲端網站中的 remsub5, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+
+心得:
+ 
+注:以放在leo第九組專案的remsub5
+ 
+
+使用程式的組立雖然是快速又方便,但在寫相關的組立程式時非常麻煩
+ 
+ 
+ 
+程式組立無法像手動時可以直接面接面,軸對軸
+ 
+ 
+ 
+必須在單一零組件創立新的軸以及面才有辦法使用老師的程式組立
+================================================== 
+
+                                                  40123217-吳柏叡
+任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+ 
+ 
+ 
+ 
+ 
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+ 
+ 
+ 
+Vimeo: https://vimeo.com/97303443
+ 
+Copy.com:https://copy.com/VzCUuG0g2PwH
+================================================== 
+
+                                                  40123226-洪宗宇
+任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+ 
+ 
+ 
+ 
+ 
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+ 
+ 
+ 
+Vimeo:https://vimeo.com/97303592
+ 
+Copy.com:https://copy.com/ZQGoOYshlzqg
+
+
 
 報告摘要
 ===
+以上內容都可以在第九組CMSimply中找到:  
+https://2014cdbg9cmsimply-cadp13ag35.rhcloud.com/cmsimply/get_page?heading=
+
 
 這是 2bg9 報告摘要內容
