@@ -150,7 +150,7 @@ lego_parts_edu內的組立檔 :
 
 一開始先選擇本體開始組立，本體基準面最好和組立圖的基準面都重合。盡量以簡單的條件來連接，像是孔和洞的接法就有兩種，一種是面和面接合，另一種是軸和軸共線，方法不同但是結果相同。可是在之後更複雜的零件就會出現問題了。
 
-![w13-1](./../images/2bg13/13-1.jpg)
+![w13-1](./../images/2bg13/13-1.jpg)\
 
 第二題:
 
@@ -184,6 +184,8 @@ lego_parts_edu內的組立檔 :
 
 2bg13 w14工作
 ===
+
+完整內容請參考:<http://2014bg13-cdbg13.rhcloud.com/cmsimply/get_page?heading=>
 
 W14-40123222
 
@@ -242,9 +244,6 @@ W14 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單�
 
 以下為新增之函式：
 
-////////////////////////////////////////////////
-// axis_plane_assembly2 組立函式
-////////////////////////////////////////////////
 function axis_plane_assembly2(session, assembly, transf, featID, inc, part2, axis1, plane1, plane2, axis2, plane3, plane4){
 var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/"+part2);
 var componentModel = session.GetModelFromDescr(descr);
@@ -300,8 +299,6 @@ var MpfcSelect = pfcCreate("MpfcSelect");
     }
 asmcomp.SetConstraints(constrs, void null);
 }
-// 以上為 axis_plane_assembly2() 函式
-////////////////////////////////////////////////
  
 
 因為程式組立的問題，需增加其他基準面。又因增加之基準面過多，因此以影片來介紹。
@@ -345,6 +342,8 @@ copy:　<https://copy.com/GQFoavez3GcX>
 2bg13 w15工作
 ===
 
+完整內容請參考:<http://2014bg13-cdbg13.rhcloud.com/cmsimply/get_page?heading=>
+
 W15-40123222
 
 W15 任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
@@ -387,7 +386,7 @@ W15-40123253
 
 因為是手動組，所以沒有增加基準面，而是直接使用曲面來接合。
 
-![w15-1](./../images/2bg13/w15.jpg)
+![w15-1](./../images/2bg13/w15.jpg)\
 
 ######第二題######
 
@@ -406,15 +405,6 @@ copy:　<https://copy.com/LiR8kyeIVN4Q>
 
 
 以下為開始組立之程式：
-
-/////////////////////////////////////////////////////////////////
-// 開始執行組立, 全部採函式呼叫組立
-/////////////////////////////////////////////////////////////////
-
-// Body 與空組立檔案採三個平面約束組立
-// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
-// Body 組立面為 TOP, FRONT, RIGHT
-// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
 
 var featID = three_plane_assembly(session, assembly, transf, 0, 0, "remsub5_BEAM_7.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
 
@@ -446,57 +436,91 @@ axis_plane_assembly(session, assembly, transf, featID, 8,
  
 2bg13 期末報告
 ===
- 
-請先將零件檔放置v:home內，<https://copy.com/waRTojtYEtAJ>
+
+完整內容請參考:<http://2014bg13-cdbg13.rhcloud.com/cmsimply/get_page?heading=%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A> 
+
+請先將零件檔放置v:home內，零件檔下載<https://copy.com/waRTojtYEtAJ>
 
 
 第一章 專案介紹
 
 1.1讀卡機構造(以CREO繪製)，參考面都是以手動的方式建立。
 
-![蓋子1](./../images/2bg13/final-1.png)
-![USB](./../images/2bg13/final-2.png)
-![蓋子2](./../images/2bg13/final-3.png)
-![SD卡](./../images/2bg13/final-4.png)
+蓋子1
 
-組合圖:
-![組合圖](./../images/2bg13/final-5.png)
+![蓋子1](./../images/2bg13/final-1.png)\
 
-1.2程式組立
+USB
 
+![USB](./../images/2bg13/final-2.png)\
+
+蓋子2
+
+![蓋子2](./../images/2bg13/final-3.png)\
+
+SD卡
+
+![SD卡](./../images/2bg13/final-4.png)\
+
+組合圖
+
+![組合圖](./../images/2bg13/final-5.png)\
+
+1.2程式組立/修改尺寸
+
+請參考:<http://2014bg13-cdbg13.rhcloud.com/cmsimply/get_page?heading=%E6%9C%9F%E6%9C%AB%E5%A0%B1%E5%91%8A>
 
 第二章 專案結構
 
 2.1運用技術
+
 (1)在近端利用 Creo 繪製零件
+
 (2)利用遠端 Pro/Web.Link 程式修改近端 Creo 零件尺寸
+
 (3)將近端零件轉為 STL, 上傳至遠端 CMSimply 網站中檢視
+
 (4)在近端利用手動組立零件	
+
 (5)在近端利用遠端網站上的 Pro/Web.Link 進行自動組立
+
 (6)在近端與雲端建立 CMSimply 網站
+
 (7)利用 Github管理所有文字資料的版次
+
 (8)利用近端 Leo Editor 與可攜程式系統管理所有資料
+
 (9)利用近端環境產生 pdf 與 html 格式報告資料
 
 2.2專案製作流程
+
 (1)在近端，各組員以CREO繪製讀卡機的各零件。
+
 (2)以手動方式建立參考面。
+
 (3)在近端以手動方式將讀卡機組立起來。
+
 (4)將零件檔存放至雲端。
+
 (5)近端編寫組立程式and修改尺寸之程式。
+
 (6)將程式整合至Leo Editor，藉此管理近端的資料。
+
 (7)將近端資料利用 Github進行遠端管理所有文字資料的版次。
+
 (8)在近端利用遠端網站上的 Pro/Web.Link 進行自動組立。
+
 (9)將各資料及報告整理後，於CMSimply上呈現出來。
 
 2.3架構圖
+
 我們利用教材三(下圖)的流程圖，對我們的專案進行流程的建構。
 
-![教材三](./../images/2bg13/final-7.png)
+![教材三](./../images/2bg13/final-7.png)\
 
 以下為我們專案的架構
 
-![讀卡機專案架構](./../images/2bg13/final-6.png)
+![讀卡機專案架構](./../images/2bg13/final-6.png)\
 
 
 第三章 問題討論
@@ -533,7 +557,7 @@ axis_plane_assembly(session, assembly, transf, featID, 8,
 
 協同是大家的事，唯有大家一起努力，才能創造價值。
 
-別抱著有人會幫忙做的心態，只當伸手族是乞丐在做的事。
+別抱著有人會幫忙做的心態，只會伸手是乞丐在做的事。
 
 
 
