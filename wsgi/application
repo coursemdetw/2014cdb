@@ -192,6 +192,8 @@ root.cdbg1 = cdbg1.CDBG1()
 # 以下為 cdbg2 的模組導入與連結設定
 import programs.cdbg2 as cdbg2
 root.cdbg2 = cdbg2.CDBG2()
+import programs.cdbg2.oldham as cdbg2_oldham
+root.cdbg2.oldham = cdbg2_oldham.oldham()
 #####################################################
 # 導入協同程式 cdbg5
 #####################################################
