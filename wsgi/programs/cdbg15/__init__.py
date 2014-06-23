@@ -28,7 +28,7 @@ class CDBG15(object):
     假如採用下列規畫
     
     import programs.cdbg15 as cdbg15
-    root.cdbg15 = cdbg15.CDBG14()
+    root.cdbg15 = cdbg15.CDBG15()
     
     則程式啟動後, 可以利用 /cdbg15/cube1 呼叫函式執行
     '''

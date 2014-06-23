@@ -7,3 +7,108 @@
 ===
 
 這是 2bg15 報告摘要內容
+
+第十週
+
+1.Creo 必須使用 64 位元教育版版
+2.Openshift與Github同步
+3.git clone https://github.com/coursemdetw/2014cdb.git並且在doc中加入cdbg15
+
+
+第十一週
+
+創立github帳號並加入老師的群組
+
+Proweb.link教學
+
+方形
+
+1.設定IE:網際網路選項→安全性→信任的網站→自訂等級 ActiveX 打勾
+2.把Creo config.pro丟到Creo2_m060_x64\Common Files\M060\text
+3.畫一個方型,d0=a,d1=b,d2=c
+4.左下方輸入網址http://2014cda-mdenfu.rhcloud.com/cdag1/cube1
+
+四連桿
+
+1.上網把fourbar抓下來放在V\home
+2.開新檔案選擇新增組件(不是零件)
+3.左下方輸入網址http://2014cda-mdenfu.rhcloud.com/cdag1/fourbar1
+
+
+第十二週
+
+翻譯和整理
+課程教材一:https://copy.com/lOk7vVwgF8dw
+課程教材二:https://copy.com/GhzwrxW2NHWY
+
+1.創立一個github群組把組員加進來 https://github.com/2014cdbg15/2014cdbg15
+2.創立組的CMSimply http://2014cdbg15cmsimply-40123230.rhcloud.com/cmsimply
+3.CMSimply和github的網址貼在老師的github/wiki上
+
+
+第十三週
+
+1.手動組立完成
+2.影片上傳
+40123230   https://vimeo.com/96463347  
+40123243   沒做
+40123256   https://copy.com/yEY4o3ypGGit
+
+第十四週
+
+1.手動組立完成
+2.影片上傳
+40123230   https://copy.com/IXqnxSZtCkNE
+           https://vimeo.com/96690007
+40123243   沒做
+40123256   https://copy.com/V2cYmcYQXGX7
+3.自動組立做一半未完成
+
+
+第十五週
+
+1.手動組立完成
+2.影片上傳
+40123230   https://copy.com/MYzrcUHSCWQg
+           https://vimeo.com/97332439
+40123243   https://copy.com/GFA9BtGbZySu
+           https://vimeo.com/97303134
+40123256   https://copy.com/foqqPrtgzoEN
+
+
+三.目前擁有技術:
+
+目前已經具備的技術:
+
+1.在近端利用 Creo 繪製零件
+
+我們這組簡單的畫了一支及輪板手作為我們期末報告的主題
+
+2.利用遠端 Pro/Web.Link 程式修改近端 Creo 零件尺寸
+
+3.將近端零件轉為 STL, 上傳至遠端 CMSimply 網站中檢視
+
+https://2014cdbg15cmsimply-40123230.rhcloud.com/cmsimply/get_page?heading=期末報告
+
+4.在近端利用手動組立零件
+
+5.在近端利用遠端網站上的 Pro/Web.Link 進行自動組立
+
+6.在近端與雲端建立 Dokuwiki 網站
+
+https://40123230-40123230.rhcloud.com/doku.php?id=start
+
+7.利用手動或半自動方式管理 Dokuwiki 的使用者
+
+
+8.在近端與雲端建立 CMSimply 網站
+
+ https://2014cdbg15cmsimply-40123230.rhcloud.com/cmsimply/get_page?heading=
+
+9.利用 Github 與 Bitbucket 管理所有文字資料的版次
+
+
+10.利用近端 Leo Editor 與可攜程式系統管理所有資料
+
+
+11.利用近端環境產生 pdf 與 html 格式報告資料
