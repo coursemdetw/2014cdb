@@ -614,7 +614,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140430174205.1613"></t>
 <t tx="kmolII_lite.20140505193226.1631"></t>
 <t tx="kmolII_lite.20140505193226.1632">@nocolor
-2bg11報告內容
 ===
 
 這是 2bg11報告內容
@@ -623,7 +622,73 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 ===
 
 這是 2bg11 報告摘要內容
-</t>
+
+
+第十二週任務
+===
+
+1.請各組將第八週與第九週考試的摘要報告放入 Github 協同專案中的分組報告區, 並將內容放入各組控管的同步 OpenShift 網站中. (佔期末成績 5分)
+
+OpenShift 網站:http://cdbg11-40123229.rhcloud.com/
+W8,W9摘要:
+dokuwiki:http://capd11-40123229.rhcloud.com/doku.php
+第八週小考
+
+第一題:http://192.168.1.49:8000/doku.php?id=start&amp;do=admin&amp;page=usermanager
+第三題:https://bitbucket.org/40123233/40123233_w16/commits/9552efdec7f15d3b89ada30a28f89501b7f7db30
+
+第九週期中考
+
+第二題:https://python-40123233.rhcloud.com/
+第三題:https://vimeo.com/92707935
+
+第十三週任務
+===
+
+(1) 請以手動方式, 從下方下載 lego_man.7z 零件, 完成組立後, 以組員為單位, 在各分組報告區詳細說明組立過程的重點與注意事項. (5 分)
+
+(2) 請利用 Vimeo 及 copy.com 存放任務一中的手動組立流程影片檔案, 以組員為單位, 將連結放入各分組報告區中. (5 分)
+
+copy:https://copy.com/BZJWkCVjfHsH
+
+vimeo:https://vimeo.com/98406111
+
+第十四週任務
+===
+
+(1) 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立.(5 分)
+
+(2) 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.(5 分)
+
+copy:https://www.copy.com/s/itIdwMJ0Ai34/w14.flv
+
+vimeo:https://vimeo.com/98849171
+
+第十五週任務
+===
+
+(1) 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立.(5 分)
+
+(2) 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.(5 分)
+
+copy:https://www.copy.com/s/itIdwMJ0Ai34/w14.flv
+
+vimeo:https://vimeo.com/98849171
+
+第十六週
+===
+
+要點
+
+第十六, 十七與十八週的任務 (佔期末成績 45 分), 在讓各組根據教材三的架構做為導引, 建立一個類似 Teamproject 的雲端軟體套件.
+
+其中要點包含:
+
+協同產品設計為同步協同或非同步協同
+套件的架構為何(流程圖), 希望引入哪些技術(本課程教導了哪些協同技術?), 解決哪些問題, 提升哪些效能?
+完成後援此教材三的格式, 編寫一份套件簡介的報告(至多 5 頁)
+所完成的內容, 必須同步放入各組雲端網站, Github 協同專案, 以及各組的協同報告中.
+各組完成專案後, 必須按照時間在各週內進行組員自我評分(由各組組員自行評分), 以及各組自我評分(必須找其他三組進行交叉評分).</t>
 <t tx="kmolII_lite.20140505203306.1631"></t>
 </tnodes>
 </leo_file>

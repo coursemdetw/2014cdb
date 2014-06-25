@@ -1,4 +1,4 @@
-2bg15報告內容
+﻿2bg15報告內容
 ===
 
 這是 2bg15報告內容
@@ -112,3 +112,58 @@ https://40123230-40123230.rhcloud.com/doku.php?id=start
 
 
 11.利用近端環境產生 pdf 與 html 格式報告資料
+
+
+協同產品設計實習期末報告
+簡易型套筒板手
+
+          組別 : 第十五組
+          組員 : 張宏仁 、  詹景菘  、 蘇建瑋
+                  40123230   40123243   40123256
+
+摘要:這次期末報告老師讓我們自定主題並依照教材三上面的格式架構做一篇5頁的報告，這次我們這組定的主題考慮了很多，最後決定用這個簡易版的套筒板手做為我們這次期末報告的主題由於市面上的套筒板手有許多種，很多都是做成梅花形的這次我們畫的是叫一般的六角型套筒板手。
+
+1.簡介
+    這次由於考慮到要做自動組立和程式調控尺寸所以想了很多題目最後都放棄了一開始是想做木頭積木，但由於程式方面有許多困難做到後面放棄了，改成現在的套筒板手考慮到程式自動組立所以在繪圖方面做了些設計考量，始自動組立的程式寫起來簡單。
+這個套筒板手一般用於機車汽車和腳踏車拆裝零件方面，由於可依外六角螺絲的大小更換套筒尺寸，又不向傳統的板手有時出太大的力會傷到螺帽頭久而久之頭變圓滑後會很難開，是一種簡單方便且省力的工具。
+
+
+2.零件圖
+(1)套筒板手手把
+(2)套筒板手本體
+(3)套筒板手伸出桿
+(4) 套筒板手套筒
+
+3.程式調控尺寸
+     下方的圖是套筒向內切掉六角型的草圖，要調控尺寸要將其改成d0再到工具→關係，新增一個d0=a，利用老師的更改尺寸程式完成更動尺寸。
+
+4.自動組立
+這次因有組過小人偶跟自走車的經驗(雖然組不起來)，但這次我們這組在思考題目時就有考慮到這點，我們在繪製過程中刻意使用些技巧使得自動組立方便許多，下面是程式最後部分。
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "prt0001.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+// 利用函式呼叫組立prt0001.prt, 組立增量次序為 1
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+           "prt0002.prt", "TOP", "FRONT","RIGHT" , " TOP " , "FRONT" , "RIGHT");
+// 利用函式呼叫組立prt0002.prt 組立增量次序為 2
+axis_plane_assembly(session, assembly, transf, featID, 1, 
+           "prt0003.prt", "TOP", "DTM1", "RIGHT" ,"TOP" , "DTM2","RIGHT");
+// 利用函式呼叫組立左上prt0003.prt 組立增量次序為 3
+axis_plane_assembly(session, assembly, transf, featID, 2, 
+          "prt0004.prt", "TOP", "FRONT","RIGHT" , " TOP " , "FRONT" , "RIGHT");
+
+assembly.Regenerate (void null);
+session.GetModelWindow (assembly).Repaint();    
+
+
+
+6.結論
+    這次我們以套筒板手作為我們的主題，但是套筒內部棘輪部分，沒有畫因為組立時要使用相切指令，程式部分弄不出來所以簡易表達外部構造和功能，沒有畫出其內部構造。
+    在這報告中我們這組學到很多東西，整理了之前許多的資料並在訂定主題時遇到不小的難題，在多次商量後決定用一個簡易的小東西表達這學期所學的東西，這支板手是由家裡工具箱中翻出來的，是直接量實體畫圖，對於不是製圖科的組員來說也是一中學習。
+
+7.參考資料
+套筒板手規格和簡介(PPT)
+https://www.google.com.tw/url?sa=t&rct=j&q=&esrc=s&source=web&cd=7&cad=rja&uact=8&ved=0CC8QFjAG&url=http%3A%2F%2Fhsmaterial.moe.edu.tw%2Ffile%2Fengi%2Fcar02%2Fclass%2Fcar02_06.ppt&ei=iG-pU5mYMYXkkAXPpIDoCQ&usg=AFQjCNFcAS3ElZWC6ZaAVriFp3pWWa0VEg
