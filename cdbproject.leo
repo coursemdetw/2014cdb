@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
+<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -38,15 +38,21 @@ expanded="2014spring.20140707105402.2224,2014spring.20140707105402.2268,"><vh>@f
 <v t="2014pythonE.20140528233931.2167"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014pythonE.20140521202529.2011" a="E"><vh>@path wsgi/programs/cdbg14</vh>
+<v t="2014pythonE.20140618151851.2285"><vh>@edit remsub6.py</vh></v>
+<v t="2014pythonE.20140618151851.2283"><vh>@edit remsub5.py</vh></v>
 <v t="2014pythonE.20140521202529.2012"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014pythonE.20140519202248.1434" a="E"><vh>@path wsgi/programs/cdbg8</vh>
 <v t="2014pythonE.20140519202248.1435"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014pythonE.20140519074351.1903" a="E"><vh>@path wsgi/programs/cdbg9</vh>
+<v t="2014pythonE.20140619190810.2027"><vh>@edit remsub5.py</vh></v>
+<v t="2014pythonE.20140619190810.2025"><vh>@edit remsub6.py</vh></v>
 <v t="2014pythonE.20140519074351.1904"><vh>@edit __init__.py</vh></v>
 </v>
-<v t="2014pythonE.20140507141007.1807"><vh>@path wsgi/programs/cdbg13</vh>
+<v t="2014pythonE.20140507141007.1807" a="E"><vh>@path wsgi/programs/cdbg13</vh>
+<v t="2014pythonE.20140621152459.2454"><vh>@edit remsub5.py</vh></v>
+<v t="2014pythonE.20140621152459.2452"><vh>@edit cardreader.py</vh></v>
 <v t="2014pythonE.20140507141007.1808"><vh>@edit __init__.py</vh></v>
 <v t="2014pythonE.20140528223628.1925"><vh>@edit remsub6.py</vh></v>
 </v>
@@ -54,19 +60,17 @@ expanded="2014spring.20140707105402.2224,2014spring.20140707105402.2268,"><vh>@f
 <v t="2014spring.20140503125211.2475"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2476" a="E"><vh>@path wsgi/programs/cdbg2</vh>
+<v t="2014pythonE.20140623184347.2203"><vh>@edit oldham.py</vh></v>
 <v t="2014spring.20140503125211.2477"><vh>@edit __init__.py</vh></v>
 </v>
 <v t="2014pythonE.20140514141707.2193" a="E"><vh>@path wsgi/programs/cdbg5</vh>
 <v t="2014pythonE.20140514141707.2194"><vh>@edit __init__.py</vh></v>
-<v t="2014pythonE.20140604134816.1853"><vh>@edit man.py</vh></v>
-<v t="2014pythonE.20140604134816.1854"><vh>@edit man2.py</vh></v>
-<v t="2014pythonE.20140604140153.1858"><vh>@edit remsub6.py</vh></v>
 </v>
 <v t="2014spring.20140513154549.3595" a="E"><vh>@path wsgi/programs/cdbg30</vh>
 <v t="2014spring.20140513154549.3596"><vh>@edit __init__.py</vh></v>
 <v t="2014spring.20140513154549.3597"><vh>@edit man.py</vh></v>
 <v t="2014spring.20140521133830.1904"><vh>@edit man2.py</vh></v>
-<v t="2014pythonE.20140604140153.1857"><vh>@edit remsub6.py</vh></v>
+<v t="2014spring.20140528132415.1926"><vh>@edit remsub6.py</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
@@ -162,7 +166,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140512232735.2633"></t>
 <t tx="2014pythonE.20140513163709.1881"></t>
 <t tx="2014pythonE.20140513163709.1882">@nocolor
-2bg17報告內容
+﻿2bg17報告內容
 ===
 
 2bg17報告內容
@@ -177,7 +181,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140519074351.1903"></t>
 <t tx="2014pythonE.20140519202248.1430"></t>
 <t tx="2014pythonE.20140519202248.1431">@nocolor
-2bg8報告內容
+﻿2bg8報告內容
 ===
 
 2bg8報告內容
@@ -610,8 +614,7 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140430174205.1613"></t>
 <t tx="kmolII_lite.20140505193226.1631"></t>
 <t tx="kmolII_lite.20140505193226.1632">@nocolor
-2bg11報告內容
-===
+﻿===
 
 這是 2bg11報告內容
 
@@ -619,7 +622,73 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 ===
 
 這是 2bg11 報告摘要內容
-</t>
+
+
+第十二週任務
+===
+
+1.請各組將第八週與第九週考試的摘要報告放入 Github 協同專案中的分組報告區, 並將內容放入各組控管的同步 OpenShift 網站中. (佔期末成績 5分)
+
+OpenShift 網站:http://cdbg11-40123229.rhcloud.com/
+W8,W9摘要:
+dokuwiki:http://capd11-40123229.rhcloud.com/doku.php
+第八週小考
+
+第一題:http://192.168.1.49:8000/doku.php?id=start&amp;do=admin&amp;page=usermanager
+第三題:https://bitbucket.org/40123233/40123233_w16/commits/9552efdec7f15d3b89ada30a28f89501b7f7db30
+
+第九週期中考
+
+第二題:https://python-40123233.rhcloud.com/
+第三題:https://vimeo.com/92707935
+
+第十三週任務
+===
+
+(1) 請以手動方式, 從下方下載 lego_man.7z 零件, 完成組立後, 以組員為單位, 在各分組報告區詳細說明組立過程的重點與注意事項. (5 分)
+
+(2) 請利用 Vimeo 及 copy.com 存放任務一中的手動組立流程影片檔案, 以組員為單位, 將連結放入各分組報告區中. (5 分)
+
+copy:https://copy.com/BZJWkCVjfHsH
+
+vimeo:https://vimeo.com/98406111
+
+第十四週任務
+===
+
+(1) 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立.(5 分)
+
+(2) 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.(5 分)
+
+copy:https://www.copy.com/s/itIdwMJ0Ai34/w14.flv
+
+vimeo:https://vimeo.com/98849171
+
+第十五週任務
+===
+
+(1) 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立.(5 分)
+
+(2) 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.(5 分)
+
+copy:https://www.copy.com/s/itIdwMJ0Ai34/w14.flv
+
+vimeo:https://vimeo.com/98849171
+
+第十六週
+===
+
+要點
+
+第十六, 十七與十八週的任務 (佔期末成績 45 分), 在讓各組根據教材三的架構做為導引, 建立一個類似 Teamproject 的雲端軟體套件.
+
+其中要點包含:
+
+協同產品設計為同步協同或非同步協同
+套件的架構為何(流程圖), 希望引入哪些技術(本課程教導了哪些協同技術?), 解決哪些問題, 提升哪些效能?
+完成後援此教材三的格式, 編寫一份套件簡介的報告(至多 5 頁)
+所完成的內容, 必須同步放入各組雲端網站, Github 協同專案, 以及各組的協同報告中.
+各組完成專案後, 必須按照時間在各週內進行組員自我評分(由各組組員自行評分), 以及各組自我評分(必須找其他三組進行交叉評分).</t>
 <t tx="kmolII_lite.20140505203306.1631"></t>
 </tnodes>
 </leo_file>

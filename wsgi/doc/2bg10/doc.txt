@@ -144,6 +144,101 @@ copy:https://www.copy.com/home/?modal=%2Fauth%2Flogin%3Fredirect%3D%252Fbrowse%2
 任務三: 請仔細觀察協同程式中的 lego_man 自動組立程式, 並且從下方 lego_parts_edu.7z 中下載相同名稱的 lego_man 零件, 請詳細比較兩個壓縮檔案解開的 lego_man 零件檔案, 有哪些差別? 請將詳細比對結果以組為單位將資料放入各分組的報告中. (5 分)
 
 ===
+2bg10 w14報告摘要
+
+任務 1 (5 分): 請以 Creo 開啟 remsub6.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+圖檔:https://cdbg10-40123241.rhcloud.com/cmsimply/get_page?heading=W14%20%E7%AC%AC%E4%B8%80%E9%A1%8C
+
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+40123245 廖柏豪
+影片網址:http://vimeo.com/96682631
+影片網址:https://copy.com/a74G38MaOetL
+40123241 黃郁文
+影片網址: https://vimeo.com/96708987
+影片網址: https://copy.com/3UhNljTRCONa
+
+任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub6 函式, 當使用者連結至各組雲端網站中的 remsub6, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+===
+2bg10 w15報告摘要
+
+任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+40123241 黃郁文
+圖檔:https://cdbg10-40123241.rhcloud.com/cmsimply/get_page?heading=W15%E7%AC%AC%E4%B8%80%E9%A1%8C
+
+任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+40123245 廖柏豪
+影片網址:https://vimeo.com/97301715
+影片網址:https://copy.com/bLkv9PhHHSh2
+40123241 黃郁文
+影片網址: https://vimeo.com/97303461
+影片網址: https://copy.com/wl1Q1hFI6mya
+
+任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub5 函式, 當使用者連結至各組雲端網站中的 remsub5, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+===
+2bg10 w16w17w18期末報告摘要
+
+第十六, 十七與十八週的任務 (佔期末成績 45 分), 在讓各組根據教材三的架構做為導引, 建立一個類似 Teamproject 的雲端軟體套件.
+其中要點包含:
+協同產品設計為同步協同或非同步協同
+套件的架構為何(流程圖), 希望引入哪些技術(本課程教導了哪些協同技術?), 解決哪些問題, 提升哪些效能?
+完成後援此教材三的格式, 編寫一份套件簡介的報告(至多 5 頁)
+所完成的內容, 必須同步放入各組雲端網站, Github 協同專案, 以及各組的協同報告中.
+各組完成專案後, 必須按照時間在各週內進行組員自我評分(由各組組員自行評分), 以及各組自我評分(必須找其他三組進行交叉評分).
+目前已經具備的技術:
+在近端利用 Creo 繪製零件
+利用遠端 Pro/Web.Link 程式修改近端 Creo 零件尺寸
+將近端零件轉為 STL, 上傳至遠端 CMSimply 網站中檢視
+在近端利用手動組立零件
+在近端利用遠端網站上的 Pro/Web.Link 進行自動組立
+在近端與雲端建立 Dokuwiki 網站
+利用手動或半自動方式管理 Dokuwiki 的使用者
+在近端與雲端建立 CMSimply 網站
+利用 Github 與 Bitbucket 管理所有文字資料的版次
+利用近端 Leo Editor 與可攜程式系統管理所有資料
+利用近端環境產生 pdf 與 html 格式報告資料
+
+第10組期末報告PDF:
+https://copy.com/jtVZSEuPjUa0
+
+CREO自動組立程式碼:
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "beam_7.prt",   //本體跟creo基準面接合
+"ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+
+axis_plane_assembly(session, assembly, transf, featID, 0,
+"axle_3.prt", "FRONT", "DTM1", "FRONT", "DTM1", "DTM1", "DTM1");
+
+axis_plane_assembly(session, assembly, transf, featID, 1,
+"axle_txtender.prt", "RIGHT", "FRONT", "DTM2", "RIGHT", "FRONT", "DTM3");
+
+axis_plane_assembly(session, assembly, transf, featID, 1,
+"axle_txtender.prt", "FRONT", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT");
+
+axis_plane_assembly(session, assembly, transf, featID, 2,
+"axle_red.prt", "RIGHT", "FRONT", "DTM1", "RIGHT", "FRONT", "DTM3");
+
+axis_plane_assembly(session, assembly, transf, featID, 2,
+"axle_red.prt", "RIGHT", "FRONT", "DTM2", "RIGHT", "FRONT", "DTM4");
+
+axis_plane_assembly(session, assembly, transf, featID, 3,
+"COON_AXLE_FEMALE.prt", "RIGHT", "FRONT", "DTM3", "RIGHT", "FRONT", "DTM1");
+
+axis_plane_assembly(session, assembly, transf, featID, 3,
+"COON_AXLE_FEMALE", "RIGHT", "FRONT", "DTM3", "RIGHT", "FRONT", "DTM2");
 
 
+axis_plane_assembly(session, assembly, transf, featID, 4,
+"COON_AXLE_FEMALE", "a_18", "DTM1", "a_17", "DTM3");
+
+axis_plane_assembly(session, assembly, transf, featID, 5,
+"CONN", "DTM2", "A_4", "DTM3", "A_21");
+
+心得:由於零件跟程式輸入後產生錯誤，所以只把程式碼貼上來
+===
+40123245 廖柏豪  90
+40123241 黃郁文  85
+40123218 呂少甫  60
 

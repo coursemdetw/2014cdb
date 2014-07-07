@@ -345,16 +345,257 @@ https://copy.com/iPg16EJkBZKk
  
 
 任務三:
+用寫程式的方式，將零件組裝完成。我改寫man2的程式來完成。
 
+ 原來為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "LEGO_BODY.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+// 利用函式呼叫組立右手 ARM, 組立增量次序為 1
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+"LEGO_ARM_RT.prt", "A_13", "DTM1", "A_4", "DTM1");
+// 利用函式呼叫組立左手 ARM, 組立增量次序為 2
+axis_plane_assembly(session, assembly, transf, featID, 0, 
+"LEGO_ARM_LT.prt", "A_9", "DTM2", "A_4", "DTM1");
+// 利用函式呼叫組立右手 HAND, 組立增量次序為 3
+axis_plane_assembly(session, assembly, transf, featID, 1, 
+"LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
+...........
 
  
 
-總得分:10分
+改寫為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_ANGLE.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_10.prt", "MIDDLE_GREEN", "DTM1", "FRONT", "DTM1", "RIGHT", "FRONT");
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_5.prt", "MIDDLE_GREEN", "RED", "BLUE", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "CROSSBLOCK_2.prt", "TOP", "FRONT", "RIGHT", "DTM4", "DTM1", "RIGHT");
+..............
+
+ 
+
+總得分:15分
 
 滿分:15分
 
+ W15
+
+請下載 lego_parts.7z orlego_parts.7z, 解開壓縮檔案後, 將資料放入 V:\home\lego 目錄中.
+
+W15 任務 1 (5 分): 請以 Creo 開啟 remsub5.asm, 本任務要求各組員以手動組立完成此一零件組立.
+
+W15 任務 2 (5 分): 請將任務 1 手動組立流程拍成 flv 檔案後, 分別上傳到 copy.com 與 Vimeo 網站, 並將個人心得與相關連結放入各組協同報告中.
+
+W15 任務 3 (5 分): 請修改上週小人偶自動組立程式, 以組為單位, 將組立命名為 remsub5 函式, 當使用者連結至各組雲端網站中的 remsub5, 可以完成自動組立, 操作完成後, 請將分組心得與相關連結放入各組協同報告中.
+
  
+
+W15-組員:程千育40123208
+
+ 1.
+
+ 2.
+
+ 3.
+
+ 
+
+總得分:
+
+滿分:分
+
+ 
+
+ 
+
+W15-組員:劉凱盈40123209
+
+ 1.
+
+ 2.
+
+          
+
+總得分:
+
+滿分:分
+
+ 
+
+ 
+
+W15-組員:蕭莉蓉40123211
+
+https://copy.com/mjJ1qkvXbOVQ
+
+任務一:
+以Creo手動完成remsub5.asm的組立操作，依序將零件  beam_7,  axle_3,  axle_extender(2個),  axle_red(2個),  conn_axle_female(2個),  beam_angle_4x2,  conn組裝成形。(星期三6/4)
+
+ https://copy.com/N8sv2SfahQAO
+
+ 
+
+任務二:
+在學校都無法成功錄影，所以影片都是回家後在錄的。(星期三6/4)
+
+Copy: https://copy.com/xLiZPqyeYfRQ
+
+Vimeo:https://vimeo.com/97310723
+
+https://copy.com/AfDFxAIldCsU
+
+ 
+
+任務三:
+
+用寫程式的方式，將零件組裝完成。我改寫man2的程式來完成。
+
+改寫為:
+
+/////////////////////////////////////////////////////////////////
+// 開始執行組立, 全部採函式呼叫組立
+/////////////////////////////////////////////////////////////////
+
+// Body 與空組立檔案採三個平面約束組立
+// 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
+// Body 組立面為 TOP, FRONT, RIGHT
+// 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_7.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_3.prt", "TOP", "FRONT", "RIGHT", "TOP", "RIGHT", "FRONT");
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_EXTENDER.prt", "TOP", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_EXTENDER.prt", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "TOP", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT");
+........................
+
+ 
+
+總得分:15分
+
+滿分:15分
+
+
+ W16
+
+W16-組員:蕭莉蓉40123211
+
+自我練習
+
+老師在上課時特別點出了我們在呈現作業時的缺點，所以特別製作這個自我練習來改進缺失。
+這裡我要練習Pro/Web.Link,利用寫程式來進行Creo的組立。
+題目-nremsub6
+
+此題目改自w14的任務remsub6。
+此題目的零件皆與remsub6的零件相同，組裝部分有改變。
+https://copy.com/LGBxvsAiaByi
+
+ 
+
+解題
+
+下載nremsub6的零件。
+https://copy.com/QxXpPIuARzNR
+將零件放在V:/home/lego/nremsub6目錄中。
+Creo web_enable_javascript 設為 on, regen_failure_handling 設為 resolve_mode。
+IE→工具→網際網路選項→安全性→信任的網站，將https://2014cdbg5-40123209.rhcloud.com設為信任網站。
+IE→工具→網際網路選項→安全性→信任的網站→自訂等級 允許信任網站執行 ActiveX。
+開啟空白Creo 組立檔案，在嵌入式 IE, 連接到 https://2014cdbg5-40123209.rhcloud.com/cdbg5/nremsub6/assembly。
+開始自動進行nremsub6組立。
+程式裡的函式大概可分為兩種
+
+固定三個平面
+three_plane_assembly2(session, assembly, transf, featID, 組裝到xx零件的組立增量次序,
+                                         "要組裝的零件名稱.prt", "裝到XX零件的面一","裝到XX零件的面二", "裝到XX零件的面三", "要組裝的零                                            的件面一", "要組裝的零件的面二","要組裝的零件的面三");
+固定一條軸和一個平面
+axis_plane_assembly(session, assembly, transf, featID, 組裝到xx零件的組立增量次序, 
+                                     "要組裝的零件名稱.prt", "裝到XX零件的軸一", "裝到XX零件的面一", "要組裝的零件的軸一", "要組裝的零                                       件的面一");
+程式
+
+可連結到 https://2014cdbg5-40123209.rhcloud.com/cdbg5/nremsub6/assembly →右鍵→檢視網頁原始碼，就能看見程式了。
+心得
+
+寫程式組立的過程中，最好一邊手動組立，確定此約束能手動完成，再寫入程式。
+若是憑空想像，常常會出現很多無法執行的問題。
+ 
+
+13-06-2014
+
+23:52:33
+
 
 成績登入
 
 http://calc-g0v.rhcloud.com/tuvyngbsjq
+
+
+
+<<協同產品設計實習期末報告>>
+
+
+班級:四設二乙
+姓名/學號:
+程千育 40123208
+劉凱盈 40123209
+蕭莉蓉 40123211
+指導老師:嚴家銘
+製作日期:2014.6.22
+ 
+摘要Abstract
+在現代科技如此先進的時代，網路也隨之普及和發達，多人協同要比單一一人苦苦努力來的省力和有效率，也就是集思廣益的好處。
+在本協同產品設計實習課程裡，我們首先上到(1)在近端利用 Creo 繪製零件，然後(2)利用遠端 Pro/Web.Link 程式修改近端 Creo 零件尺寸，並(3)將近端零件轉為 STL，上傳至遠端 CMSimply 網站中檢視，(4)在近端利用手動組立零件，(5)在近端利用遠端網站上的 Pro/Web.Link 進行自動組立，(6)在近端與雲端建立 Dokuwiki 網站，(7)利用手動或半自動方式管理 Dokuwiki 的使用者，(8)在近端與雲端建立 CMSimply 網站，(9)利用 Github 與 Bitbucket 管理所有文字資料的版次，(10)利用近端 Leo Editor 與可攜程式系統管理所有資料，(11)利用近端環境產生 pdf 與 html 格式報告資料。
+
+
+ 
+目錄Directory
+
+摘要Abstract	1
+目錄Directory	2
+介紹Introduction	3
+結論Conclusions	5
+
+ 
+介紹Introduction
+1.	在近端利用 Creo 繪製零件
+學習利用Creo繪製零件。
+2.	利用遠端 Pro/Web.Link 程式修改近端 Creo 零件尺寸
+學習使用Pro/Web.Link 程式的特性，可從遠端網頁上，輸入零件尺寸，進而修改在近端Creo零件的尺寸。
+3.	將近端零件轉為 STL，上傳至遠端 CMSimply 網站中檢視
+學習將零件儲存為STL檔，然後再利用CMSimply網站的file upload 功能將STL上傳，並且可以在file list 開啟STL檔案來檢視。
+4.	在近端利用手動組立零件
+學習使用Creo 手動組立man(樂高小人偶)，並且利用CamStudioPortable錄製影片，再用格式工廠轉檔成FLV，上傳至Copy與Vimeo。
+5.	在近端利用遠端網站上的 Pro/Web.Link 進行自動組立
+學習在近端利用遠端網站上的 Pro/Web.Link 進行自動組立，我們練習過的題目有man、remsub6和remsub5。寫程式組立的過程中，最好一邊手動組立，確定此約束能手動完成，再寫入程式。若是憑空想像，常常會出現很多無法執行的問題。
+6.	在近端與雲端建立 Dokuwiki 網站
+學習先在近端 loclhost 測試更改的程式，節省每次上傳至雲端的時間，在確定沒問題後再利用git 更新至雲端。
+7.	利用手動或半自動方式管理 Dokuwiki 的使用者
+學習利用手動編輯管理 Dokuwiki，將上課的學習過程與心得編輯到雲端Dokuwiki。
+8.	在近端與雲端建立 CMSimply 網站
+學習在近端 loclhost 測試更改的程式，節省每次上傳至雲端的時間，在確定沒問題後再利用git 更新至雲端 CMSimply 網站。
+9.	利用 Github 與 Bitbucket 管理所有文字資料的版次
+學習利用 Github 與 Bitbucket管理所有文字資料的版次，讓班上所有同學都能便利的更新與上傳資料。
+10.	利用近端 Leo Editor 與可攜程式系統管理所有資料
+學習利用近端Leo Editor 與可攜程式系統管理所有資料，可以非常便利的進行文字資料的編輯與管理。
+11.	利用近端環境產生 pdf 與 html 格式報告資料
+學習利用近端Leo Editor 創建button pandoc_auto，在近端環境產生 pdf 與 html 格式報告資料。
+
+ 
+結論Conclusions
+
+在上了一學期的協同產品設計實習課程之後，我們具備了在github等網站上與別人線上合作的能力，並且能夠在近端修改遠端的資料，隨時更新，讓距離不再是問題。只要我們懂得運用程式，就可以把資料傳送到各地，不用再藉由書信來往，直接透過網路的便利性就可以輕易與他人合作，並且隨時上傳或下載資料，使得人與人之間的何過更加便利。
+學會了這項技能，相信在未來對工作或是與他人合作方面都是有所成長的。不再受限於距離與時間，如果可以把這項能力加強並且運用的淋漓盡致，未來必可省下人力資源並且節省時間的消耗。
+

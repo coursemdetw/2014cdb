@@ -192,7 +192,32 @@ root.cdbg1 = cdbg1.CDBG1()
 # 以下為 cdbg2 的模組導入與連結設定
 import programs.cdbg2 as cdbg2
 root.cdbg2 = cdbg2.CDBG2()
-
+import programs.cdbg2.oldham as cdbg2_oldham
+root.cdbg2.oldham = cdbg2_oldham.oldham()
+#####################################################
+# 導入協同程式 cdbg5
+#####################################################
+# 以下為 cdbg5 的模組導入與連結設定
+import programs.cdbg5 as cdbg5
+root.cdbg5 = cdbg5.CDBG5()
+###########################man
+import programs.cdbg5.man as cdbg5_man
+root.cdbg5.man = cdbg5_man.MAN()
+###########################man2
+import programs.cdbg5.man2 as cdbg5_man2
+root.cdbg5.man2 = cdbg5_man2.MAN()
+###########################remsub61
+import programs.cdbg5.remsub61 as cdbg5_remsub61
+root.cdbg5.remsub61 = cdbg5_remsub61.MAIN()
+###########################remsub5
+import programs.cdbg5.remsub5 as cdbg5_remsub5
+root.cdbg5.remsub5 = cdbg5_remsub5.MAIN()
+###########################remsub6
+import programs.cdbg5.remsub6 as cdbg5_remsub6
+root.cdbg5.remsub6 = cdbg5_remsub6.MAIN()
+###########################nremsub6
+import programs.cdbg5.nremsub6 as cdbg5_nremsub6
+root.cdbg5.nremsub6 = cdbg5_nremsub6.MAIN()
 #####################################################
 # 導入協同程式 cdbg13
 #####################################################
@@ -201,12 +226,20 @@ import programs.cdbg13 as cdbg13
 root.cdbg13 = cdbg13.CDBG13()
 import programs.cdbg13.remsub6 as cdbg13_remsub6
 root.cdbg13.remsub6 = cdbg13_remsub6.remsub6()
+import programs.cdbg13.remsub5 as cdbg13_remsub5
+root.cdbg13.remsub5 = cdbg13_remsub5.remsub5()
+import programs.cdbg13.cardreader as cdbg13_cardreader
+root.cdbg13.cardreader = cdbg13_cardreader.cardreader()
 #####################################################
 # 導入協同程式 cdbg14
 #####################################################
 # 以下為 cdbg14 的模組導入與連結設定
 import programs.cdbg14 as cdbg14
 root.cdbg14 = cdbg14.CDBG14()
+import programs.cdbg14.remsub6 as cdbg14_remsub6
+root.cdbg14.remsub6 = cdbg14_remsub6.remsub6()
+import programs.cdbg14.remsub5 as cdbg14_remsub5
+root.cdbg14.remsub5 = cdbg14_remsub5.remsub5()
 #####################################################
 # 導入協同程式 cdbg15
 #####################################################
@@ -231,6 +264,10 @@ root.cdbg30.remsub6 = cdbg30_remsub6.MAIN()
 # 以下為 cdbg9 的模組導入與連結設定
 import programs.cdbg9 as cdbg9
 root.cdbg9 = cdbg9.CDBG9()
+import programs.cdbg9.remsub6 as cdbg9_remsub6
+root.cdbg9.remsub6 = cdbg9_remsub6.MAIN()
+import programs.cdbg9.remsub5 as cdbg9_remsub5
+root.cdbg9.remsub5 = cdbg9_remsub5.MAIN()
 #####################################################
 # 導入協同程式 cdbg6
 #####################################################

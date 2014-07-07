@@ -12,7 +12,7 @@ root.cdag5.man = cdag5_man.MAN()
 /cdag5/man/assembly
 # 呼叫 man.py 中 MAN 類別的 assembly 方法
 '''
-class MAN(object):
+class MAIN(object):
     # 各組利用 index 引導隨後的程式執行
     @cherrypy.expose
     def index(self, *args, **kwargs):
@@ -45,7 +45,7 @@ class MAN(object):
 // axis_plane_assembly 組立函式
 ////////////////////////////////////////////////
 function axis_plane_assembly(session, assembly, transf, featID, inc, part2, axis1, plane1, axis2, plane2){
-var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/"+part2);
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/"+part2);
 var componentModel = session.GetModelFromDescr(descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
@@ -91,7 +91,7 @@ asmcomp.SetConstraints(constrs, void null);
 // three_plane_assembly 採 align 組立, 若 featID 為 0 表示為空組立檔案
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 function three_plane_assembly(session, assembly, transf, featID, inc, part2, plane1, plane2, plane3, plane4, plane5, plane6){
-var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/"+part2);
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/"+part2);
 var componentModel = session.GetModelFromDescr(descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
@@ -150,7 +150,7 @@ if (featID == 0)
 // three_plane_assembly2 採 mate 組立, 若 featID 為 0 表示為空組立檔案
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 function three_plane_assembly2(session, assembly, transf, featID, inc, part2, plane1, plane2, plane3, plane4, plane5, plane6){
-var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/man/"+part2);
+var descr = pfcCreate("pfcModelDescriptor").CreateFromFileName ("v:/home/lego/"+part2);
 var componentModel = session.GetModelFromDescr(descr);
 var componentModel = session.RetrieveModel(descr);
 if (componentModel != void null)
@@ -245,37 +245,12 @@ var assembly = model;
 // 空組立面為 ASM_TOP, ASM_FRONT, ASM_RIGHT
 // Body 組立面為 TOP, FRONT, RIGHT
 // 若 featID=0 表示為空組立檔案, 而且函式會傳回第一個組立件的 featID
-var featID = three_plane_assembly(session, assembly, transf, 0, 0, "LEGO_BODY.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
-// 利用函式呼叫組立右手 ARM, 組立增量次序為 1
-axis_plane_assembly(session, assembly, transf, featID, 0, 
-                              "LEGO_ARM_RT.prt", "A_13", "DTM1", "A_4", "DTM1");
-// 利用函式呼叫組立左手 ARM, 組立增量次序為 2
-axis_plane_assembly(session, assembly, transf, featID, 0, 
-                              "LEGO_ARM_LT.prt", "A_9", "DTM2", "A_4", "DTM1");
-// 利用函式呼叫組立右手 HAND, 組立增量次序為 3
-axis_plane_assembly(session, assembly, transf, featID, 1, 
-                              "LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
-// 利用函式呼叫組立左手 HAND, 組立增量次序為 4
-axis_plane_assembly(session, assembly, transf, featID, 2, 
-                              "LEGO_HAND.prt", "A_2", "DTM2", "A_1", "DTM3");
-// 利用函式呼叫組立人偶頭部 HEAD, 組立增量次序為 5
-// BODY id 為 featID+0, 以 A_2 及  DTM3 約束
-// HEAD 則直接呼叫檔案名稱, 以 A_2, DTM2 約束
-axis_plane_assembly(session, assembly, transf, featID, 0, 
-                              "LEGO_HEAD.prt", "A_2", "DTM3", "A_2", "DTM2");
-// Body 與 WAIST 採三個平面約束組立
-// Body 組立面為 DTM4, DTM5, DTM6
-// WAIST 組立面為 DTM1, DTM2, DTM3, 組立增量次序為 6, 與 body 採三面 mate 組立
-three_plane_assembly2(session, assembly, transf, featID, 0, "LEGO_WAIST.prt", "DTM5", "DTM4" ,"DTM6", "DTM2", "DTM1" ,"DTM3"); 
-// 右腳
-axis_plane_assembly(session, assembly, transf, featID, 6, 
-                              "LEGO_LEG_RT.prt", "A_8", "DTM4", "A_10", "DTM1");
-// 左腳
-axis_plane_assembly(session, assembly, transf, featID, 6, 
-                              "LEGO_LEG_LT.prt", "A_8", "DTM5", "A_10", "DTM1");
-// 紅帽
-axis_plane_assembly(session, assembly, transf, featID, 5, 
-                              "LEGO_HAT.prt", "A_2", "TOP", "A_2", "FRONT"); 
+var featID = three_plane_assembly(session, assembly, transf, 0, 0, "BEAM_7.prt", "ASM_TOP", "ASM_FRONT", "ASM_RIGHT", "TOP", "FRONT", "RIGHT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_3.prt", "TOP", "FRONT", "RIGHT", "TOP", "RIGHT", "FRONT");
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_EXTENDER.prt", "TOP", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_EXTENDER.prt", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "TOP", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
+three_plane_assembly(session, assembly, transf, featID, 0, "AXLE_RED.prt", "DTM1", "RIGHT", "FRONT", "TOP", "RIGHT", "FRONT"); 
 // regenerate 並且 repaint 組立檔案
 assembly.Regenerate (void null);
 session.GetModelWindow (assembly).Repaint();    
