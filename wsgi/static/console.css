@@ -11,7 +11,7 @@ margin: 10px;
 }
 
 #left-div {
-width:50%;
+width:30%;
 height:60%;
 #position:relative;
 margin: auto;
@@ -19,7 +19,7 @@ float:left;
 }
 
 #right-div {
-width:48%;
+width:70%;
 height:60%;
 position:relative;
 margin: auto;
@@ -28,8 +28,8 @@ float:right;
 
 #editor {
 float:auto;
-width:50%;
-height:60%;
+width:100%;
+height:100%;
 resize:both;
 }
 
