@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Created by Leo (http://webpages.charter.net/edreamleo/front.html) -->
+<!-- Created by Leo (http://leoeditor.com/leo_toc.html) -->
 <?xml-stylesheet ekr_test?>
 <leo_file xmlns:leo="http://www.leo-editor.org/2011/leo" >
 <leo_header file_format="2" tnodes="0" max_tnode_index="0" clone_windows="0"/>
@@ -166,7 +166,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140512232735.2633"></t>
 <t tx="2014pythonE.20140513163709.1881"></t>
 <t tx="2014pythonE.20140513163709.1882">@nocolor
-﻿2bg17報告內容
+2bg17報告內容
 ===
 
 2bg17報告內容
@@ -181,7 +181,7 @@ course-mde-tw 為協同人員
 <t tx="2014pythonE.20140519074351.1903"></t>
 <t tx="2014pythonE.20140519202248.1430"></t>
 <t tx="2014pythonE.20140519202248.1431">@nocolor
-﻿2bg8報告內容
+2bg8報告內容
 ===
 
 2bg8報告內容
@@ -614,7 +614,7 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 <t tx="kmolII_lite.20140430174205.1613"></t>
 <t tx="kmolII_lite.20140505193226.1631"></t>
 <t tx="kmolII_lite.20140505193226.1632">@nocolor
-﻿===
+===
 
 這是 2bg11報告內容
 

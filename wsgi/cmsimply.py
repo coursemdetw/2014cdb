@@ -1936,9 +1936,9 @@ if (!newfile.Status) {
     # only admin can save program to server
     '''
         adm2 = '''
-    doc['save_program'].bind('click',lambda ev:post('/save_program'))
+    doc['save_program'].bind('click',lambda ev:post('save_program'))
     # add delete_program 5/7, delete_program button bind to execute delete_program on server.
-    doc['delete_program'].bind('click',lambda ev:post('/delete_program'))
+    doc['delete_program'].bind('click',lambda ev:post('delete_program'))
     '''
         # if load program through url
         if filename != None:
@@ -2192,7 +2192,7 @@ if (!newfile.Status) {
 
     # bindings
     #doc['timeout'].bind('click',lambda ev:go('/ajax.py'))
-    doc['save_program'].bind('click',lambda ev:post('/save_calcprogram'))
+    doc['save_program'].bind('click',lambda ev:post('save_calcprogram'))
     doc['get_prog'].bind('click', get_prog)
     doc['show_save'].bind('click', show_save)
     doc['doreload'].bind('click', doreload)
@@ -2408,9 +2408,9 @@ if (!newfile.Status) {
     doc['doreload'].bind('click', doreload)
     '''
         adm1 = '''
-    doc['save_program'].bind('click',lambda ev:post('/save_calcprogram'))
+    doc['save_program'].bind('click',lambda ev:post('save_calcprogram'))
     # add delete_program 5/7, delete_program button bind to execute delete_program on server.
-    doc['delete_program'].bind('click',lambda ev:post('/delete_calcprogram'))
+    doc['delete_program'].bind('click',lambda ev:post('delete_calcprogram'))
     doc['show_save'].bind('click', show_save)
     doc['set_overwrite'].bind('change',set_overwrite)
     # add delete_program 4/7, two associated binds added
